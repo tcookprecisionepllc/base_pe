@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- MODIFIED ACTIONS -->
+    <record model="ir.actions.act_window" id="stock.stock_picking_type_action">
+      <field name="context">{'group_by':['code']}</field>
+    </record>
+    <!-- NEW ACTIONS -->
+    <record model="ir.actions.act_window" id="action_incoming_outgoing_report">
+      <field name="name">Incoming Outgoing Report</field>
+      <field name="res_model">incoming.outgoing.report</field>
+      <field name="auto_search" eval="True"/>
+      <field name="context">{}</field>
+      <field name="limit">80</field>
+      <field name="src_model" eval="False"/>
+      <field name="target">current</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_id" ref="base_pe.view_incoming_outgoing_report_pivot"/>
+      <field name="view_ids" eval="[(6, 0, [])]"/>
+      <field name="view_mode">pivot</field>
+    </record>
+  </data>
+</odoo>
