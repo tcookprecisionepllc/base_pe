@@ -8,3 +8,4 @@ class StockMove(models.Model):
 
     date_done = fields.Datetime('Closed Date',related='picking_id.date_done', store=True, readonly=True)
     qty_available = fields.Float('QoH', related="product_id.qty_available",store=False,readonly=True)
+    product_desc = fields.Text(string="Description",related="product_id.description_picking")

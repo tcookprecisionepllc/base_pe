@@ -31,12 +31,13 @@ THIS MODULE IS PROVIDED AS IS - INSTALLATION AT USERS' OWN RISK - AUTHOR OF MODU
 RESPONSIBILITY FOR ANY BEHAVIOR ONCE INSTALLED.
         """,
 
-    'depends':['stock'],
+    'depends':['stock','mrp'],
     'data':[
             'views/ir_ui_views.xml',
             'views/ir_actions_act_window.xml',
             'views/ir_ui_menu.xml',
             'views/ir_model_access.xml',
+            'views/ir_ui_qweb.xml',
             ],
     'installable': True,
 
