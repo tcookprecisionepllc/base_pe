@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record model="ir.ui.view" id="report_mrporder_mod">
+    <field name="name">x_gfp.report_mrporder.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="mrp.report_mrporder"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//thead/tr/th" position="after">
+        <th>Description</th>
+     </xpath>
+      <xpath expr="//tbody/t/tr[2]" position="replace">
+        <tr t-foreach="o.move_raw_ids.sorted(lambda x: x.product_id.name)" t-as="line">
+           <td>
+               <span t-field="line.product_id"/>
+           </td>
+           <td>
+             <span t-field="line.product_desc"/>
+           </td>
+           <td class="text-right">
+               <span t-field="line.product_uom_qty"/>
+               <span t-field="line.product_uom.name" groups="product.group_uom"/>
+           </td>
+           <td class="text-center" groups="stock.group_stock_multi_locations">
+               <span t-field="line.location_id.name"/>
+           </td>
+           <td class="text-center" groups="stock.group_stock_multi_locations">
+               <span t-field="line.location_dest_id.name"/>
+           </td>
+           <td class="text-center">
+               <span t-if="line.product_id.barcode">
+                   <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', line.product_id.barcode, 600, 100)" style="width:300px;height:50px"/>
+               </span>
+           </td>
+       </tr>
+     </xpath>
+    </field>
+  </record>
+</odoo>
