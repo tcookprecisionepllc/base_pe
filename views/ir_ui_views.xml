@@ -51,6 +51,9 @@
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
         </xpath>
+        <xpath expr="//notebook/page[2]/field/tree/field" position="after">
+          <field name="product_desc"/>
+        </xpath>
       </field>
     </record>
   </data>
