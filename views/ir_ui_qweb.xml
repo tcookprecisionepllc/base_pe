@@ -19,7 +19,7 @@
              <span t-field="line.product_desc"/>
            </td>
            <td>
-              <span t-field="line.bin_locations"/>
+              <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.x_shelf_location_tags))"/>
            </td>
            <td class="text-right">
                <span t-field="line.product_uom_qty"/>
