@@ -18,6 +18,9 @@
            <td>
              <span t-field="line.product_desc"/>
            </td>
+           <td>
+              <span t-field="line.bin_locations"/>
+           </td>
            <td class="text-right">
                <span t-field="line.product_uom_qty"/>
                <span t-field="line.product_uom.name" groups="product.group_uom"/>
