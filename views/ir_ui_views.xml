@@ -50,6 +50,7 @@
       <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <!--
         <xpath expr="//notebook/page/field/tree" position="replace">
           <tree delete="0" default_order="is_done,sequence" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="reserved_availability &lt; product_uom_qty" default_order="name">
                                     <field name="product_id" required="1"/>
@@ -68,6 +69,7 @@
                                     <field name="quantity_done" string="Consumed"/>
                                   </tree>
         </xpath>
+      -->
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
         </xpath>
