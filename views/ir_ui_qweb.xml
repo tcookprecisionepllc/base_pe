@@ -18,7 +18,6 @@
            <td>
              <span t-field="line.product_desc"/>
            </td>
-
            <td>
               <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.x_shelf_location_tags))"/>
            </td>
