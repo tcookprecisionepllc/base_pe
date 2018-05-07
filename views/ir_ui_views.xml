@@ -42,6 +42,7 @@
            </pivot>
       </field>
     </record>
+    <!--
     <record model="ir.ui.view" id="mrp_production_form_view_mod2">
       <field name="name">x_gfp.mrp.production.form.mod2</field>
       <field name="model">mrp.production</field>
@@ -70,6 +71,7 @@
         </xpath>
       </field>
     </record>
+  -->
     <record model="ir.ui.view" id="mrp_production_form_view_mod">
       <field name="name">x_gfp.mrp.production.form.mod</field>
       <field name="model">mrp.production</field>
