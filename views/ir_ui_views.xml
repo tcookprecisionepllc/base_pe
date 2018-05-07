@@ -50,6 +50,24 @@
       <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//notebook/page/field/tree" position="replace">
+          <tree delete="0" default_order="is_done,sequence" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="reserved_availability &lt; product_uom_qty" default_order="name">
+                                    <field name="product_id" required="1"/>
+                                    <field name="name" invisible="1"/>
+                                    <field name="unit_factor" invisible="1"/>
+                                    <field name="product_uom" groups="product.group_uom"/>
+                                    <field name="has_tracking" invisible="1"/>
+                                    <field name="needs_lots" readonly="1" groups="stock.group_production_lot"/>
+                                    <field name="is_done" invisible="1"/>
+                                    <field name="sequence" invisible="1"/>
+                                    <field name="location_id" invisible="1"/>
+                                    <field name="location_dest_id" domain="[('id', 'child_of', parent.location_dest_id)]" invisible="1"/>
+                                    <field name="state" invisible="1" force_save="1"/>
+                                    <field name="product_uom_qty" string="To Consume"/>
+                                    <field name="reserved_availability" attrs="{'invisible': [('is_done', '=', True)]}" string="Reserved"/>
+                                    <field name="quantity_done" string="Consumed"/>
+                                  </tree>
+        </xpath>
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
         </xpath>
