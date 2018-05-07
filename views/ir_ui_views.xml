@@ -81,7 +81,7 @@
       <field name="priority">16</field>
       <field name="arch" type="xml">
         <xpath expr="//notebook/page/field/tree" position="replace">
-          <tree delete="0" default_order="is_done,name" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="reserved_availability &lt; product_uom_qty" default_order="name">
+          <tree delete="0" default_order="is_done,name" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="reserved_availability &lt; product_uom_qty">
                                     <field name="product_id" required="1"/>
                                     <field name="name" invisible="1"/>
                                     <field name="unit_factor" invisible="1"/>
