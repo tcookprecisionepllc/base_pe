@@ -24,7 +24,7 @@
            </td>
          -->
            <td>
-              <span t-esc="', '.join(line.bin_locations.mapped('shelf_locations.name'))"/>
+              <span t-esc="', '.join(line.bin_locations.mapped('name'))"/>
            </td>
            <td class="text-right">
                <span t-field="line.product_uom_qty"/>
