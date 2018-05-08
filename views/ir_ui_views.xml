@@ -117,8 +117,14 @@
       <field name="priority">16</field>
       <field name="arch" type="xml">
         <xpath expr="//sheet/group/group[5]" position="after">
+          <group>
+            <group>
           <field name="counted_by" widget="many2many_tags"/>
+        </group>
+        <group>
           <field name="x_notes"/>
+        </group>
+      </group>
         </xpath>
       </field>
     </record>
