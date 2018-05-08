@@ -19,7 +19,7 @@
              <span t-field="line.product_desc"/>
            </td>
            <td>
-              <span t-esc=" ', '.join(l.x_shelf_location_tags.mapped('name')"/>
+              <span t-esc="', '.join(l.x_shelf_location_tags.mapped('name')"/>
            </td>
            <td class="text-right">
                <span t-field="line.product_uom_qty"/>
