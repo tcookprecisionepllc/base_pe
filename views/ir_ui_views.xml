@@ -101,6 +101,7 @@
       -->
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
+          <field name="bin_locations" invisible="1"/>
         </xpath>
         <xpath expr="//notebook/page[2]/field/tree/field" position="after">
           <field name="product_desc"/>
