@@ -80,6 +80,7 @@
       <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <!--
         <xpath expr="//notebook/page/field/tree" position="replace">
         <tree editable="bottom" delete="1" default_order="is_done,stock_move.name" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="quantity_available &lt; product_uom_qty" create="1">
                                     <field name="product_id" required="1"/>
@@ -97,11 +98,10 @@
                                     <button name="split_move_lot" string="Register lots" type="object" icon="fa-list" attrs="{'invisible': [('has_tracking', 'not in', ['lot','serial'])]}"/>
                                 </tree>
         </xpath>
-        <!--
+      -->
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
         </xpath>
-      -->
         <xpath expr="//notebook/page[2]/field/tree/field" position="after">
           <field name="product_desc"/>
         </xpath>
