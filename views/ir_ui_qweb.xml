@@ -21,11 +21,9 @@
            <td>
              <span t-field="line.bin_locations"/>
            </td>
-           <!--
            <td>
-              <span t-esc="', '.join(line.bin_locations.mapped('name'))"/>
+              <span t-esc="', '.join(line.bin_locations.mapped('x_name'))"/>
            </td>
-         -->
            <td class="text-right">
                <span t-field="line.product_uom_qty"/>
                <span t-field="line.product_uom.name" groups="product.group_uom"/>
