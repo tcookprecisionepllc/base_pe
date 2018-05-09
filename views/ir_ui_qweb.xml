@@ -38,6 +38,9 @@
                <span t-field="line.product_uom_qty"/>
                <span t-field="line.product_uom.name" groups="product.group_uom"/>
            </td>
+           <td>
+             <span t-field="quantity_done"/>
+           </td>
            <!--
            <td class="text-center" groups="stock.group_stock_multi_locations">
                <span t-field="line.location_id.name"/>
