@@ -106,12 +106,11 @@
         <xpath expr="//notebook/page[2]/field/tree/field" position="after">
           <field name="product_desc"/>
         </xpath>
-        <!--
-        <xpath expr="//sheet/group[2]/field[@name='x_serial_number']" position="after">
+        <xpath expr="//field[@name='origin']" position="after">
+          <field name="x_serial_number"/>
           <field name="moves_corrected_by"/>
           <field name="moves_corrected_date"/>
         </xpath>
-      -->
       </field>
     </record>
     <record model="ir.ui.view" id="stock_view_move_form_mod">
