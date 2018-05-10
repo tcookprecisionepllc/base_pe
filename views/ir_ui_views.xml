@@ -172,7 +172,7 @@
       <field name="priority">16</field>
       <field name="arch" type="xml">
         <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
-          <field name="invoice_address_email" readonly="1"/>
+        <field name="invoice_address_email" readonly="1"/>
         </xpath>
       </field>
     </record>
