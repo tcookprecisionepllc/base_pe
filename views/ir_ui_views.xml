@@ -178,5 +178,19 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="account_invoice_form_mod">
+      <field name="name">x_aec.account.invoice_form.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+        <field name="invoice_address_email" readonly="1"/>
+        <field name="shipping_address_email" readonly="1" invisible="1"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
