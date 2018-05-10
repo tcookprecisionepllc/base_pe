@@ -110,6 +110,7 @@
           <field name="x_serial_number"/>
           <field name="moves_corrected_by"/>
           <field name="moves_corrected_date"/>
+          <field name="no_correction"/>
         </xpath>
       </field>
     </record>
@@ -140,7 +141,6 @@
         <xpath expr="//field[@name='state']" position="after">
           <field name="x_serial_number"/>
           <field name="moves_corrected_date"/>
-          <field name="no_correction"/>
         </xpath>
       </field>
     </record>
