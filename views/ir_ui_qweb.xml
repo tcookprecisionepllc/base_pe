@@ -65,7 +65,7 @@
       <xpath expr="//div/div" position="after">
         <div t-field="o.invoice_address_email"/>
      </xpath>
-     <xpath expr="//div/div[2]" position="after">
+     <xpath expr="//div/div[2]/div" position="after">
        <div t-field="o.shipping_address_email"/>
     </xpath>
     </field>
