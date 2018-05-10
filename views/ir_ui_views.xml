@@ -129,5 +129,19 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="mrp_production_tree_view_mod">
+      <field name="name">x_aec.mrp.mrp_production_tree_view.mod</field>
+      <field name="model">mrp.production</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='origin']" position="after">
+          <field name="x_serial_number"/>
+          <field name="moves_corrected_date"
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
