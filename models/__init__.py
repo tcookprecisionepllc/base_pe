@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from . import stock_move,mrp_production
+from . import stock_move,mrp_production,res_partner
