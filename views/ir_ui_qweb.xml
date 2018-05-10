@@ -59,4 +59,16 @@
      </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="sale_report_saleorder_document_mod">
+    <field name="name">x_aec.sale.report_saleorder_document.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="sale.report_saleorder_document"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//t/t/div/div[2]/div/div" position="replace">
+        <div t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;fax&quot;, &quot;email&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+     </xpath>
+    </field>
+  </record>
 </odoo>
