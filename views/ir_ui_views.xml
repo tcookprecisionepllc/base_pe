@@ -155,11 +155,9 @@
         <xpath expr="//sheet/group/group[2]/field[@name='email']" position="replace">
           <field name="email" readonly="1"/>
         </xpath>
-        <!--
-        <xpath expr="//sheet/notebook/page/field/form/sheet/group[2]/field[@name='email']" position="replace">
+        <xpath expr="//sheet/notebook/page/field/form/sheet/group/group[2]/field[@name='email']" position="replace">
           <field name="email" readonly="1"/>
         </xpath>
-      -->
         <!--
         <xpath expr="//field[@name='email']" position="after">
           <field name="email_temp"/>
