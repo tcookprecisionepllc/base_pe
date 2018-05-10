@@ -74,16 +74,19 @@
      </xpath>
     </field>
   </record>
-  <record model="ir.ui.view" id="account_report_invoice_document_mod">
-    <field name="name">x_aec.account.report_invoice_document.mod</field>
+  <record model="ir.ui.view" id="account_report_invoice_document_inherit_sale_mod">
+    <field name="name">x_aec.account.report_invoice_document_inherit_sale.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
-    <field name="inherit_id" ref="account.report_invoice_document"/>
+    <field name="inherit_id" ref="account.report_invoice_document_inherit_sale"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/div/div/div/address" position="after">
-        <div t-field="o.shipping_address_email"/>
+      <xpath expr="//div/div" position="after">
+        <div t-field="o.invoice_address_email"/>
      </xpath>
+     <xpath expr="//div/div[2]" position="after">
+       <div t-field="o.shipping_address_email"/>
+    </xpath>
     </field>
   </record>
 </odoo>
