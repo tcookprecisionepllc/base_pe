@@ -67,7 +67,7 @@
     <field name="priority">99</field>
     <field name="arch" type="xml">
       <xpath expr="//t/t/div/div[2]/div/div" position="after">
-        <div t-field="invoice_address_email"/>
+        <div t-field="doc.invoice_address_email"/>
      </xpath>
     </field>
   </record>
