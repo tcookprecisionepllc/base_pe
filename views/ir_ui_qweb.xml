@@ -67,7 +67,7 @@
         <div t-field="o.shipping_address_email"/>
      </xpath>
    -->
-      <xpath expr="//div/div" position="after">
+      <xpath expr="//div/span" position="before">
         <div t-field="o.invoice_address_email"/>
      </xpath>
     </field>
