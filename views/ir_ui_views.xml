@@ -155,9 +155,11 @@
         <xpath expr="//field[@name='email']" position="replace">
           <field name="email" readonly="1"/>
         </xpath>
+        <!--
         <xpath expr="//field[@name='email']" position="after">
           <field name="email_temp"/>
         </xpath>
+      -->
       </field>
     </record>
   </data>
