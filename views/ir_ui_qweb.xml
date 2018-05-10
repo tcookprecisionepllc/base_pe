@@ -62,14 +62,12 @@
     <field name="inherit_id" ref="sale.report_invoice_document_inherit_sale"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <!--
       <xpath expr="//div/div" position="after">
         <div t-field="o.invoice_address_email"/>
      </xpath>
      <xpath expr="//div/div[2]/div" position="after">
        <div t-field="o.shipping_address_email"/>
     </xpath>
-  -->
     </field>
   </record>
 </odoo>
