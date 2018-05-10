@@ -13,9 +13,3 @@ class StockMove(models.Model):
     bin_locations = fields.Many2many(string="Bin Locations",related="product_id.x_shelf_location_tags")
     #bin_locations = fields.Many2many('x_shelf_locations',string="Bin Locations")
     counted_by = fields.Many2many('res.users', string="Counted By")
-
-#class MrpProduction(models.Model):
-#    _inherit = "mrp.production"
-
-#    moves_corrected_by = field.Many2many('res.users', string="Moves Corrected By")
-#    moves_corrected_date = Datetime('Date Corrected')

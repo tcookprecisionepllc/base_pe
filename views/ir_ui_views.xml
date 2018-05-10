@@ -42,36 +42,6 @@
            </pivot>
       </field>
     </record>
-    <!--
-    <record model="ir.ui.view" id="mrp_production_form_view_mod2">
-      <field name="name">x_gfp.mrp.production.form.mod2</field>
-      <field name="model">mrp.production</field>
-      <field name="type">form</field>
-      <field name="mode">extension</field>
-      <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
-      <field name="priority">15</field>
-      <field name="arch" type="xml">
-        <xpath expr="//notebook/page/field/tree" position="replace">
-          <tree delete="0" default_order="is_done,sequence" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="reserved_availability &lt; product_uom_qty" default_order="name">
-                                    <field name="product_id" required="1"/>
-                                    <field name="name" invisible="1"/>
-                                    <field name="unit_factor" invisible="1"/>
-                                    <field name="product_uom" groups="product.group_uom"/>
-                                    <field name="has_tracking" invisible="1"/>
-                                    <field name="needs_lots" readonly="1" groups="stock.group_production_lot"/>
-                                    <field name="is_done" invisible="1"/>
-                                    <field name="sequence" invisible="1"/>
-                                    <field name="location_id" invisible="1"/>
-                                    <field name="location_dest_id" domain="[('id', 'child_of', parent.location_dest_id)]" invisible="1"/>
-                                    <field name="state" invisible="1" force_save="1"/>
-                                    <field name="product_uom_qty" string="To Consume"/>
-                                    <field name="reserved_availability" attrs="{'invisible': [('is_done', '=', True)]}" string="Reserved"/>
-                                    <field name="quantity_done" string="Consumed"/>
-                                  </tree>
-        </xpath>
-      </field>
-    </record>
-  -->
     <record model="ir.ui.view" id="mrp_production_form_view_mod">
       <field name="name">x_gfp.mrp.production.form.mod</field>
       <field name="model">mrp.production</field>
@@ -80,25 +50,6 @@
       <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <!--
-        <xpath expr="//notebook/page/field/tree" position="replace">
-        <tree editable="bottom" delete="1" default_order="is_done,stock_move.name" decoration-muted="is_done" decoration-warning="quantity_done&gt;product_uom_qty" decoration-success="quantity_done==product_uom_qty" decoration-danger="quantity_available &lt; product_uom_qty" create="1">
-                                    <field name="product_id" required="1"/>
-                                    <field name="product_desc"/>
-                                    <field name="product_uom" groups="product.group_uom"/>
-                                    <field name="has_tracking" invisible="1"/>
-                                    <field name="is_done" invisible="1"/>
-                                    <field name="sequence" invisible="1"/>
-                                    <field name="location_id" domain="[('id', 'child_of', parent.location_id)]" invisible="1"/>
-                                    <field name="location_dest_id" domain="[('id', 'child_of', parent.location_dest_id)]" invisible="1"/>
-                                    <field name="state" invisible="1"/>
-                                    <field name="quantity_available" attrs="{'invisible': [('is_done', '=', True)]}"/>
-                                    <field name="product_uom_qty" readonly="0" attrs="{'required': [('product_id', '!=', False)]}" string="To Consume"/>
-                                    <field name="quantity_done" attrs="{'readonly': ['|', ('is_done', '=', True), ('has_tracking', 'in', ['lot','serial'])]}" string="Consumed"/>
-                                    <button name="split_move_lot" string="Register lots" type="object" icon="fa-list" attrs="{'invisible': [('has_tracking', 'not in', ['lot','serial'])]}"/>
-                                </tree>
-        </xpath>
-      -->
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
           <field name="bin_locations" widget="many2many_tags" invisible="0" readonly="1"/>
