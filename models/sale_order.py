@@ -7,3 +7,4 @@ class SaleOrder(models.Model):
     _inherit = "sale.order"
 
     invoice_address_email = fields.Char("Email Address", related="partner_invoice_id.email_temp")
+    shipping_address_email = fields.Char("Email Address", related="partner_shipping_id.email_temp")
