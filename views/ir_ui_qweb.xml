@@ -59,7 +59,6 @@
      </xpath>
     </field>
   </record>
-  <!--
   <record model="ir.ui.view" id="sale_report_saleorder_document_mod">
     <field name="name">x_aec.sale.report_saleorder_document.mod</field>
     <field name="type">qweb</field>
@@ -68,9 +67,8 @@
     <field name="priority">99</field>
     <field name="arch" type="xml">
       <xpath expr="//t/t/div/div[2]/div/div" position="after">
-        <div t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;fax&quot;, &quot;email&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+        <div t-field="invoice_address_email"/>
      </xpath>
     </field>
   </record>
--->
 </odoo>
