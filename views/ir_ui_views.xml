@@ -162,6 +162,7 @@
         </xpath>
       </field>
     </record>
+    <!--
     <record model="ir.ui.view" id="sale_view_order_form_mod">
       <field name="name">x_aec.sale.view_order_form.mod</field>
       <field name="model">sale.order</field>
@@ -175,5 +176,6 @@
         </xpath>
       </field>
     </record>
+  -->
   </data>
 </odoo>
