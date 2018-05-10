@@ -70,7 +70,7 @@
       <xpath expr="//t/t/div/div[2]/div/div" position="after">
         <div t-field="doc.partner_invoice_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;, &quot;fax&quot;, &quot;email&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
      </xpath>
-   -->
     </field>
   </record>
+-->
 </odoo>
