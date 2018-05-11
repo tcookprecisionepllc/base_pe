@@ -9,3 +9,4 @@ class MrpProduction(models.Model):
     moves_corrected_by = fields.Many2one('res.users', 'Moves Corrected By')
     moves_corrected_date = fields.Date('Date Corrected')
     no_correction = fields.Boolean("No Correction Necessary")
+    date_reversed = fields.Date('Date Reversed')

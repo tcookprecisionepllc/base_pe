@@ -63,6 +63,10 @@
           <field name="moves_corrected_date"/>
           <field name="no_correction"/>
         </xpath>
+        <xpath expr="//field[@name='availability']" position="after">
+          <field name="x_notes"/>
+          <field name="date_reversed"/>
+        </xpath>
       </field>
     </record>
     <record model="ir.ui.view" id="stock_view_move_form_mod">
@@ -92,6 +96,7 @@
         <xpath expr="//field[@name='state']" position="after">
           <field name="x_serial_number"/>
           <field name="moves_corrected_date"/>
+          <field name="date_reversed"/>
         </xpath>
       </field>
     </record>
