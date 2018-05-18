@@ -63,9 +63,12 @@
         <xpath expr="//notebook/page[2]" position="after">
           <page string="Corrections">
             <group>
+              <field name="no_correction"/>
+              <field name="corrections_submitted_by"/>
+              <field name="corrections_submitted_to"/>
+              <field name="corrections_submitted_date"/>
               <field name="moves_corrected_by"/>
               <field name="moves_corrected_date"/>
-              <field name="no_correction"/>
             </group>
           </page>
         </xpath>
