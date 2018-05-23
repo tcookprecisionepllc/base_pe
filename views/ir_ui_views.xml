@@ -187,5 +187,18 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="mrp_plm.mrp_eco_stage_view_tree">_
+      <field name="name">x_aec.mrp_plm.mrp_eco_stage_view_tree.mod</field>
+      <field name="model">ir.values</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp_plm.mrp_eco_stage_view_tree"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+        <field name="type_id"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
