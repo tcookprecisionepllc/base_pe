@@ -187,7 +187,7 @@
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="mrp_plm.mrp_eco_stage_view_tree">
+    <record model="ir.ui.view" id="mrp_plm_mrp_eco_stage_view_tree">
       <field name="name">x_aec.mrp_plm.mrp_eco_stage_view_tree.mod</field>
       <field name="model">mrp.eco.stage</field>
       <field name="type">form</field>
