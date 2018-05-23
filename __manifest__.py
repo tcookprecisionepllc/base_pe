@@ -31,7 +31,7 @@ THIS MODULE IS PROVIDED AS IS - INSTALLATION AT USERS' OWN RISK - AUTHOR OF MODU
 RESPONSIBILITY FOR ANY BEHAVIOR ONCE INSTALLED.
         """,
 
-    'depends':['stock','mrp','product','base','sale','account'],
+    'depends':['stock','mrp','product','base','sale','account','mrp_plm'],
     'data':[
             'views/ir_ui_views.xml',
             'views/ir_actions_act_window.xml',
