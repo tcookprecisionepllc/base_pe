@@ -208,6 +208,9 @@
       <field name="inherit_id" ref="stock.view_move_tree"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//field[@name='date']" position="after">
+          <field name="group_id"/>
+        </xpath>
         <xpath expr="//field[@name='date']" position="replace">
           <field name="date"/>
         </xpath>
