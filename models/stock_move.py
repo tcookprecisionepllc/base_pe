@@ -24,3 +24,10 @@ class StockMove(models.Model):
                 move.product_id.code and '%s: ' % move.product_id.code or '',
                 move.location_id.name, move.location_dest_id.name)))
         return res
+
+    def name_search(self, name='', args=None, operator='ilike', limit=100):
+        res = []
+        ids = self.search(args + [('id', '=', name)], limit=limit)
+         if ids:
+              return ids.name_get()
+        return res
