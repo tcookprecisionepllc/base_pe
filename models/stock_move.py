@@ -13,4 +13,5 @@ class StockMove(models.Model):
     bin_locations = fields.Many2many(string="Bin Locations",related="product_id.x_shelf_location_tags")
     #bin_locations = fields.Many2many('x_shelf_locations',string="Bin Locations")
     counted_by = fields.Many2many('res.users', string="Counted By")
-    reversing_move_id = fields.Integer('Reversing Move id')
+    #reversing_move_id = fields.Integer('Reversing Move id')
+    reversing_move = fields.Many2one('stock.move', string="Reversing Move")
