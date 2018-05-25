@@ -15,6 +15,7 @@ class StockMove(models.Model):
     counted_by = fields.Many2many('res.users', string="Counted By")
     #reversing_move_id = fields.Integer('Reversing Move id')
     reversing_move = fields.Many2one('stock.move', string="Reversing Move")
+    is_reversing_move = fields.Boolean(string="Is Reversing Move")
 
     def name_get(self):
         res = []
