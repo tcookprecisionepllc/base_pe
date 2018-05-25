@@ -15,3 +15,12 @@ class StockMove(models.Model):
     counted_by = fields.Many2many('res.users', string="Counted By")
     #reversing_move_id = fields.Integer('Reversing Move id')
     reversing_move = fields.Many2one('stock.move', string="Reversing Move")
+
+def name_get(self):
+    res = []
+    for move in self:
+        res.append((move.id, '%s%s%s%s>%s' % (move.id and "%s - ",
+            move.picking_id.origin and '%s/' % move.picking_id.origin or '',
+            move.product_id.code and '%s: ' % move.product_id.code or '',
+            move.location_id.name, move.location_dest_id.name)))
+    return res
