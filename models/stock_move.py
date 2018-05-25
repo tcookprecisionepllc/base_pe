@@ -43,3 +43,12 @@ class StockMove(models.Model):
 #        if not recs:
 #            recs = self.search([('id', operator, name)] + args, limit=limit)
 #        return recs.name_get()
+
+    def name_search(self, name, args=None, operator='ilike', limit=100):
+        args = args or []
+        recs = self.browse()
+        if name:
+            recs = self.search([('id', '=', name)] + args, limit=limit)
+        if not recs:
+            recs = self.search([('id', operator, name)] + args, limit=limit)
+        return recs.name_get()
