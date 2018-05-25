@@ -25,7 +25,6 @@ class StockMove(models.Model):
                 move.location_id.name, move.location_dest_id.name)))
         return res
 
-    @api.model
     def name_search(self, name, args=None, operator='ilike', limit=100):
         args = args or []
         recs = self.browse()
