@@ -25,9 +25,13 @@ class StockMove(models.Model):
                 move.location_id.name, move.location_dest_id.name)))
         return res
 
-    def name_search(self, name='', args=None, operator='ilike', limit=100):
-        res = []
-        ids = self.search(args + [('id', '=', name)], limit=limit)
-         if ids:
-              return ids.name_get()
-        return res
+    @api.model
+    def name_search(self, name, args=None, operator='ilike', limit=100):
+        args = args or []
+        recs = self.browse()
+        if name:
+            recs = self.search((args + [('id', 'ilike', name)]),
+                               limit=limit)
+        if not recs:
+            recs = self.search([('name', operator, name)] + args, limit=limit)
+        return recs.name_get()
