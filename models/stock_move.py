@@ -35,10 +35,10 @@ class StockMove(models.Model):
 #            recs = self.search([('name', operator, name)] + args, limit=limit)
 #        return recs.name_get()
 
-    @api.model
-    def name_search(self, name, args=None, operator='ilike', limit=100):
-        args = args or []
-        recs = self.browse()
-        if not recs:
-            recs = self.search([('id', operator, name)] + args, limit=limit)
-        return recs.name_get()
+#    @api.model
+#    def name_search(self, name, args=None, operator='ilike', limit=100):
+#        args = args or []
+#        recs = self.browse()
+#        if not recs:
+#            recs = self.search([('id', operator, name)] + args, limit=limit)
+#        return recs.name_get()
