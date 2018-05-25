@@ -89,7 +89,7 @@
         <xpath expr="//sheet/group/group[5]" position="after">
           <group>
           <field name="counted_by" widget="many2many_tags"/>
-          <field name="reversing_move"/>
+          <field name="reversing_move_id"/>
           <field name="x_notes"/>
         </group>
         </xpath>
