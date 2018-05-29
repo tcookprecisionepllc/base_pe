@@ -171,6 +171,10 @@
         <xpath expr="//field[@name='partner_shipping_id']" position="after">
         <field name="shipping_address_email" readonly="1"/>
         </xpath>
+        <xpath expr="//field[@name='payment_term_id']" position="after">
+          <field name="x_number_cancel"/>
+          <field name="x_number_po"/>
+        </xpath>
       </field>
     </record>
     <record model="ir.ui.view" id="base_values_view_tree_action_mod">
