@@ -219,5 +219,19 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="account_invoice_tree_mod">
+      <field name="name">x_aec.account.invoice_tree.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="account.invoice_tree"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='number']" position="replace">
+          <field name="x_number_cancel"/>
+          <field name="x_customer_po"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
