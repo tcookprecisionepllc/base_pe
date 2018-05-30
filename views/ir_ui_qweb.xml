@@ -77,7 +77,7 @@
     <field name="inherit_id" ref="account.report_invoice_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//field[@name='reference']" position="before">
+      <xpath expr="//div[@name='reference']" position="before">
         <div class=""col-xs-2"" t-if=""o.x_customer_po"">
           <strong>Customer PO:</strong>
           <p t-field=""o.x_customer_po""/>
