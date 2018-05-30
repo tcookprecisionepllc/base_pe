@@ -70,6 +70,7 @@
      </xpath>
     </field>
   </record>
+  <!--
   <record model="ir.ui.view" id="account_report_invoice_document_mod">
     <field name="name">x_aec.account.report_invoice_document.mod</field>
     <field name="type">qweb</field>
@@ -85,4 +86,5 @@
      </xpath>
     </field>
   </record>
+-->
 </odoo>
