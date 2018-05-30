@@ -50,6 +50,9 @@
       <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//field[@name='routing_id']" position="after">
+          <field name="x_legacy_number"/>
+        </xpath>
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
           <field name="bin_locations" widget="many2many_tags" invisible="0" readonly="1"/>
