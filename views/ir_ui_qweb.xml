@@ -70,4 +70,19 @@
      </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="account_report_invoice_document_mod">
+    <field name="name">x_aec.account.report_invoice_document.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="account.report_invoice_document"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='reference']" position="before">
+        <div class=""col-xs-2"" t-if=""o.x_customer_po"">
+          <strong>Customer PO:</strong>
+          <p t-field=""o.x_customer_po""/>
+        </div>
+     </xpath>
+    </field>
+  </record>
 </odoo>
