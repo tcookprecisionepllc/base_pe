@@ -7,7 +7,7 @@
     <field name="inherit_id" ref="mrp.report_mrporder"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/t/div/div[4]/div[4]" position="replace">
+      <xpath expr="//t/t/div/div[4]/div[4]" position="after">
         <div class="col-xs-3" t-if="'sale_name' in o">
           <strong>SO Number:</strong><br/>
           <span t-esc="'sale_name' in o and o.sale_name"/><br/>
