@@ -236,5 +236,20 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="product_product_supplierinfo_form_view_mod">
+      <field name="name">x_aec.product.product_supplierinfo_form_view.mod</field>
+      <field name="model">product.supplierinfo</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="x_quote_number"/>
+          <field name="x_quote_line"/>
+          <field name="x_quote_date"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
