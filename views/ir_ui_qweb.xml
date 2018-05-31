@@ -99,4 +99,21 @@
      </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="purchase.report_purchaseorder_document_mod">
+    <field name="name">x_aec.purchase.report_purchaseorder_document.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="purchase.report_purchaseorder_document"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//t/div/h2[2]" position="after">
+        <div class="row mt32 mb32">
+          <div><strong>Received By:</strong></div>
+          <div><strong>Received Date:</strong></div>
+          <div><strong>Entered By:</strong></div>
+          <div><strong>Entered Date:</strong></div>
+        </div>
+      </xpath>
+    </field>
+  </record>
 </odoo>
