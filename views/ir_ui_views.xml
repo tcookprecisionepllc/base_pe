@@ -280,6 +280,8 @@
           <field name="x_last_counted_bakersfield"/>
           <field name="x_is_equipment"/>
           <field name="x_is_buyout"/>
+          <field name="x_tags2" widget="many2many_tags"/>
+          <field name="x_shelf_location_tags" widget="many2many_tags" options="{'no_create': True}"/>
         </xpath>
       </field>
     </record>
