@@ -136,4 +136,16 @@
       </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="purchase_report_purchasequotation_document_mod">
+    <field name="name">x_aec.purchase.report_purchasequotation_document.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="purchase.report_purchasequotation_document"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//table/thead/tr/th" position="before">
+        <th><strong>Line</strong></th>
+      </xpath>
+    </field>
+  </record>
 </odoo>
