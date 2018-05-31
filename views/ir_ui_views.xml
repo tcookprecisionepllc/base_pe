@@ -377,5 +377,18 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="sale_view_order_tree_mod">
+      <field name="name">x_aec.sale.view_order_tree.mod</field>
+      <field name="model">sale.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="sale.view_order_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="x_legacy_number"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
