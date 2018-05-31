@@ -244,6 +244,9 @@
       <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//group/group/div" position="after">
+          <field name="x_weight"/>
+        </xpath>
         <xpath expr="//field[@name='delay']" position="before">
           <field name="x_delay_lower" class="oe_inline"/> days (lower limit)<br/>
         </xpath>
