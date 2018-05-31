@@ -429,5 +429,31 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="stock_view_picking_form_mod">
+      <field name="name">x_aec.stock.view_picking_form.mod</field>
+      <field name="model">stock.picking</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_picking_form"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='picking_type_id']" position="after">
+          <field name="x_legacy_stock_move_id"/>
+          <field name="x_corrected_by_move_no"/>
+          <field name="x_notes"/>
+        </xpath>
+        <xpath expr="//field[@name='location_dest_id']" position="after">
+          <field name="x_serial_number"/>
+        </xpath>
+        <xpath expr="//field[@name='min_date']" position="after">
+          <field name="x_actual_date"/>
+          <field name="x_serial_number"/>
+          <field name="x_date_audited"/>
+        </xpath>
+        <xpath expr="//field[@name='backorder_id']" position="after">
+          <field name="x_packing_list_no"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
