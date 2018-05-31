@@ -352,5 +352,26 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="report_external_layout_header_mod">
+      <field name="name">x_aec.report.external_layout_header.mod</field>
+      <field name="model">purchase.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="report.external_layout_header"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//div/div[3]/div/span" position="before">
+          <strong>BILL TO:</strong><br/>
+        </xpath>
+        <xpath expr="//div/div[3]/div" position="after">
+          <div class="col-xs-6" name="remit address">
+            <strong>REMIT TO:</strong><br/>
+            Precision Energy Products LLC<br/>
+            1601 F Street #100<br/>
+            Bakersfield, CA 93301
+          </div>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
