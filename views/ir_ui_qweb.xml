@@ -176,4 +176,23 @@
       </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="sale.report_saleorder_document_mod">
+    <field name="name">x_aec.sale.report_saleorder_document.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="sale.report_saleorder_document"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//t/div/div[3]/div[4]" position="after">
+        <div t-if="doc.x_customer_po" class="col-xs-3">
+          <strong>Customer PO:</strong>
+          <p t-field="doc.x_customer_po"/>
+        </div>
+        <div t-if="doc.x_reference_number" class="col-xs-3">
+          <strong>Reference Number:</strong>
+          <p t-field="doc.x_reference_number"/>
+        </div>
+      </xpath>
+    </field>
+  </record>
 </odoo>
