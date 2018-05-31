@@ -250,6 +250,9 @@
         <xpath expr="//field[@name='delay']" position="after">
           ARO <field name="x_lead_time_aro"/>
         </xpath>
+        <xpath expr="//field[@name='delay']" position="replace">
+          <field name="delay" class="oe_inline"/> days (upper limit)<br/>
+        </xpath>
         <xpath expr="//field[@name='name']" position="after">
           <field name="x_quote_number"/>
           <field name="x_quote_line"/>
