@@ -107,9 +107,7 @@
     <field name="priority">99</field>
     <field name="arch" type="xml">
       <xpath expr="//table/tbody/tr/td/span" position="before">
-        <td>
-          <span t-field="line.product_id"/>
-        </td>
+        <span t-field="line.product_id"/>
       </xpath>
       <xpath expr="//table/tbody/tr/td" position="before">
         <td>
