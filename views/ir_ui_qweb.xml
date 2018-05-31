@@ -183,6 +183,12 @@
     <field name="inherit_id" ref="sale.report_saleorder_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
+      <xpath expr="//table/tbody/t/t/tr/td" position="before">
+        <td><span t-field="l.x_line_number"/></td>
+      </xpath>
+      <xpath expr="//table/thead/tr/th" position="before">
+        <th>Line</th>
+      </xpath>
       <xpath expr="//t/div/div[3]/div[4]" position="after">
         <div t-if="doc.x_customer_po" class="col-xs-3">
           <strong>Customer PO:</strong>
