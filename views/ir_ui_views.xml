@@ -352,6 +352,7 @@
         </xpath>
       </field>
     </record>
+    <!--
     <record model="ir.ui.view" id="report_external_layout_header_mod">
       <field name="name">x_aec.report.external_layout_header.mod</field>
       <field name="model">purchase.order</field>
@@ -376,5 +377,6 @@
         </xpath>
       </field>
     </record>
+  -->
   </data>
 </odoo>

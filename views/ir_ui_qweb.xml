@@ -153,4 +153,27 @@
       </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="report_external_layout_header_mod">
+    <field name="name">x_aec.report.external_layout_header.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="report.external_layout_header"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//div/div[3]" position="replace">
+        <div class="row">
+          <div class="col-xs-6" name="company_address">
+              <strong>BILL TO:</strong><br/>
+              <span t-field="company.partner_id" t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}" style="border-bottom: 1px solid black; display:inline-block;"/><br/>
+          </div>
+          <div class="col-xs-6" name="remit address">
+          <strong>REMIT TO:</strong><br/>
+          Precision Energy Products LLC<br/>
+          1601 F Street #100<br/>
+          Bakersfield, CA 93301
+          </div>
+      </div>
+      </xpath>
+    </field>
+  </record>
 </odoo>
