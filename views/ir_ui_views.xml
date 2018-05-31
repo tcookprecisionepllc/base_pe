@@ -272,9 +272,9 @@
       <field name="type">form</field>
       <field name="mode">extension</field>
       <field name="inherit_id" ref="product.product_template_form_view"/>
-      <field name="priority">16</field>
+      <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='type']" position="after">
+        <xpath expr="//field[@name='barcode']" position="after">
           <field name="x_33_no"/>
           <field name="x_last_counted_odessa"/>
           <field name="x_last_counted_bakersfield"/>
