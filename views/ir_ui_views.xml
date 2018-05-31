@@ -244,12 +244,11 @@
       <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <xpath expr="//group/group/div" position="replace">
-          <div>
-            <field name="x_delay_lower" class="oe_inline"/> days (lower limit)<br/>
-            <field name="delay" class="oe_inline"/> days (upper limit)<br/>
-            ARO <field name="x_lead_time_aro"/>
-          </div>
+        <xpath expr="//field[@name='delay']" position="before">
+          <field name="x_delay_lower" class="oe_inline"/> days (lower limit)<br/>
+        </xpath>
+        <xpath expr="//field[@name='delay']" position="after">
+          ARO <field name="x_lead_time_aro"/>
         </xpath>
         <xpath expr="//field[@name='name']" position="after">
           <field name="x_quote_number"/>
