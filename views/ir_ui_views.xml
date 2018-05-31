@@ -326,7 +326,7 @@
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="purchase.purchase_order_line_tree_mod">
+    <record model="ir.ui.view" id="purchase_purchase_order_line_tree_mod">
       <field name="name">x_aec.purchase.purchase_order_line_tree.mod</field>
       <field name="model">purchase.order.line</field>
       <field name="type">form</field>
@@ -336,6 +336,19 @@
       <field name="arch" type="xml">
         <xpath expr="//field[@name='order_id']" position="after">
           <field name="date_order"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_purchase_order_tree_mod">
+      <field name="name">x_aec.purchase.purchase_order_tree.mod</field>
+      <field name="model">purchase.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='invoice_status']" position="after">
+          <field name="x_closed"/>
         </xpath>
       </field>
     </record>
