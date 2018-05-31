@@ -463,7 +463,7 @@
       <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='picking_id']" position="after">
+        <xpath expr="//sheet/group/group/field[@name='picking_id']" position="after">
           <field name="x_unscrap_picking"/>
           <field name="x_notes"/>
         </xpath>
