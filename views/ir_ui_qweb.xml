@@ -143,6 +143,11 @@
     <field name="inherit_id" ref="purchase.report_purchasequotation_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
+      <xpath expr="//table/tbody/tr/td" position="before">
+        <td>
+          <span t-field="order_line.x_line_number"/>
+        </td>
+      </xpath>
       <xpath expr="//table/thead/tr/th" position="before">
         <th><strong>Line</strong></th>
       </xpath>
