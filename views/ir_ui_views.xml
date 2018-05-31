@@ -469,5 +469,18 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="stock_stock_scrap_tree_view_mod">
+      <field name="name">x_aec.stock.stock_scrap_tree_view.mod</field>
+      <field name="model">stock.scrap</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.stock_scrap_tree_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="x_unscrap_picking"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
