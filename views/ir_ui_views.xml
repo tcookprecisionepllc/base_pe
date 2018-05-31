@@ -148,7 +148,7 @@
         <xpath expr="//tree/field[@name='sequence']" position="after">
           <field name="x_line_number"/>
         </xpath>
-        <xpath expr="//notebook/page/form/group/group/field" position="before">
+        <xpath expr="//notebook/page/field/form/group/group/field" position="before">
           <field name="x_line_number"/>
         </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
