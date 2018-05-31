@@ -495,5 +495,29 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="stock_vpicktree_mod">
+      <field name="name">x_aec.stock.vpicktree.mod</field>
+      <field name="model">stock.picking</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.vpicktree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='picking_type_id']" position="after">
+          <field name="x_corrected_by_move_no"/>
+          <field name="x_date_audited"/>
+        </xpath>
+        <xpath expr="//field[@name='partner_id']" position="after">
+          <field name="date_done"/>
+          <field name="create_date"/>
+        </xpath>
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="location_id"/>
+        </xpath>
+        <xpath expr="//field[@name='name']" position="before">
+          <field name="id"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
