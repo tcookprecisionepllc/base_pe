@@ -142,11 +142,23 @@
       <field name="inherit_id" ref="sale.view_order_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//notebook/page[2]/group/group[3]" position="after">
+          <field name="x_notes"/>
+        </xpath>
+        <xpath expr="//tree/field[@name='sequence']" position="after">
+          <field name="x_line_number"/>
+        </xpath>
+        <xpath expr="//notebook/page/form/group/group/field" position="before">
+          <field name="x_line_number"/>
+        </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
         <field name="invoice_address_email" readonly="1"/>
         </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
         <field name="shipping_address_email" readonly="1"/>
+        <field name="x_legacy_number"/>
+        <field name="x_customer_po"/>
+        <field name="x_reference_number"/>
         </xpath>
       </field>
     </record>
