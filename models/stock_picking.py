@@ -5,3 +5,5 @@ from odoo.exceptions import UserError
 
 class StockMove(models.Model):
     _inherit = "stock.picking"
+
+    replacement_move_no = fields.Char("Replacement Move")
