@@ -527,8 +527,16 @@
       <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='carrier_id']" position="replace">
-          <field name="carrier_id"/>
+        <xpath expr="//group[@name='carrier_data']" position="replace">
+          <group name="carrier_data">
+            <field name="carrier_id" attrs="{'readonly': [('state', '=', 'done')]}"/>
+            <field name="delivery_type" attrs="{'invisible':True}"/>
+            <label for="carrier_tracking_ref"/>
+            <div name="tracking">
+              <field name="carrier_tracking_ref" class="oe_inline" attrs="{'readonly': [('state', '=', 'done')]}"/>
+              <button type="object" class="fa fa-arrow-right oe_link" name="cancel_shipment" string="Cancel" attrs="{'invisible':['|','|','|',('carrier_tracking_ref','=',False),('delivery_type','in', ['fixed', 'base_on_rule']),('delivery_type','=',False),('state','not in',('done'))]}"/>
+            </div>
+          </group>
         </xpath>
       </field>
     </record>
