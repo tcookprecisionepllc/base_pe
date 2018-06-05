@@ -519,7 +519,6 @@
         </xpath>
       </field>
     </record>
-    <!--
     <record model="ir.ui.view" id="delivery_view_picking_withcarrier_out_form_mod">
       <field name="name">x_aec.delivery.view_picking_withcarrier_out_form.mod</field>
       <field name="model">stock.picking</field>
@@ -541,6 +540,5 @@
         </xpath>
       </field>
     </record>
-  -->
   </data>
 </odoo>
