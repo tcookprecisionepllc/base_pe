@@ -437,12 +437,6 @@
       <field name="inherit_id" ref="stock.view_picking_form"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='carrier_tracking_ref']" position="replace">
-          <field name="carrier_tracking_ref" class="oe_inline"/>
-        </xpath>
-        <xpath expr="//field[@name='carrier_id']" position="replace">
-          <field name="carrier_id"/>
-        </xpath>
         <xpath expr="//field[@name='picking_type_id']" position="after">
           <field name="x_legacy_stock_move_id"/>
           <field name="x_corrected_by_move_no"/>
@@ -525,7 +519,6 @@
         </xpath>
       </field>
     </record>
-    <!--
     <record model="ir.ui.view" id="delivery_view_picking_withcarrier_out_form_mod">
       <field name="name">x_aec.delivery.view_picking_withcarrier_out_form.mod</field>
       <field name="model">stock.picking</field>
@@ -542,6 +535,5 @@
         </xpath>
       </field>
     </record>
-  -->
   </data>
 </odoo>
