@@ -62,10 +62,8 @@
         </xpath>
         <xpath expr="//field[@name='origin']" position="after">
           <field name="x_serial_number"/>
-          <!--
-          <field name="bom_labor_hours" readonly="1"/>
-          <field name="actual_labor_hours"/>
-        -->
+          <field name="labor_hours_bom" readonly="1"/>
+          <field name="labor_hours_actual"/>
         </xpath>
         <xpath expr="//notebook/page[2]" position="after">
           <page string="Corrections">
