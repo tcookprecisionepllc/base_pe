@@ -142,6 +142,9 @@
       <field name="inherit_id" ref="sale.view_order_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//notebook/page/field/tree/field[@name='tax_id']" position="after">
+          <field name="product_internal_category"/>
+        </xpath>
         <xpath expr="//div[@name='discount']" position="after">
           <field name="product_internal_category"/>
         </xpath>
