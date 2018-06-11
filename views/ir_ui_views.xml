@@ -62,6 +62,7 @@
         </xpath>
         <xpath expr="//field[@name='origin']" position="after">
           <field name="x_serial_number"/>
+          <field name="assembled_by"/>
           <field name="labor_hours_bom" readonly="1"/>
           <field name="labor_hours_actual"/>
         </xpath>
