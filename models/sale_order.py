@@ -8,4 +8,4 @@ class SaleOrder(models.Model):
 
     invoice_address_email = fields.Char("Email Address", related="partner_invoice_id.email_temp")
     shipping_address_email = fields.Char("Email Address", related="partner_shipping_id.email_temp")
-    product_internal_category = fields.Text(string="Category", related="product_id.categ_id.name")
+    product_internal_category = fields.Char(string="Category", related="product_id.categ_id.name")
