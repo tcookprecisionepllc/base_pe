@@ -542,5 +542,18 @@
         </xpath>
       </field>
     </record>
+    <record model="ir.ui.view" id="mrp_mrp_bom_form_view_mod">
+      <field name="name">x_aec.mrp.mrp_bom_form_view.mod</field>
+      <field name="model">mrp.bom</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='type']" position="after">
+          <field name="labor_hours"/>
+        </xpath>
+      </field>
+    </record>
   </data>
 </odoo>
