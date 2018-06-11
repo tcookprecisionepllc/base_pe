@@ -13,5 +13,5 @@ class MrpProduction(models.Model):
     corrections_submitted_by = fields.Many2one('res.users', 'Corrections Submitted By')
     corrections_submitted_to = fields.Many2one('res.users', 'Corrections Submitted To')
     corrections_submitted_date = fields.Date('Date Submitted')
-    bom_labor_hours = fields.Float(string="BOM Labor Hours", related="mrp_bom.labor_hours")
+    bom_labor_hours = fields.Float(string="BOM Labor Hours", related="bom_id.labor_hours")
     actual_labor_hours = fields.Float("Actual Labor Hours")
