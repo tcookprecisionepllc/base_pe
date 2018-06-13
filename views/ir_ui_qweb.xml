@@ -183,6 +183,16 @@
     <field name="inherit_id" ref="sale.report_saleorder_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
+      <xpath expr="//t/div/div[3]/div[2]" position="replace">
+        <div t-if="doc.state not in ['draft','sent']" class="col-xs-3">
+          <strong>Date Ordered:</strong>
+          <p t-field="doc.confirmation_date"/>
+        </div>
+        <div t-if="doc.state in ['draft','sent']" class="col-xs-3">
+          <strong>Quotation Date:</strong>
+          <p t-field="doc.date_order"/>
+        </div>
+      </xpath>
       <xpath expr="//table/tbody/t/t[2]/tr/td" position="before">
         <td><span t-field="l.x_line_number"/></td>
       </xpath>
