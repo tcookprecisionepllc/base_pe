@@ -17,6 +17,13 @@ class StockMove(models.Model):
     reversing_move = fields.Many2one('stock.move', string="Reversing Move")
     is_reversing_move = fields.Boolean(string="Is Reversing Move")
 
+    #@api.model
+    #def my_example(self):
+    #    res = super(StockMove, self).my_example()
+    #    for record in self:
+    #        print 'hello'
+    #    return res
+
     def name_get(self):
         res = []
         for move in self:

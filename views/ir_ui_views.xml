@@ -235,19 +235,6 @@
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="stock_view_move_tree_mod">
-      <field name="name">x_aec.stock.view_move_tree.mod</field>
-      <field name="model">stock.move</field>
-      <field name="type">form</field>
-      <field name="mode">extension</field>
-      <field name="inherit_id" ref="stock.view_move_tree"/>
-      <field name="priority">16</field>
-      <field name="arch" type="xml">
-        <xpath expr="//field[@name='date']" position="replace">
-          <field name="date"/>
-        </xpath>
-      </field>
-    </record>
     <record model="ir.ui.view" id="account_invoice_tree_mod">
       <field name="name">x_aec.account.invoice_tree.mod</field>
       <field name="model">account.invoice</field>
@@ -440,6 +427,9 @@
       <field name="arch" type="xml">
         <xpath expr="//field[@name='name']" position="before">
           <field name="id"/>
+        </xpath>
+        <xpath expr="//field[@name='date']" position="replace">
+          <field name="date"/>
         </xpath>
       </field>
     </record>
