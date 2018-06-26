@@ -400,6 +400,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='state']" position="after">
+          <field name="invoice_status"/>
           <field name="x_legacy_number"/>
         </xpath>
       </field>
