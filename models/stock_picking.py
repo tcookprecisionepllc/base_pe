@@ -7,3 +7,4 @@ class StockMove(models.Model):
     _inherit = "stock.picking"
 
     replacement_move_no = fields.Char("Replacement Move")
+    corrective_move_no = fields.Char("Corrective Move")

@@ -446,6 +446,7 @@
           <field name="x_legacy_stock_move_id"/>
           <field name="x_corrected_by_move_no"/>
           <field name="replacement_move_no"/>
+          <field name="corrective_move_no"/>
           <field name="x_notes"/>
         </xpath>
         <xpath expr="//field[@name='location_dest_id']" position="after">
