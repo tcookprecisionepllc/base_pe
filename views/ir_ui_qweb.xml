@@ -211,6 +211,7 @@
       </xpath>
     </field>
   </record>
+  <!--
   <record model="ir.ui.view" id="stock_report_picking_mod">
     <field name="name">x_aec.stock.report_picking.mod</field>
     <field name="type">qweb</field>
@@ -226,4 +227,5 @@
       </xpath>
     </field>
   </record>
+-->
 </odoo>
