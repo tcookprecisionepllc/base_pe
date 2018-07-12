@@ -211,4 +211,19 @@
       </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="stock_report_picking_mod">
+    <field name="name">x_aec.stock.report_picking.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="stock.report_picking"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//t/t/t/div/thead/tr/th[4]" position="after">
+        <th><strong>Created By</strong></th>
+      </xpath>
+      <xpath expr="//t/t/t/div/tbody/tr/td[4]" position="after">
+        <span t-field="o.create_uid"/>
+      </xpath>
+    </field>
+  </record>
 </odoo>
