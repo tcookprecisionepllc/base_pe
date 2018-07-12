@@ -222,7 +222,7 @@
         <th><strong>Created By</strong></th>
       </xpath>
       <xpath expr="//tbody/tr/td[4]" position="after">
-        <span t-field="o.create_uid"/>
+        <td><span t-field="o.create_uid"/></td>
       </xpath>
     </field>
   </record>
