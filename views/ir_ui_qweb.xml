@@ -221,15 +221,7 @@
       <xpath expr="//thead[1]/tr/th[4]" position="after">
         <th><strong>Created By</strong></th>
       </xpath>
-      <xpath expr="//thead[2]/tr/th[4]" position="after">
-        <th><strong>Created By</strong></th>
-      </xpath>
       <xpath expr="//tbody[1]/tr/td[4]" position="after">
-        <td>
-          <span t-field="o.create_uid"/>
-        </td>
-      </xpath>
-      <xpath expr="//tbody[2]/tr/td[4]" position="after">
         <td>
           <span t-field="o.create_uid"/>
         </td>
