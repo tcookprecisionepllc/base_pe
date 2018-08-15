@@ -203,6 +203,7 @@
         <xpath expr="//field[@name='payment_term_id']" position="after">
           <field name="x_number_cancel"/>
           <field name="x_customer_po"/>
+          <field name="legacy_number"/>
         </xpath>
       </field>
     </record>
