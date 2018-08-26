@@ -92,7 +92,7 @@
       <field name="inherit_id" ref="stock.view_move_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <xpath expr="//sheet/group/group[5]" position="after">
+        <xpath expr="//group[@name='linked_group']" position="after">
           <group>
           <field name="counted_by" widget="many2many_tags"/>
           <field name="reversing_move"/>
