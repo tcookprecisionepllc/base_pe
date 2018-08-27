@@ -165,9 +165,9 @@
         <xpath expr="//notebook/page/field/form/group/group/field" position="before">
           <field name="x_line_number"/>
         </xpath>
-        <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
+        <!--<xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
         <field name="invoice_address_email" readonly="1"/>
-        </xpath>
+      </xpath>-->
         <xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
         <field name="shipping_address_email" readonly="1"/>
         <field name="x_legacy_number"/>
@@ -184,9 +184,9 @@
       <field name="inherit_id" ref="account.invoice_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+        <!--<xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
         <field name="invoice_address_email" readonly="1"/>
-        </xpath>
+      </xpath>-->
       </field>
     </record>
     <record model="ir.ui.view" id="sale_account_invoice_form_mod">
