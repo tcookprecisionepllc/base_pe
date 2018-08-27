@@ -11,9 +11,7 @@ class StockMove(models.Model):
 
     product_desc = fields.Text(string="Description",related="product_id.description_picking")
     bin_locations = fields.Many2many(string="Bin Locations",related="product_id.x_shelf_location_tags")
-    #bin_locations = fields.Many2many('x_shelf_locations',string="Bin Locations")
     counted_by = fields.Many2many('res.partner', string="Counted By")
-    #reversing_move_id = fields.Integer('Reversing Move id')
     reversing_move = fields.Many2one('stock.move', string="Reversing Move")
     is_reversing_move = fields.Boolean(string="Is Reversing Move")
 
