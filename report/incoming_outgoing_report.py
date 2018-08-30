@@ -92,13 +92,13 @@ class IncomingOutgoingReport(models.Model):
                     quant.id AS id,
                     quant.product_id AS product_id,
                     product_template.id AS product_tmpl_id,
-                    quant.quantity AS quantity,
+                    quant.qty AS quantity,
                     source_location.id AS location_id,
                     source_location.company_id AS company_id,
-                    (quant.quantity - quant.quantity) AS incoming,
-                    (quant.quantity - quant.quantity) AS outgoing,
-                    (quant.quantity - quant.quantity) AS product_min_qty,
-                    (quant.quantity - quant.quantity) AS product_max_qty,
+                    (quant.qty - quant.qty) AS incoming,
+                    (quant.qty - quant.qty) AS outgoing,
+                    (quant.qty - quant.qty) AS product_min_qty,
+                    (quant.qty - quant.qty) AS product_max_qty,
                     (quant.id > quant.id) AS reorderpoint
                 FROM
                     stock_quant as quant
@@ -108,7 +108,7 @@ class IncomingOutgoingReport(models.Model):
                     product_product ON product_product.id = quant.product_id
                 JOIN
                     product_template ON product_template.id = product_product.product_tmpl_id
-                WHERE quant.quantity>0 AND source_location.usage in ('internal', 'transit'))
+                WHERE quant.qty>0 AND source_location.usage in ('internal', 'transit'))
                 UNION ALL
                 (SELECT
                     (-100000) - move.id AS id,
