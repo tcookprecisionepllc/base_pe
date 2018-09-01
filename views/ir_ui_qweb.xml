@@ -33,6 +33,9 @@
           <th>Qty Pulled</th>
         </tr>
       </xpath>
+      <xpath expr="//t/t/div/div[2]/div/h2" position="after">
+        <h1>Serial Number: <span t-field="o.x_serial_number"/></h1>
+      </xpath>
       <xpath expr="//tbody/t/tr[2]" position="replace">
         <tr t-foreach="o.move_raw_ids.sorted(lambda x: x.product_id.name)" t-as="line">
            <td>
