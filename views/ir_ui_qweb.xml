@@ -16,7 +16,7 @@
       <xpath expr="//t/t/div/div[3]/div[3]" position="after">
         <div class="col-xs-3">
           <strong>Date Pulled:</strong><br/>
-          <strong>Pulled By:</strong><br/>
+          <strong>Pulled By:</strong><br/><br/>
           <strong>Date Completed:</strong><br/>
           <strong>Assembled By:</strong>
         </div>
