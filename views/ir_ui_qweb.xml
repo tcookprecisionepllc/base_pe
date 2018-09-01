@@ -17,6 +17,7 @@
       </xpath>
       <xpath expr="//t/t/div/div[3]/div[3]" position="after">
         <div class="col-xs-3">
+          <strong>Date Pulled:</strong><br/>
           <strong>Date Completed:</strong><br/>
           <strong>Assembled By:</strong>
         </div>
@@ -29,7 +30,6 @@
           <th>Quantity</th>
           <th>Previously Pulled</th>
           <th>Qty Pulled</th>
-          <th>Date Pulled</th>
         </tr>
       </xpath>
       <xpath expr="//tbody/t/tr[2]" position="replace">
