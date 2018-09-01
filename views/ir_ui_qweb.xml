@@ -10,9 +10,7 @@
       <xpath expr="//t/t/div/div[4]/div[3]" position="after">
         <div class="col-xs-3" t-if="'sale_name' in o">
           <strong>SO Number:</strong><br/>
-          <span t-esc="'sale_name' in o and o.sale_name"/><br/>
-          <strong>Serial Number</strong><br/>
-          <span t-field="o.x_serial_number"/>
+          <span t-esc="'sale_name' in o and o.sale_name"/>
         </div>
       </xpath>
       <xpath expr="//t/t/div/div[3]/div[3]" position="after">
