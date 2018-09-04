@@ -7,3 +7,4 @@ class MrpBomLine(models.Model):
     _inherit = "mrp.bom.line"
 
     description = fields.Text(string="Description", related="product_id.description_picking")
+    #1809011048 This field is not showing up in model. See ir_ui_views.xml for the BOM view to be changed
