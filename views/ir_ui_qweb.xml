@@ -54,6 +54,20 @@
            </td>
        </tr>
      </xpath>
+     <xpath expr="//t/t/t/div/div/table/tr[2]/td[3]" position="after">
+       <td class="text-center"><span t-field="line2.description"/></td>
+     </xpath>
+     <xpath expr="//t/t/t/div/div/table/tr[2]/td[1]" position="after">
+       <td class="text-center"> </td>
+       <td class="text-center"> </td>
+     </xpath>
+     <xpath expr="//t/t/t/div/div/table/tr/td[3]" position="after">
+       <td class="text-center"><strong>Description</strong></td>
+     </xpath>
+     <xpath expr="//t/t/t/div/div/table/tr/td[1]" position="before">
+       <td class="text-center"><strong>Initials</strong></td>
+       <td class="text-center"><strong>Date Completed</strong></td>
+     </xpath>
     </field>
   </record>
   <record model="ir.ui.view" id="sale_report_saleorder_document_mod">
