@@ -54,16 +54,27 @@
            </td>
        </tr>
      </xpath>
-     <xpath expr="//t/t/t/div/div/table/tr[2]/td[3]" position="after">
-       <td class="text-center"><span t-field="line2.workcenter_note"/></td>
+     <xpath expr="//t/t/t/div/div/table/tr[2]" position="replace">
+       <tr t-foreach="o.workorder_ids" t-as="line2">
+         <td class="text-center"> </td>
+         <td class="text-center"> </td>
+         <td class="text-center"><span t-field="line2.workcenter_id.sequence"/></td>
+         <td class="text-center"><span t-field="line2.name"/></td>
+         <td class="text-center"><span t-field="line2.workcenter_id.name"/></td>
+         <td class="text-center"><span t-field="line2.duration_expected"/></td>
+         <td class="text-center"><span t-field="line2.workcenter_note"/></td>
+       </tr>
      </xpath>
-     <xpath expr="//t/t/t/div/div/table/tr[2]/td[1]" position="before">
-       <td class="text-center"> </td>
-       <td class="text-center"> </td>
-       <td class="text-center"><span t-field="line2.workcenter_id.sequence"/></td>
-     </xpath>
-     <xpath expr="//t/t/t/div/div/table/tr/td[3]" position="after">
-       <td class="text-center"><strong>Description</strong></td>
+     <xpath expr="//t/t/t/div/div/table/tr[1]" position="replace">
+       <tr>
+         <td class="text-center"><strong>Initials</strong></td>
+         <td class="text-center"><strong>Date Completed</strong></td>
+         <td class="text-center"><strong>Sequence</strong></td>
+         <td class="text-center"><strong>Operation</strong></td>
+         <td class="text-center"><strong>WorkCenter</strong></td>
+         <td class="text-center"><strong>No. Of Minutes</strong></td>
+         <td class="text-center"><strong>Description</strong></td>
+       </tr>
      </xpath>
      <xpath expr="//t/t/t/div/div/table/tr/td[1]" position="replace">
        <td class="text-center"><strong>Operation</strong></td>
