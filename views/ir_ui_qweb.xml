@@ -56,7 +56,7 @@
      </xpath>
      <xpath expr="//t/t/t/div/div/table" position="replace">
       <table class="table table-bordered">
-       <tr t-foreach="o.workorder_ids" t-as="line2">
+       <tr>
          <td class="text-center"><strong>Initials</strong></td>
          <td class="text-center"><strong>Date Completed</strong></td>
          <td class="text-center"><strong>Sequence</strong></td>
@@ -65,7 +65,7 @@
          <td class="text-center"><strong>No. Of Minutes</strong></td>
          <td class="text-center"><strong>Description</strong></td>
        </tr>
-       <tr>
+       <tr t-foreach="o.workorder_ids" t-as="line2">
          <td class="text-center"> </td>
          <td class="text-center"> </td>
          <td class="text-center"><span t-field="line2.operation_id.sequence"/></td>
