@@ -62,7 +62,7 @@
          <td class="text-center"><span t-field="line2.name"/></td>
          <td class="text-center"><span t-field="line2.workcenter_id.name"/></td>
          <td class="text-center"><span t-field="line2.duration_expected"/></td>
-         <td class="text-center"><span t-field="line2.workcenter_id.note"/></td>
+         <td class="text-center"><span t-field="line2.operation_id.note"/></td>
        </tr>
      </xpath>
      <xpath expr="//t/t/t/div/div/table/tr[1]" position="replace">
