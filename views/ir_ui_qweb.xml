@@ -57,7 +57,7 @@
      <xpath expr="//t/t/t/div/div/table/tr[2]/td[3]" position="after">
        <td class="text-center"><span t-field="line2.workcenter_note"/></td>
      </xpath>
-     <xpath expr="//t/t/t/div/div/table/tr[2]/td[1]" position="after">
+     <xpath expr="//t/t/t/div/div/table/tr[2]/td[1]" position="before">
        <td class="text-center"> </td>
        <td class="text-center"> </td>
      </xpath>
