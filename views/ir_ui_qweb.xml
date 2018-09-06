@@ -18,7 +18,9 @@
           <strong>Date Pulled:</strong><br/>
           <strong>Pulled By:</strong><br/><br/>
           <strong>Date Completed:</strong><br/>
-          <strong>Assembled By:</strong>
+          <strong>Assembled By:</strong><br/><br/>
+          <strong>Source loc: <span t-field="o.location_src_id"/></strong><br/>
+          <strong>Dest. loc: <span t-field="o.location_dest_id"/></strong><br/>
         </div>
       </xpath>
       <xpath expr="//thead/tr" position="replace">
