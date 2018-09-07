@@ -258,6 +258,12 @@
           <span t-field="o.create_uid"/>
         </td>
       </xpath>
+      <xpath expr="//t/t/t/div/tbody/tr/td[3]/span" position="replace">
+        <span t-field="o.date_done"/>
+      </xpath>
+      <xpath expr="//t/t/t/div/thead/tr/th[3]" position="replace">
+        <th><strong>Completed Date</strong></th>
+      </xpath>
       <xpath expr="//h1" position="before">
         <h3><strong>ID: </strong><span t-field="o.id"/></h3>
       </xpath>
