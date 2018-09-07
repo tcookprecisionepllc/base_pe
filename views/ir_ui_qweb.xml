@@ -257,7 +257,7 @@
         </td>
       </xpath>
       <xpath expr="//h1" position="before">
-        <strong>ID: </strong><span t-field="o.id"/>
+        <h2><strong>ID: </strong><span t-field="o.id"/></h2>
       </xpath>
     </field>
   </record>
