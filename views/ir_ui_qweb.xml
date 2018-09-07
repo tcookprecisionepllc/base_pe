@@ -162,6 +162,8 @@
           <div><strong>Received Date:</strong></div>
           <div><strong>Entered By:</strong></div>
           <div><strong>Entered Date:</strong></div>
+          <div><strong>Submitted By:</strong></div>
+          <div><strong>Submitted Date:</strong></div>
         </div>
       </xpath>
     </field>
