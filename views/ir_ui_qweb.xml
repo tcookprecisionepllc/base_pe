@@ -256,6 +256,9 @@
           <span t-field="o.create_uid"/>
         </td>
       </xpath>
+      <xpath expr="//h1" position="before">
+        <strong>ID: </strong><span t-field="o.id"/>
+      </xpath>
     </field>
   </record>
   <!--<record model="ir.ui.view" id="mrp_bom_structure_report_mod">
