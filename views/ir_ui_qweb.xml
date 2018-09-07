@@ -158,8 +158,8 @@
       </xpath>
       <xpath expr="//t/div/h2[2]" position="after">
         <div class="row mt32 mb32">
-          <div><strong>Received By:</strong></div>
-          <div><strong>Received Date:</strong></div>
+          <div><strong>Checked In By:</strong></div>
+          <div><strong>Checked In Date:</strong></div>
           <div><strong>Entered By:</strong></div>
           <div><strong>Entered Date:</strong></div>
           <div><strong>Submitted By:</strong></div>
