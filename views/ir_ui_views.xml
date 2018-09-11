@@ -184,6 +184,10 @@
       <field name="inherit_id" ref="account.invoice_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//notebook/page[2]/group/group/field[6]" position="after">
+          <field name="billing_method"/>
+          <field name="date_delivered"/>
+        </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
           <field name="invoice_address_email" readonly="1"/>
         </xpath>
@@ -557,6 +561,39 @@
         </xpath>-->
         <xpath expr="//field[@name='type']" position="after">
           <field name="labor_hours"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="account_invoice_tree_mod">
+      <field name="name">x_aec.account.invoice_tree.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="account.invoice_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//tree" position="replace">
+          <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" string="Invoice">
+            <field name="partner_id" groups="base.group_user" string="Customer"/>
+            <field name="date_invoice"/>
+            <field name="number"/>
+            <field name="commercial_partner_id" invisible="1"/>
+            <field name="reference" invisible="1"/>
+            <field name="name" invisible="1"/>
+            <field name="journal_id" invisible="1"/>
+            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            <field name="user_id"/>
+            <!--<field name="date_due"/>-->
+            <field name="origin"/>
+            <field name="amount_total_signed" string="Total"/>
+            <field name="residual_signed" string="Amount Due"/>
+            <field name="currency_id" invisible="1"/>
+            <field name="company_currency_id" invisible="1"/>
+            <field name="state"/>
+            <field name="type" invisible="context.get('type',True)"/>
+            <field name="billing_method"/>
+            <field name="date_delivered"/>
+          </tree>
         </xpath>
       </field>
     </record>

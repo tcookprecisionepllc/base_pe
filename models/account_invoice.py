@@ -9,3 +9,5 @@ class AccountInvoice(models.Model):
     invoice_address_email = fields.Char("Email Address", related="partner_id.email_temp")
     shipping_address_email = fields.Char("Email Address", related="partner_shipping_id.email_temp")
     legacy_number = fields.Char("Legacy Number")
+    billing_method = field.Selection([('email, _('Email')),('mail', _('Mail')),('fax', _('Fax')),('hand', _('Hand-delivered'))], string='Billing Method', default='email')
+    date_delivered = field.Date('Date Delivered')
