@@ -9,3 +9,4 @@ from . import stock_picking
 from . import sale_order_line
 from . import mrp_bom
 from . import mrp_workorder
+from . import stock_move_operation_link
