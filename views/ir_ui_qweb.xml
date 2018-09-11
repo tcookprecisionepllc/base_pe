@@ -275,7 +275,7 @@
         <th><strong>Completed Date</strong></th>
       </xpath>
       <xpath expr="//h1" position="before">
-        <h3><strong>ID: </strong><span t-field="o.id"/></h3><br/>
+        <h3><strong>ID: </strong><span t-field="o.id"/></h3>
         <h3><strong>Packing Slip Number: </strong><span t-field="o.x_packing_list_no"/></h3>
       </xpath>
     </field>
