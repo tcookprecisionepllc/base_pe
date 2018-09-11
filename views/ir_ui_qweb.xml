@@ -258,16 +258,25 @@
           <span t-field="o.create_uid"/>
         </td>
       </xpath>
+      <xpath expr="//t/t/t/div/table/tbody/tr/td[4]" position="replace">
+        <td>
+          <span t-field="o.create_date"/>
+        </td>
+      </xpath>
       <xpath expr="//t/t/t/div/table/tbody/tr/td[3]" position="replace">
         <td>
           <span t-field="o.date_done"/>
         </td>
       </xpath>
+      <xpath expr="//t/t/t/div/table/thead/tr/th[4]" position="replace">
+        <th><strong>Date Created</strong></th>
+      </xpath>
       <xpath expr="//t/t/t/div/table/thead/tr/th[3]" position="replace">
         <th><strong>Completed Date</strong></th>
       </xpath>
       <xpath expr="//h1" position="before">
-        <h3><strong>ID: </strong><span t-field="o.id"/></h3>
+        <h3><strong>ID: </strong><span t-field="o.id"/></h3><br/>
+        <h3><strong>Packing Slip Number: </strong><span t-field="o.x_packing_list_no"/></h3>
       </xpath>
     </field>
   </record>
