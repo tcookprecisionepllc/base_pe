@@ -531,9 +531,9 @@
         <xpath expr="//field[@name='name']" position="before">
           <field name="id"/>
         </xpath>
-        <xpath expr="//tree" position="attributes">
+        <!--<xpath expr="//tree" position="attributes">
           <attribute name="editable">top</attribute>
-        </xpath>
+        </xpath>-->
       </field>
     </record>
     <record model="ir.ui.view" id="delivery_view_picking_withcarrier_out_form_mod">
