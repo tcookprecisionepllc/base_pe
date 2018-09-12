@@ -165,6 +165,9 @@
         <xpath expr="//notebook/page/field/form/group/group/field" position="before">
           <field name="x_line_number"/>
         </xpath>
+        <xpath expr="//field[@name='confirmation_date']" position="attributes">
+          <attribute name="readonly">0</attribute>
+        </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
           <field name="invoice_address_email" readonly="1"/>
         </xpath>
