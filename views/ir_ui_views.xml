@@ -457,9 +457,6 @@
           <field name="corrective_move_no"/>
           <field name="x_notes"/>
         </xpath>
-        <xpath expr="//field[@name='location_dest_id']" position="after">
-          <field name="x_serial_number"/>
-        </xpath>
         <xpath expr="//field[@name='min_date']" position="after">
           <field name="x_actual_date"/>
           <field name="x_serial_number"/>
