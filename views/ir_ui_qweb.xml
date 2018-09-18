@@ -156,6 +156,12 @@
           <th><strong>Qty Received</strong></th>
         </tr>
       </xpath>
+      <xpath expr="//t/div/div[3]/div[1]" position="replace">
+        <div class="col-xs-3">
+          <strong>Shipping Method:</strong>
+          <p t-field="o.x_shipping_method"/>
+        </div>
+      </xpath>
       <xpath expr="//t/div/h2[2]" position="after">
         <div class="row mt32 mb32">
           <div><strong>Checked In By:</strong></div>
