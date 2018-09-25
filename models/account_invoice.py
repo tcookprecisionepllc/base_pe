@@ -12,3 +12,4 @@ class AccountInvoice(models.Model):
     billing_method = fields.Selection([('email', _('Email')),('mail', _('Mail')),('fax', _('Fax')),('hand', _('Hand-delivered'))], string='Billing Method')
     date_delivered = fields.Date('Date Delivered')
     replaced_by = fields.Char("Replaced By")
+    date_audited = fields.Date('Date Audited')

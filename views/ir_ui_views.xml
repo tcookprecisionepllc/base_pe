@@ -189,6 +189,7 @@
       <field name="arch" type="xml">
         <xpath expr="//notebook/page[2]/group/group[2]/field[3]" position="after">
           <field name="replaced_by"/>
+          <field name="date_audited"/>
         </xpath>
         <xpath expr="//notebook/page[2]/group/group/field[6]" position="after">
           <field name="billing_method"/>
@@ -603,6 +604,7 @@
             <field name="billing_method"/>
             <field name="date_delivered"/>
             <field name="replaced_by"/>
+            <field name="date_audited"/>
           </tree>
         </xpath>
       </field>
