@@ -585,6 +585,7 @@
             <field name="id"/>
             <field name="partner_id" groups="base.group_user" string="Customer"/>
             <field name="date_invoice"/>
+            <field name="create_date"/>
             <field name="number"/>
             <field name="commercial_partner_id" invisible="1"/>
             <field name="reference" invisible="1"/>
