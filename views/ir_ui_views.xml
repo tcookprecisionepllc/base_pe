@@ -187,6 +187,9 @@
       <field name="inherit_id" ref="account.invoice_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
+        <xpath expr="//notebook/page[2]/group/group[2]/field[3]" position="after">
+          <field name="replaced_by"/>
+        </xpath>
         <xpath expr="//notebook/page[2]/group/group/field[6]" position="after">
           <field name="billing_method"/>
           <field name="date_delivered"/>
@@ -254,6 +257,7 @@
         <xpath expr="//field[@name='number']" position="after">
           <field name="x_number_cancel"/>
           <field name="x_customer_po"/>
+          <field name="replaced_by"/>
         </xpath>
       </field>
     </record>
