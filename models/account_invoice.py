@@ -13,3 +13,4 @@ class AccountInvoice(models.Model):
     date_delivered = fields.Date('Date Delivered')
     replaced_by = fields.Char("Replaced By")
     date_audited = fields.Date('Date Audited')
+    notes = fields.Char("Notes")
