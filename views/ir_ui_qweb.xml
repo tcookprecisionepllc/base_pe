@@ -306,7 +306,7 @@
       <xpath expr="//t/t/t/div/table/thead/tr/th[3]" position="replace">
         <th><strong>Completed Date</strong></th>
       </xpath>
-      <xpath expr="//h1" position="replace">
+      <!--<xpath expr="//h1" position="replace">
         <table>
           <tr>
             <td>
@@ -323,7 +323,7 @@
             </td>
           </tr>
         </table>
-      </xpath>
+      </xpath>-->
     </field>
   </record>
   <!--<record model="ir.ui.view" id="mrp_bom_structure_report_mod">
