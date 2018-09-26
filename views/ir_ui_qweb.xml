@@ -276,10 +276,10 @@
       <xpath expr="//div/table[2]/thead/tr/th[5]" position="replace">
         <th><strong>Completed</strong></th>
       </xpath>
-      <xpath expr="//div/table[2]]/thead/tr/t[2]" position="replace">
+      <xpath expr="//div/table[2]/thead/tr/t[2]" position="replace">
         <th><strong>Destination</strong></th>
       </xpath>
-      <xpath expr="//div/table[2]]/thead/tr/t[1]" position="replace">
+      <xpath expr="//div/table[2]/thead/tr/t[1]" position="replace">
         <th><strong>Source</strong></th>
       </xpath>
       <xpath expr="//thead[1]/tr/th[4]" position="after">
