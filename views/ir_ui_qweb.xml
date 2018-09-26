@@ -315,11 +315,11 @@
               <h3><strong>Packing Slip Number: </strong><span t-field="o.x_packing_list_no"/></h3>
             </td>
             <td>
-              <strong>Date Pulled:</strong></br>
-              <strong>Pulled By:</strong></br>
-              <strong>Checked By:</strong></br>
-              <strong>Carrier:</strong></br>
-              <strong>Tracking Number(s):</strong></br>
+              <strong>Date Pulled:</strong><br/>
+              <strong>Pulled By:</strong><br/>
+              <strong>Checked By:</strong><br/>
+              <strong>Carrier:</strong><br/>
+              <strong>Tracking Number(s):</strong>
             </td>
           </tr>
         </table>
