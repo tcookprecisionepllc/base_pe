@@ -259,14 +259,14 @@
       <xpath expr="//t/t/t/div/p[2]" position="after">
         <p t-field="o.x_notes"/>
       </xpath>
-      <!--<xpath expr="//div/table[2]/tbody/tr/t[2]" position="replace">
+      <xpath expr="//div/table[2]/tbody/tr/t[2]" position="replace">
         <td>
           <span t-field="pack_operation.location_dest_id"/>
           <span t-if="pack_operation.result_package_id">:</span>
           <span t-field="pack_operation.result_package_id"/>
         </td>
       </xpath>
-      <xpath expr="//div/table[2]/tbody/tr/t[1]" position="replace">
+      <!--<xpath expr="//div/table[2]/tbody/tr/t[1]" position="replace">
         <td>
           <span t-field="pack_operation.location_id"/>
           <span t-if="pack_operation.package_id">:</span>
