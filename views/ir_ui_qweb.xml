@@ -314,7 +314,7 @@
               <h3><strong>ID: </strong><span t-field="o.id"/></h3><br/>
               <h3><strong>Packing Slip Number: </strong><span t-field="o.x_packing_list_no"/></h3>
             </td>
-            <td><div style="width: 15%"/></td>
+            <td><div style="width: 15%"></div></td>
             <td>
               <strong>Date Pulled:</strong><br/>
               <strong>Pulled By:</strong><br/>
