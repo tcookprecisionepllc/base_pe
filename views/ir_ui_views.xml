@@ -176,6 +176,7 @@
         <field name="x_legacy_number"/>
         <field name="x_customer_po"/>
         <field name="x_reference_number"/>
+        <field name="sale_deadline"/>
         </xpath>
       </field>
     </record>
@@ -416,6 +417,7 @@
         <xpath expr="//field[@name='state']" position="after">
           <field name="invoice_status"/>
           <field name="x_legacy_number"/>
+          <field name="sale_deadline"/>
         </xpath>
       </field>
     </record>
