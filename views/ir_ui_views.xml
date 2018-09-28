@@ -305,7 +305,7 @@
         <xpath expr="//field[@name='company_id']" position="before">
           <field name="cost_custom"/>
           <field name="cost_entered_by"/>
-          <field name="cost_entered_date"/>
+          <field name="cost_entered_date"/><br/><br/>
         </xpath>
         <xpath expr="//field[@name='type']" position="after">
           <field name="x_33_no"/>
