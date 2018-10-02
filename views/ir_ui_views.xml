@@ -450,7 +450,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='product_uom_qty']" position="after">
-          <field name="qty_counted" widget="char"/>
+          <field name="qty_counted" attrs="{'invisible':[('qty_counted','=',0.0)]}"/>
           <field name="zero_counted"/>
         </xpath>
         <xpath expr="//field[@name='name']" position="before">
