@@ -14,6 +14,7 @@ class StockMove(models.Model):
     counted_by = fields.Many2many('res.partner', string="Counted By")
     reversing_move = fields.Many2one('stock.move', string="Reversing Move")
     is_reversing_move = fields.Boolean(string="Is Reversing Move")
+    qty_counted = fields.Float('Quantity Counted')
 
     #@api.model
     #def my_example(self):
