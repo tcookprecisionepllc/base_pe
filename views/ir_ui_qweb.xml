@@ -311,7 +311,7 @@
           <tr>
             <td>
               <h1 t-field="o.name" class="mt0"/><br/>
-              <h3><strong>ID: </strong><span t-field="o.id"/></h3><br/>
+              <h3><strong>ID: </strong><span t-field="o.id" t-esc-options='{"widget": "char"}'/></h3><br/>
               <h3><strong>Packing Slip Number: </strong><span t-field="o.x_packing_list_no"/></h3>
             </td>
             <td width="15%"></td>
