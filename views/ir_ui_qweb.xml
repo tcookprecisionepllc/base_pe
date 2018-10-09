@@ -335,12 +335,12 @@
     <field name="inherit_id" ref="account.report_overdue_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/div/div/t/table/tr/td[1]" position="after">
+      <xpath expr="//table/tr/td[1]" position="after">
         <td>
           <span t-esc="line['x_customer_po']"/>
         </td>
       </xpath>
-      <xpath expr="//t/div/div/t/table/thead/th[1]" position="after">
+      <xpath expr="//table/thead/th[1]" position="after">
         <th class="text-center">Invoice Number</th>
         <th class="text-center">Customer PO</th>
       </xpath>
