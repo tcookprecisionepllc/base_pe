@@ -340,7 +340,7 @@
           <span t-esc="line['x_customer_po']"/>
         </td>
       </xpath>
-      <xpath expr="//table/thead/th[1]" position="after">
+      <xpath expr="//table/thead/tr/th[1]" position="after">
         <th class="text-center">Invoice Number</th>
         <th class="text-center">Customer PO</th>
       </xpath>
