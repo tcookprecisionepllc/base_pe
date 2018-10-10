@@ -114,6 +114,8 @@
       <field name="arch" type="xml">
         <xpath expr="//field[@name='state']" position="after">
           <field name="x_serial_number"/>
+          <field name="location_dest_id"/>
+          <field name="location_src_id"/>
           <field name="corrections_submitted_date"/>
           <field name="moves_corrected_date"/>
           <field name="no_correction"/>
