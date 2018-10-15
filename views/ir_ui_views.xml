@@ -355,6 +355,7 @@
         </xpath>
         <xpath expr="//field[@name='date_order']" position="after">
           <field name="x_actual_date"/>
+          <field name="origin_custom"/>
           <field name="x_closed"/>
         </xpath>
         <xpath expr="//field[@name='partner_ref']" position="after">
@@ -385,6 +386,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='invoice_status']" position="after">
+          <field name="origin_custom"/>
           <field name="x_closed"/>
         </xpath>
       </field>
