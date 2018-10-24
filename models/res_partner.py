@@ -7,4 +7,4 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     email_temp = fields.Char('Email Address')
-    salesperson_custom = fields.Many2one('res.users','Custom Salesperson')
+    salesperson_custom = fields.Many2one('product.template','Custom Salesperson')
