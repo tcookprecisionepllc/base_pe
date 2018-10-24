@@ -140,7 +140,7 @@
           <field name="email_temp"/>
         </xpath>
         <xpath expr="//field[@name='user_id']" position="replace">
-          <field name="salesperson_custom"/>
+          <field name="test"/>
         </xpath>
       </field>
     </record>
