@@ -139,9 +139,9 @@
           <field name="email" readonly="1"/>
           <field name="email_temp"/>
         </xpath>
-        <!--<xpath expr="//field[@name='user_id']" position="replace">
-          <field name="test"/>
-        </xpath>-->
+        <xpath expr="//field[@name='user_id']" position="replace">
+          <field name="test2"/>
+        </xpath>
       </field>
     </record>
     <record model="ir.ui.view" id="sale_view_order_form_mod">
