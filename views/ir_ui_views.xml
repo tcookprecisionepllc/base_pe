@@ -643,7 +643,7 @@
         <xpath expr="//field[@name='email']" position="after">
           <field name="property_product_pricelist"/>
         </xpath>
-        <xpath expr="//field[@name='display_name']" position="after">
+        <xpath expr="//field[@name='display_name']" position="before">
           <field name="id"/>
         </xpath>
       </field>
