@@ -8,4 +8,4 @@ class ResPartner(models.Model):
 
     email_temp = fields.Char('Email Address')
     #salesperson_custom = fields.Many2one('product.template','Custom Salesperson')
-    salesperson = fields.Many2one('res.partner',string="Salesperson")
+    #salesperson = fields.Many2one('res.partner',string="Salesperson")
