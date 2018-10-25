@@ -167,6 +167,9 @@
         <xpath expr="//notebook/page[2]/group/group[3]" position="after">
           <field name="x_notes"/>
         </xpath>
+        <xpath expr="//field[@name='user_id']" position="after">
+          <field name="salesperson_from_partner"/>
+        </xpath>
         <xpath expr="//tree/field[@name='sequence']" position="after">
           <field name="x_line_number"/>
         </xpath>
