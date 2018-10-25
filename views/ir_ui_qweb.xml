@@ -248,7 +248,7 @@
         </div>
       </xpath>
       <xpath expr="//t/div/div[3]/div[3]" position="replace">
-        <div t-if="doc.salesperson_from_partner.display_name" class="col-xs-3">
+        <div t-if="doc.salesperson_from_partner" class="col-xs-3">
           <strong>Salesperson:</strong>
           <p t-field="doc.salesperson_from_partner"/>
         </div>
