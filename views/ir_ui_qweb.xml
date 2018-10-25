@@ -247,6 +247,16 @@
           <p t-field="doc.x_reference_number"/>
         </div>
       </xpath>
+      <xpath expr="//t/div/div[3]/div[3]" position="replace">
+        <div t-if="doc.salesperson_from_partner.display_name" class="col-xs-3">
+          <strong>Salesperson:</strong>
+          <p t-field="doc.salesperson_from_partner"/>
+        </div>
+        <div t-if="doc.user_id.name" class="col-xs-3">
+          <strong>Created By:</strong>
+          <p t-field="doc.user_id"/>
+        </div>
+      </xpath>
     </field>
   </record>
   <record model="ir.ui.view" id="stock_report_picking_mod">
