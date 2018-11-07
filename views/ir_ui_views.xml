@@ -548,25 +548,29 @@
       <field name="inherit_id" ref="stock.vpicktree"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='picking_type_id']" position="after">
-          <field name="x_corrected_by_move_no"/>
-          <field name="replacement_move_no"/>
-          <field name="corrective_move_no"/>
-          <field name="x_date_audited"/>
+        <xpath expr="//tree" position="replace">
+          <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" decoration-danger="state not in ('cancel', 'done') and min_date &lt; current_date" string="Picking list">
+            <field name="id"/>
+            <field name="name"/>
+            <field name="location_id"/>
+            <field name="location_dest_id"/>
+            <field name="partner_id"/>
+            <field name="x_packing_list_no"/>
+            <field name="date_done"/>
+            <field name="create_date"/>
+            <field name="date" invisible="1"/>
+            <field name="origin"/>
+            <field name="group_id" invisible="1"/>
+            <field name="backorder_id"/>
+            <field name="state"/>
+            <field name="priority" invisible="1"/>
+            <field name="picking_type_id" invisible="1"/>
+            <field name="x_corrected_by_move_no"/>
+            <field name="replacement_move_no"/>
+            <field name="corrective_move_no"/>
+            <field name="x_date_audited"/>
+        </tree>
         </xpath>
-        <xpath expr="//field[@name='partner_id']" position="after">
-          <field name="date_done"/>
-          <field name="create_date"/>
-        </xpath>
-        <xpath expr="//field[@name='name']" position="after">
-          <field name="location_id"/>
-        </xpath>
-        <xpath expr="//field[@name='name']" position="before">
-          <field name="id"/>
-        </xpath>
-        <!--<xpath expr="//tree" position="attributes">
-          <attribute name="editable">top</attribute>
-        </xpath>-->
       </field>
     </record>
     <record model="ir.ui.view" id="delivery_view_picking_withcarrier_out_form_mod">
