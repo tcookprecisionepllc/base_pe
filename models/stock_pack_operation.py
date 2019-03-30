@@ -7,4 +7,4 @@ class StockPackOperation(models.Model):
     _inherit = "stock.pack.operation"
 
     price_unit = fields.Float("Unit Price")
-    bin_locations = fields.Many2many(string="Bin Locations",related="product_id.x_shelf_location_tags")
+    #bin_locations = fields.Many2many(string="Bin Locations",related="product_id.x_shelf_location_tags")

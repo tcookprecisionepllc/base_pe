@@ -284,7 +284,7 @@
         </td>
       </xpath>
       <xpath expr="//div/table[2]/thead/tr/th[5]" position="replace">
-        <th><strong>Completed TEST</strong></th>
+        <th><strong>Completed</strong></th>
       </xpath>
       <xpath expr="//div/table[2]/thead/tr/t[2]" position="replace">
         <th><strong>Destination</strong></th>
