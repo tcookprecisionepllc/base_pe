@@ -337,6 +337,9 @@
           </tr>
         </table>
       </xpath>
+      <xpath expr="//table[2]/tbody/tr/td/span[2]" position="after">
+        <span t-esc="', '.join(pack_operation.product_id.bin_locations.mapped('x_name'))"/><br/>
+      </xpath>
     </field>
   </record>
   <!--<record model="ir.ui.view" id="account_report_overdue_document_mod">
