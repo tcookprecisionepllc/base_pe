@@ -339,6 +339,7 @@
       </xpath>
       <xpath expr="//table[2]/tbody/tr/td/span[2]" position="after">
         <span t-esc="', '.join(pack_operation.product_id.bin_locations.mapped('x_name'))"/>TEST<br/>
+        <span t-field="pack_operation.product_id.id"/><br/>
       </xpath>
     </field>
   </record>
