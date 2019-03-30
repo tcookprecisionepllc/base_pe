@@ -284,7 +284,7 @@
         </td>
       </xpath>
       <xpath expr="//div/table[2]/thead/tr/th[5]" position="replace">
-        <th><strong>Completed</strong></th>
+        <th><strong>Completed TEST</strong></th>
       </xpath>
       <xpath expr="//div/table[2]/thead/tr/t[2]" position="replace">
         <th><strong>Destination</strong></th>
@@ -337,10 +337,10 @@
           </tr>
         </table>
       </xpath>
-      <xpath expr="//table[2]/tbody/tr/td/span[2]" position="after">
+      <!--<xpath expr="//table[2]/tbody/tr/td/span[2]" position="after">
         <span t-esc="', '.join(pack_operation.product_id.bin_locations.mapped('x_name'))"/>TEST<br/>
         <span t-field="pack_operation.product_id.id"/><br/>
-      </xpath>
+      </xpath>-->
     </field>
   </record>
   <!--<record model="ir.ui.view" id="account_report_overdue_document_mod">
