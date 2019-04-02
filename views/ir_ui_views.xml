@@ -162,7 +162,7 @@
           <field name="product_internal_category"/>
         </xpath>
         <xpath expr="//div[@name='discount']" position="after">
-          <field name="product_internal_category"/>
+          <field name="product_internal_category" readonly="1"/>
         </xpath>
         <xpath expr="//notebook/page[2]/group/group[3]" position="after">
           <field name="x_notes"/>
