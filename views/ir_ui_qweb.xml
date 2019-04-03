@@ -266,7 +266,7 @@
     <field name="inherit_id" ref="stock.report_picking"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//div[1]" position="after">
+      <xpath expr="//div[1]" position="replace">
         <div class="page">
               <br/>
               <div class="row">
