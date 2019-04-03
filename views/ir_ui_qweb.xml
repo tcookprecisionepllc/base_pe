@@ -372,14 +372,15 @@
                                 <tr t-foreach="pack_operation_ids" t-as="pack_operation">
                                     <td><span t-field="pack_operation.product_id"/><br/>
                                         <span t-field="pack_operation.product_id.description_picking"/>
-                                        <t t-if="not pack_operation.product_id and pack_operation.package_id"><span t-field="pack_operation.package_id"/></t></td>
+                                        <t t-if="not pack_operation.product_id and pack_operation.package_id"><span t-field="pack_operation.package_id"/></t>
+                                      </td>
                                     <td class="text-right"><span t-field="pack_operation.product_qty"/> <span t-field="pack_operation.product_uom_id" groups="product.group_uom"/></td>
                                       <td>
                                         <span t-field="pack_operation.location_id"/>
                                         <span t-if="pack_operation.package_id">:</span>
                                         <span t-field="pack_operation.package_id"/>
                                       </td>
-                                    <td t-if="has_barcode">
+                                      <td t-if="has_barcode">
                                         <span t-if="pack_operation.product_id and pack_operation.product_id.barcode">
                                             <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', pack_operation.product_id.barcode, 600, 100)" style="width:300px;height:50px"/>
                                         </span>
@@ -409,7 +410,51 @@
                                       </td>
                                 </tr>
                               </tbody>
-                          </table>
+                              <t t-if="o.state in ['draft', 'waiting', 'confirmed']">
+                                <t t-set="picking_operation_ids" t-value="o.picking_operation_ids"/>
+                                <t groups="base.group_portal" t-set="picking_operation_ids" t-value="o.picking_operation_ids.sudo()"/>
+                                <tr t-foreach="picking_operation_ids" t-as="picking_operation">
+                                    <td><span t-field="picking_operation.product_id"/><br/>
+                                        <span t-field="picking_operation.product_id.description_picking"/>
+                                        <t t-if="not picking_operation.product_id and picking_operation.package_id"><span t-field="picking_operation.package_id"/></t>
+                                      </td>
+                                    <td class="text-right"><span t-field="picking_operation.product_qty"/> <span t-field="picking_operation.product_uom_id" groups="product.group_uom"/></td>
+                                      <td>
+                                        <span t-field="picking_operation.location_id"/>
+                                        <span t-if="picking_operation.package_id">:</span>
+                                        <span t-field="picking_operation.package_id"/>
+                                      </td>
+                                      <td t-if="has_barcode">
+                                        <span t-if="picking_operation.product_id and picking_operation.product_id.barcode">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', picking_operation.product_id.barcode, 600, 100)" style="width:300px;height:50px"/>
+                                        </span>
+                                        <span t-if="picking_operation.package_id and not picking_operation.product_id">
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', picking_operation.package_id.name, 600, 100)" style="width:300px;height:50px"/>
+                                        </span>
+                                    </td>
+                                    <td t-if="has_serial_number">
+                                        <table class="table table-condensed" t-if="picking_operation.picking_lot_ids">
+                                            <tr t-foreach="picking_operation.picking_lot_ids" t-as="picklot">
+                                                <td>
+                                                    <span t-field="picklot.lot_id"/>
+                                                    <t t-if="not picklot.lot_id">
+                                                        <span t-field="picklot.lot_name"/>
+                                                    </t>
+                                                </td>
+                                                <td>
+                                                    <span t-field="picklot.qty"/> <t t-if="o.picking_type_id.use_existing_lots and o.state!='done'"> / <span t-field="picklot.qty_todo"/></t>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                      <td>
+                                        <span t-field="picking_operation.location_dest_id"/>
+                                        <span t-if="picking_operation.result_package_id">:</span>
+                                        <span t-field="picking_operation.result_package_id"/>
+                                      </td>
+                                </tr>
+                              </t>
+                            </table>
                           <p t-if="o.state in ['draft', 'waiting', 'confirmed']">
                             You do not have any products reserved for this picking.  Please click the 'Reserve' button
                             to check if products are available.
