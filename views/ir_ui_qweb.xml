@@ -266,10 +266,8 @@
     <field name="inherit_id" ref="stock.report_picking"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t" position="after">
-        <t t-foreach="docs" t-as="o">
-          <t t-call="stock.external_layout_barcode_right">
-            <div class="page">
+      <xpath expr="//div[1]" position="after">
+        <div class="page">
               <br/>
               <div class="row">
                 <div class="col-xs-6">
@@ -419,8 +417,6 @@
                           <p t-field="o.note"/>
                           <p t-field="o.x_notes"/>
                         </div>
-                      </t>
-                    </t>
                   </xpath>
       <!--<xpath expr="//t/t/t/div/p[2]" position="after">
         <p t-field="o.x_notes"/>
