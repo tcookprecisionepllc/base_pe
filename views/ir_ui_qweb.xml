@@ -434,7 +434,7 @@
                                   <td><span t-field="move.product_id"/><br/>
                                       <span t-field="move.product_id.description_picking"/>
                                     </td>
-                                  <td class="text-right"><span t-field="move.product_qty"/> <span t-field="move.product_uom_id" groups="product.group_uom"/></td>
+                                  <td class="text-right"><span t-field="move.product_qty"/></td>
                                     <td>
                                       <span t-field="move.location_id"/>
                                     </td>
