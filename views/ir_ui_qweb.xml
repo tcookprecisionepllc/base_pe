@@ -321,7 +321,7 @@
                                   <thead>
                                     <tr>
                                       <th t-if="o.origin"><strong>Order (Origin)</strong></th>
-                                      <th><strong>Job Ticket</th>
+                                      <th><strong>Job Ticket</strong></th>
                                       <th><strong>State</strong></th>
                                       <th><strong>Completed Date</strong></th>
                                       <th><strong>Date Created</strong></th>
