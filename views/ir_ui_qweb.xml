@@ -321,6 +321,7 @@
                                   <thead>
                                     <tr>
                                       <th t-if="o.origin"><strong>Order (Origin)</strong></th>
+                                      <th><strong>Job Ticket</th>
                                       <th><strong>State</strong></th>
                                       <th><strong>Completed Date</strong></th>
                                       <th><strong>Date Created</strong></th>
@@ -331,6 +332,9 @@
                                     <tr>
                                       <td t-if="o.origin">
                                         <span t-field="o.origin"/>
+                                      </td>
+                                      <td>
+                                        <span t-field="o.job_ticket_number"/>
                                       </td>
                                       <td>
                                         <span t-field="o.state"/>

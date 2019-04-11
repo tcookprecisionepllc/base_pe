@@ -11,3 +11,4 @@ class SaleOrder(models.Model):
     sale_deadline = fields.Date('Sale Deadline')
     user_id = fields.Many2one('res.users', string='Created By', index=True, track_visibility='onchange', default=lambda self: self.env.user)
     salesperson_from_partner = fields.Char(string="Salesperson", related="partner_id.salesperson.display_name")
+    job_ticket_number = fields.Char(string='Job Ticket Number')
