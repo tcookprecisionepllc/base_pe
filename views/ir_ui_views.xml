@@ -94,6 +94,7 @@
       <field name="arch" type="xml">
         <xpath expr="//group[@name='moved_quants_grp']" position="after">
           <group>
+            <field name="date_actual">
             <field name="qty_counted" widget="char"/>
             <field name="zero_counted"/>
             <field name="counted_by" widget="many2many_tags"/>

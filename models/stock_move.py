@@ -16,6 +16,7 @@ class StockMove(models.Model):
     is_reversing_move = fields.Boolean(string="Is Reversing Move")
     qty_counted = fields.Float('Quantity Counted')
     zero_counted = fields.Boolean(string="Zero Counted")
+    date_actual = fields.Datetime(string="Actual Date")
 
     #@api.model
     #def my_example(self):
