@@ -474,6 +474,7 @@
         </xpath>
         <xpath expr="//field[@name='date']" position="replace">
           <field name="date"/>
+          <field name="date_actual"/>
         </xpath>
       </field>
     </record>
