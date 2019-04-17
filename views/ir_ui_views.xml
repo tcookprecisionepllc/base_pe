@@ -500,7 +500,7 @@
         </xpath>
         <xpath expr="//field[@name='backorder_id']" position="after">
           <field name="x_packing_list_no"/>
-          <field name="job_ticket_number"/>
+          <field name="job_ticket_number" attrs="{'readonly': True}"/>
         </xpath>
       </field>
     </record>
