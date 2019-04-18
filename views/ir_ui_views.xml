@@ -604,9 +604,9 @@
         <!--<xpath expr="//page/field/tree/field[@name='product_id']" position="after">
           <field name="description"/>
         </xpath>-->
-        <xpath expr="//field[@name='has_attachments']" position="before">
+        <!--<xpath expr="//field[@name='has_attachments']" position="before">
           <field name="product_id.description_picking"/>
-        </xpath>
+        </xpath>-->
         <xpath expr="//field[@name='type']" position="after">
           <field name="labor_hours"/>
         </xpath>
