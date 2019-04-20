@@ -316,29 +316,29 @@
                                     <td><span t-field="o.x_packing_list_no"/></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Date Validated:</strong></td><td></td>
+                                    <td width="25%"><strong>Date Validated:</strong></td><td width="25%"></td>
                                     <td width="25%"><strong>Validated By:</strong></td><td></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Date Received:</strong></td><td></td>
+                                    <td width="25%"><strong>Date Received:</strong></td><td width="25%"></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Date Pulled/Stocked:</strong></td><td></td>
+                                    <td width="25%"><strong>Date Pulled/Stocked:</strong></td><td width="25%"></td>
                                     <td width="25%"><strong>Pulled/Stocked By:</strong></td><td></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Date Checked:</strong></td><td></td>
+                                    <td width="25%"><strong>Date Checked:</strong></td><td width="25%"></td>
                                     <td width="25%"><strong>Checked By:</strong></td><td></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Carrier:</strong></td><td></td>
+                                    <td width="25%"><strong>Carrier:</strong></td><td width="25%"></td>
                                     <td width="25%"><strong>Tracking Number(s):</strong></td><td></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Weights and Dimensions:</strong></td><td></td>
+                                    <td width="25%"><strong>Weights and Dimensions:</strong></td><td width="25%"></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Freight Charge:</strong></td><td></td>
+                                    <td width="25%"><strong>Freight Charge:</strong></td><td width="25%"></td>
                                     <td width="25%"><strong>Freight PO:</strong></td><td></td>
                                   </tr>
                                 </table>
