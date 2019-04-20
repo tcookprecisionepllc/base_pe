@@ -95,6 +95,7 @@
         <xpath expr="//group[@name='moved_quants_grp']" position="after">
           <group>
             <field name="date_actual"/>
+            <field name="date_received"/>
             <field name="qty_counted" widget="char"/>
             <field name="zero_counted"/>
             <field name="counted_by" widget="many2many_tags"/>
@@ -495,6 +496,7 @@
         </xpath>
         <xpath expr="//field[@name='min_date']" position="after">
           <field name="x_actual_date"/>
+          <field name="date_recieved"/>
           <field name="x_serial_number"/>
           <field name="x_date_audited"/>
         </xpath>

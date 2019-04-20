@@ -17,6 +17,7 @@ class StockMove(models.Model):
     qty_counted = fields.Float('Quantity Counted')
     zero_counted = fields.Boolean(string="Zero Counted")
     date_actual = fields.Datetime(string="Actual Date")
+    date_received = fields.Datetime(string="Date Received")
 
     #@api.model
     #def my_example(self):

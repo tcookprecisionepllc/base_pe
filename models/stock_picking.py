@@ -9,3 +9,4 @@ class StockMove(models.Model):
     replacement_move_no = fields.Char("Replacement Move")
     corrective_move_no = fields.Char("Corrective Move")
     job_ticket_number = fields.Char(string='Job Ticket Number', related="sale_id.job_ticket_number")
+    date_received = fields.Datetime(string="Date Received")
