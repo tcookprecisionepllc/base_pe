@@ -496,7 +496,7 @@
         </xpath>
         <xpath expr="//field[@name='min_date']" position="after">
           <field name="x_actual_date"/>
-          <field name="date_recieved"/>
+          <field name="date_received"/>
           <field name="x_serial_number"/>
           <field name="x_date_audited"/>
         </xpath>
