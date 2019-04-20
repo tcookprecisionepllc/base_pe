@@ -13,13 +13,21 @@
           <span t-esc="'sale_name' in o and o.sale_name"/>
         </div>
       </xpath>-->
-      <xpath expr="//t/t/div/div[3]/div[3]" position="after">
-        <div class="col-xs-3">
-          <strong>Date Pulled:</strong><br/>
-          <strong>Pulled By:</strong><br/><br/>
-          <strong>Date Completed:</strong><br/>
-          <strong>Assembled By:</strong>
-        </div>
+      <xpath expr="//t/t/div/div[4]" position="after">
+        <table class="table table-bordered">
+          <tr>
+            <td width="25%"><strong>Date Pulled:</strong></td><td></td>
+            <td width="25%"><strong>Pulled By:</strong></td><td></td>
+          </tr>
+          <tr>
+            <td width="25%"><strong>Date Completed:</strong></td><td></td>
+            <td width="25%"><strong>Assembled By:</strong></td><td></td>
+          </tr>
+          <tr>
+            <td width="25%"><strong>Date Processed:</strong></td><td></td>
+            <td width="25%"><strong>Processed By:</strong></td><td></td>
+          </tr>
+        </table>
       </xpath>
       <xpath expr="//thead/tr" position="replace">
         <tr>
