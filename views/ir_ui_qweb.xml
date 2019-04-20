@@ -300,6 +300,7 @@
                                 <table>
                                   <tr>
                                     <td><h1 t-field="o.name" class="mt0"/></td>
+                                    <td width="15%"></td>
                                     <td><h3><strong>ID: </strong><span t-field="o.id"/></h3></td>
                                   </tr>
                                 </table>
