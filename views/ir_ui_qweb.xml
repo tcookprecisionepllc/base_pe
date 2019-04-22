@@ -153,6 +153,30 @@
           <span t-field="line.x_line_number"/>
         </td>
       </xpath>
+      <xpath expr="//table/tbody/tr" position="replace">
+        <tr t-foreach="o.order_line" t-as="line">
+          <td>
+            <span t-field="line.name"/>
+          </td>
+          <td>
+            <span t-esc="', '.join(map(lambda x: x.name, line.taxes_id))"/>
+          </td>
+          <td class="text-center">
+            <span t-field="line.date_planned"/>
+          </td>
+          <td class="text-right">
+            <span t-field="line.product_qty"/>
+            <span t-field="line.product_uom.name" groups="product.group_uom"/>
+          </td>
+          <td class="text-right">
+            <span t-field="line.price_unit"/>
+          </td>
+          <td class="text-right">
+            <span t-field="line.price_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+          </td>
+          <td style="border: 1px solid black"></td>
+        </tr>
+      </xpath>
       <xpath expr="//table/thead/tr" position="replace">
         <tr>
           <th><strong>Line</strong></th>
