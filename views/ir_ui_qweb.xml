@@ -60,6 +60,7 @@
            <td>
              <span t-field="line.quantity_done"/>
            </td>
+           <td style="border: 1px solid black"></td>
        </tr>
      </xpath>
      <xpath expr="//t/t/t/div/div/table" position="replace">
