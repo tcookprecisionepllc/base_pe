@@ -11,5 +11,5 @@ class StockMove(models.Model):
     job_ticket_number = fields.Char(string='Job Ticket Number', related="sale_id.job_ticket_number")
     date_received = fields.Datetime(string="Date Received")
     date_checked = fields.Datetime(string="Date Checked")
-    #checked_by = fields.Many2one('res.partner','Checked By')
-    #stocked_by = fields.Many2one('res.partner','Stocked By')
+    checked_by = fields.Many2one('res.partner','Checked By')
+    stocked_by = fields.Many2one('res.partner','Stocked By')
