@@ -507,6 +507,7 @@
                                     <td>
                                       <span t-field="move.location_dest_id"/>
                                     </td>
+                                    <td style="border: 1px solid black"></td>
                               </tr>
                           </tbody>
                         </table>
