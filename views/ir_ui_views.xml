@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="view_incoming_outgoing_report_tree">
+      <field name="name">x_gfp.incoming.outgoing.report.tree</field>
+      <field name="model">incoming.outgoing.report</field>
+      <field name="mode">primary</field>
+      <field name="type">tree</field>
+      <field name="inherit_id" eval="False"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+          <tree string="Rebalancing Report" create="0" delete="0">
+              <field name="reorderpoint"/>
+              <field name="past_ninety_sales"/>
+              <field name="location_id"/>
+              <field name="product_id"/>
+              <field name="product_template_id"/>
+              <field name="incoming"/>
+              <field name="quantity"/>
+              <field name="outgoing"/>
+              <field name="net_available"/>
+          </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="view_incoming_outgoing_report_pivot">
+      <field name="name">x_gfp.incoming.outgoing.report.pivot</field>
+      <field name="model">incoming.outgoing.report</field>
+      <field name="mode">primary</field>
+      <field name="type">pivot</field>
+      <field name="inherit_id" eval="False"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+          <pivot string="Rebalancing Report" disable_linking="True">
+               <field name="location_id" type="row"/>
+               <field name="product_id" type="row"/>
+               <field name="product_min_qty" type="measure"/>
+               <field name="incoming" type="measure"/>
+               <field name="quantity" type="measure"/>
+               <field name="outgoing" type="measure"/>
+               <field name="available" type="measure"/>
+               <field name="net_available" type="measure"/>
+           </pivot>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="mrp_production_form_view_mod">
+      <field name="name">x_gfp.mrp.production.form.mod</field>
+      <field name="model">mrp.production</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='routing_id']" position="after">
+          <field name="x_legacy_number"/>
+        </xpath>
+        <xpath expr="//notebook/page/field/tree/field" position="after">
+          <field name="product_desc"/>
+          <field name="bin_locations" widget="many2many_tags" invisible="0" readonly="1"/>
+        </xpath>
+        <xpath expr="//notebook/page[2]/field/tree/field" position="after">
+          <field name="product_desc"/>
+        </xpath>
+        <xpath expr="//field[@name='origin']" position="after">
+          <field name="x_serial_number"/>
+          <field name="assembled_by"/>
+          <field name="labor_hours_bom" readonly="1"/>
+          <field name="labor_hours_actual"/>
+        </xpath>
+        <xpath expr="//notebook/page[2]" position="after">
+          <page string="Corrections">
+            <group>
+              <field name="no_correction"/>
+              <field name="corrections_submitted_by"/>
+              <field name="corrections_submitted_to"/>
+              <field name="corrections_submitted_date"/>
+              <field name="moves_corrected_by"/>
+              <field name="moves_corrected_date"/>
+              <field name="date_audited"/>
+              <field name="audited_by"/>
+            </group>
+          </page>
+        </xpath>
+        <xpath expr="//field[@name='availability']" position="after">
+          <field name="date_reversed"/>
+          <field name="x_notes"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_view_move_form_mod">
+      <field name="name">x_aec.stock.view_move_form.mod</field>
+      <field name="model">stock.move</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_move_form"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//group[@name='moved_quants_grp']" position="after">
+          <group>
+            <field name="date_actual"/>
+            <field name="date_received"/>
+            <field name="qty_counted" widget="char"/>
+            <field name="zero_counted"/>
+            <field name="counted_by" widget="many2many_tags"/>
+            <field name="reversing_move"/>
+            <field name="is_reversing_move"/>
+            <field name="x_notes"/>
+        </group>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="mrp_production_tree_view_mod">
+      <field name="name">x_aec.mrp.mrp_production_tree_view.mod</field>
+      <field name="model">mrp.production</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="x_serial_number"/>
+          <field name="location_dest_id"/>
+          <field name="location_src_id"/>
+          <field name="corrections_submitted_date"/>
+          <field name="moves_corrected_date"/>
+          <field name="no_correction"/>
+          <field name="date_reversed"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="base_view_partner_form_mod">
+      <field name="name">x_aec.base.view_partner_form.mod</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet/group/group[2]/field[@name='email']" position="replace">
+          <field name="email" readonly="1"/>
+          <field name="email_temp"/>
+        </xpath>
+        <xpath expr="//sheet/notebook/page/field/form/sheet/group/group[2]/field[@name='email']" position="replace">
+          <field name="email" readonly="1"/>
+          <field name="email_temp"/>
+        </xpath>
+        <xpath expr="//field[@name='user_id']" position="replace">
+          <field name="user_id" invisible="1"/>
+          <field name="salesperson"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="sale_view_order_form_mod">
+      <field name="name">x_aec.sale.view_order_form.mod</field>
+      <field name="model">sale.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <!--
+        <xpath expr="//button[@name='action_done']" position="after">
+          <button name="refresh_pricing" states="draft" type="object" string="Refresh Pricing"/>
+        </xpath>
+      -->
+        <xpath expr="//notebook/page/field/tree/field[@name='tax_id']" position="after">
+          <field name="product_internal_category"/>
+        </xpath>
+        <xpath expr="//div[@name='discount']" position="after">
+          <field name="product_internal_category" readonly="1"/>
+        </xpath>
+        <xpath expr="//notebook/page[2]/group/group[3]" position="after">
+          <field name="x_notes"/>
+        </xpath>
+        <xpath expr="//field[@name='user_id']" position="after">
+          <field name="salesperson_from_partner"/>
+        </xpath>
+        <xpath expr="//tree/field[@name='sequence']" position="after">
+          <field name="x_line_number"/>
+        </xpath>
+        <xpath expr="//notebook/page/field/form/group/group/field" position="before">
+          <field name="x_line_number"/>
+        </xpath>
+        <xpath expr="//field[@name='confirmation_date']" position="attributes">
+          <attribute name="readonly">0</attribute>
+        </xpath>
+        <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
+          <field name="invoice_address_email" readonly="1"/>
+        </xpath>
+        <xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
+        <field name="shipping_address_email" readonly="1"/>
+        <field name="x_legacy_number"/>
+        <field name="x_customer_po"/>
+        <field name="job_ticket_number"/>
+        <field name="x_reference_number"/>
+        <field name="sale_deadline"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="account_invoice_form_mod">
+      <field name="name">x_aec.account.invoice_form.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="account.invoice_form"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//notebook/page[2]/group/group[2]/field[3]" position="after">
+          <field name="replaced_by"/>
+          <field name="date_audited"/>
+          <field name="notes"/>
+        </xpath>
+        <xpath expr="//notebook/page[2]/group/group/field[6]" position="after">
+          <field name="billing_method"/>
+          <field name="date_delivered"/>
+        </xpath>
+        <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+          <field name="invoice_address_email" readonly="1"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="sale_account_invoice_form_mod">
+      <field name="name">x_aec.sale.account_invoice_form.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="sale.account_invoice_form"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='partner_shipping_id']" position="after">
+        <field name="shipping_address_email" readonly="1"/>
+        </xpath>
+        <xpath expr="//field[@name='payment_term_id']" position="after">
+          <field name="x_number_cancel"/>
+          <field name="x_customer_po"/>
+          <field name="legacy_number"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="base_values_view_tree_action_mod">
+      <field name="name">x_aec.base.values_view_tree_action.mod</field>
+      <field name="model">ir.values</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="base.values_view_tree_action"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='model']" position="after">
+        <field name="user_id"/>
+        <field name="value"/>
+        <field name="value_unpickle"/>
+        <field name="key"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="mrp_plm_mrp_eco_stage_view_tree">
+      <field name="name">x_aec.mrp_plm.mrp_eco_stage_view_tree.mod</field>
+      <field name="model">mrp.eco.stage</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp_plm.mrp_eco_stage_view_tree"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+        <field name="type_id"/>
+        </xpath>
+      </field>
+    </record>
+    <!--<record model="ir.ui.view" id="account_invoice_tree_mod">
+      <field name="name">x_aec.account.invoice_tree.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="account.invoice_tree"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='number']" position="after">
+          <field name="x_number_cancel"/>
+          <field name="x_customer_po"/>
+          <field name="replaced_by"/>
+        </xpath>
+      </field>
+    </record>-->
+    <record model="ir.ui.view" id="product_product_supplierinfo_form_view_mod">
+      <field name="name">x_aec.product.product_supplierinfo_form_view.mod</field>
+      <field name="model">product.supplierinfo</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+      <field name="priority">16</field>
+      <field name="arch" type="xml">
+        <xpath expr="//group/group[2]" position="after">
+          <div>Notes<br/><field name="x_notes" class="oe_inline"/></div>
+        </xpath>
+        <xpath expr="//field[@name='product_id']" position="after">
+          <field name="x_weight"/>
+        </xpath>
+        <xpath expr="//field[@name='delay']" position="before">
+          <field name="x_delay_lower" class="oe_inline"/> days (lower limit)<br/>
+        </xpath>
+        <xpath expr="//field[@name='delay']" position="after">
+          <field name="x_lead_time_aro"/> ARO
+        </xpath>
+        <xpath expr="//field[@name='delay']" position="replace">
+          <field name="delay" class="oe_inline"/> days (upper limit)<br/>
+        </xpath>
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="x_quote_number"/>
+          <field name="x_quote_line"/>
+          <field name="x_quote_date"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="product_product_template_form_view_mod">
+      <field name="name">x_aec.product.product_template_form_view.mod</field>
+      <field name="model">product.template</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="product.product_template_form_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='company_id']" position="before">
+          <field name="cost_custom"/>
+          <field name="cost_entered_by"/>
+          <field name="cost_entered_date"/><br/><br/>
+        </xpath>
+        <xpath expr="//field[@name='type']" position="after">
+          <field name="x_33_no"/>
+          <field name="x_last_counted_odessa"/>
+          <field name="x_last_counted_bakersfield"/>
+          <field name="x_is_equipment"/>
+          <field name="x_is_buyout"/>
+          <field name="x_tags2" widget="many2many_tags"/>
+          <field name="x_shelf_location_tags" widget="many2many_tags" options="{'no_create': True}"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="product.product_template_tree_view_mod">
+      <field name="name">x_aec.product.product_template_tree_view.mod</field>
+      <field name="model">product.template</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="product.product_template_tree_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="description_sale"/>
+        </xpath>
+        <xpath expr="//field[@name='active']" position="after">
+          <field name="x_last_counted_odessa"/>
+          <field name="x_last_counted_bakersfield"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_purchase_order_form_mod">
+      <field name="name">x_aec.purchase.purchase_order_form.mod</field>
+      <field name="model">purchase.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="purchase.purchase_order_form"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_approve']" position="after">
+          <field name="x_notes"/>
+        </xpath>
+        <xpath expr="//field[@name='sequence']" position="after">
+          <field name="x_line_number"/>
+        </xpath>
+        <xpath expr="//field[@name='date_order']" position="after">
+          <field name="x_actual_date"/>
+          <field name="date_sent"/>
+          <field name="sent_by"/>
+          <field name="date_confirmed"/>
+          <field name="origin_custom"/>
+          <field name="x_closed"/>
+        </xpath>
+        <xpath expr="//field[@name='partner_ref']" position="after">
+          <field name="x_legacy_number"/>
+          <field name="x_shipping_method"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_purchase_order_line_tree_mod">
+      <field name="name">x_aec.purchase.purchase_order_line_tree.mod</field>
+      <field name="model">purchase.order.line</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="purchase.purchase_order_line_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='order_id']" position="after">
+          <field name="date_order"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_purchase_order_tree_mod">
+      <field name="name">x_aec.purchase.purchase_order_tree.mod</field>
+      <field name="model">purchase.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='invoice_status']" position="after">
+          <field name="origin_custom"/>
+          <field name="x_closed"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="sale_view_order_line_tree_mod">
+      <field name="name">x_aec.sale.view_order_line_tree.mod</field>
+      <field name="model">sale.order.line</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="sale.view_order_line_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='order_id']" position="after">
+          <field name="create_date"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="sale_view_order_tree_mod">
+      <field name="name">x_aec.sale.view_order_tree.mod</field>
+      <field name="model">sale.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="sale.view_order_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="x_legacy_number"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="sale_view_quotation_tree_mod">
+      <field name="name">x_aec.sale.view_quotation_tree.mod</field>
+      <field name="model">sale.order</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="sale.view_quotation_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='user_id']" position="after">
+          <field name="salesperson_from_partner"/>
+        </xpath>
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="invoice_status"/>
+          <field name="x_legacy_number"/>
+          <field name="sale_deadline"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock.view_inventory_tree_mod">
+      <field name="name">x_aec.stock.view_inventory_tree.mod</field>
+      <field name="model">stock.inventory</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_inventory_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='date']" position="after">
+          <field name="location_id"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_view_move_tree_mod">
+      <field name="name">x_aec.stock.view_move_tree.mod</field>
+      <field name="model">stock.move</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_move_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='product_uom_qty']" position="after">
+          <field name="qty_counted" attrs="{'invisible':[('qty_counted','=',0.0)]}"/>
+          <field name="zero_counted"/>
+        </xpath>
+        <xpath expr="//field[@name='name']" position="before">
+          <field name="id"/>
+        </xpath>
+        <xpath expr="//field[@name='date']" position="replace">
+          <field name="date"/>
+          <field name="date_actual"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_view_picking_form_mod">
+      <field name="name">x_aec.stock.view_picking_form.mod</field>
+      <field name="model">stock.picking</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_picking_form"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='picking_type_id']" position="after">
+          <field name="x_legacy_stock_move_id"/>
+          <field name="x_corrected_by_move_no"/>
+          <field name="replacement_move_no"/>
+          <field name="corrective_move_no"/>
+          <field name="x_notes"/>
+        </xpath>
+        <xpath expr="//field[@name='min_date']" position="after">
+          <field name="x_actual_date"/>
+          <field name="date_received"/>
+          <field name="date_checked"/>
+          <field name="checked_by"/>
+          <field name="stocked_by"/>
+          <field name="x_serial_number"/>
+          <field name="x_date_audited"/>
+        </xpath>
+        <xpath expr="//field[@name='backorder_id']" position="after">
+          <field name="x_packing_list_no"/>
+          <field name="job_ticket_number" attrs="{'readonly': True}"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_stock_scrap_form_view_mod">
+      <field name="name">x_aec.stock.stock_scrap_form_view.mod</field>
+      <field name="model">stock.scrap</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.stock_scrap_form_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//sheet/group/group/field[@name='picking_id']" position="after">
+          <field name="x_unscrap_picking"/>
+          <field name="x_notes"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_stock_scrap_tree_view_mod">
+      <field name="name">x_aec.stock.stock_scrap_tree_view.mod</field>
+      <field name="model">stock.scrap</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.stock_scrap_tree_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='state']" position="after">
+          <field name="x_unscrap_picking"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_view_pack_operation_details_form_mod">
+      <field name="name">x_aec.stock.view_pack_operation_details_form.mod</field>
+      <field name="model">stock.pack.operation</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_pack_operation_details_form"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//group/group/div" position="after">
+          <field name="x_serial_number"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_vpicktree_mod">
+      <field name="name">x_aec.stock.vpicktree.mod</field>
+      <field name="model">stock.picking</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.vpicktree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//tree" position="replace">
+          <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" decoration-danger="state not in ('cancel', 'done') and min_date &lt; current_date" string="Picking list">
+            <field name="id"/>
+            <field name="name"/>
+            <field name="location_id"/>
+            <field name="location_dest_id"/>
+            <field name="partner_id"/>
+            <field name="x_packing_list_no"/>
+            <field name="min_date" invisible="1"/>
+            <field name="date_done"/>
+            <field name="create_date"/>
+            <field name="date" invisible="1"/>
+            <field name="origin"/>
+            <field name="group_id" invisible="1"/>
+            <field name="backorder_id"/>
+            <field name="state"/>
+            <field name="priority" invisible="1"/>
+            <field name="picking_type_id" invisible="1"/>
+            <field name="x_corrected_by_move_no"/>
+            <field name="replacement_move_no"/>
+            <field name="corrective_move_no"/>
+            <field name="x_date_audited"/>
+        </tree>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="delivery_view_picking_withcarrier_out_form_mod">
+      <field name="name">x_aec.delivery.view_picking_withcarrier_out_form.mod</field>
+      <field name="model">stock.picking</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='carrier_tracking_ref']" position="replace">
+          <field name="carrier_tracking_ref" class="oe_inline"/>
+        </xpath><xpath expr="//field[@name='carrier_id']" position="replace">
+          <field name="carrier_id"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="mrp_mrp_bom_form_view_mod">
+      <field name="name">x_aec.mrp.mrp_bom_form_view.mod</field>
+      <field name="model">mrp.bom</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <!--<xpath expr="//page/field/tree/field[@name='product_id']" position="after">
+          <field name="description"/>
+        </xpath>-->
+        <!--<xpath expr="//field[@name='has_attachments']" position="before">
+          <field name="product_id.description_picking"/>
+        </xpath>-->
+        <xpath expr="//field[@name='type']" position="after">
+          <field name="labor_hours"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="account_invoice_tree_mod">
+      <field name="name">x_aec.account.invoice_tree.mod</field>
+      <field name="model">account.invoice</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="account.invoice_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//tree" position="replace">
+          <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" string="Invoice">
+            <field name="id"/>
+            <field name="partner_id" groups="base.group_user" string="Customer"/>
+            <field name="date_invoice"/>
+            <field name="create_date"/>
+            <field name="number"/>
+            <field name="commercial_partner_id" invisible="1"/>
+            <field name="reference" invisible="1"/>
+            <field name="name" invisible="1"/>
+            <field name="journal_id" invisible="1"/>
+            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+            <field name="user_id"/>
+            <field name="x_customer_po"/>
+            <!--<field name="date_due"/>-->
+            <field name="origin"/>
+            <field name="amount_total_signed" string="Total"/>
+            <field name="residual_signed" string="Amount Due"/>
+            <field name="currency_id" invisible="1"/>
+            <field name="company_currency_id" invisible="1"/>
+            <field name="state"/>
+            <field name="type" invisible="context.get('type',True)"/>
+            <field name="billing_method"/>
+            <field name="date_delivered"/>
+            <field name="replaced_by"/>
+            <field name="date_audited"/>
+          </tree>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="base_view_partner_tree_mod">
+      <field name="name">x_aec.base.view_partner_tree.mod</field>
+      <field name="model">res.partner</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="base.view_partner_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='email']" position="after">
+          <field name="property_product_pricelist"/>
+        </xpath>
+        <xpath expr="//field[@name='display_name']" position="before">
+          <field name="id"/>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>
