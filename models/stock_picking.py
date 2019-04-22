@@ -12,4 +12,4 @@ class StockMove(models.Model):
     date_received = fields.Datetime(string="Date Received")
     date_checked = fields.Datetime(string="Date Checked")
     checked_by = fields.Many2one('res.partner','Checked By')
-    stocked_by = fields.Many2one('res.partner','Stocked By')
+    stocked_by = fields.Many2one('res.partner','Pulled/Stocked By')
