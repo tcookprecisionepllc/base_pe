@@ -365,6 +365,9 @@
         </xpath>
         <xpath expr="//field[@name='date_order']" position="after">
           <field name="x_actual_date"/>
+          <field name="date_sent"/>
+          <field name="sent_by"/>
+          <field name="date_confirmed"/>
           <field name="origin_custom"/>
           <field name="x_closed"/>
         </xpath>
@@ -497,6 +500,9 @@
         <xpath expr="//field[@name='min_date']" position="after">
           <field name="x_actual_date"/>
           <field name="date_received"/>
+          <field name="date_checked"/>
+          <field name="checked_by"/>
+          <field name="stocked_by"/>
           <field name="x_serial_number"/>
           <field name="x_date_audited"/>
         </xpath>
