@@ -173,11 +173,11 @@
       <xpath expr="//t/div/h2[2]" position="after">
         <table class="table table-bordered">
           <tr>
-            <td width="25%"><strong>Date Sent:</strong></td><td width="25%"><!--<span t-field="date_sent"/>--></td>
-            <td width="25%"><strong>Sent By:</strong></td><td width="25%"><!--<span t-field="sent_by"/>--></td>
+            <td width="25%"><strong>Date Sent:</strong></td><td width="25%"><span t-field="date_sent"/></td>
+            <td width="25%"><strong>Sent By:</strong></td><td width="25%"><span t-field="sent_by"/></td>
           </tr>
           <tr>
-            <td width="25%"><strong>Date Confirmed:</strong></td><td width="25%"><!--<span t-field="date_confirmed"/>--></td>
+            <td width="25%"><strong>Date Confirmed:</strong></td><td width="25%"><span t-field="date_confirmed"/></td>
           </tr>
           <tr>
             <td width="25%"><strong>Date Checked:</strong></td><td width="25%"></td>
@@ -335,11 +335,11 @@
                                     <td width="25%"><strong>Validated By:</strong></td><td></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Date Received:</strong></td><td width="25%"><!--<span t-field="date_received"/>--></td>
+                                    <td width="25%"><strong>Date Received:</strong></td><td width="25%"><span t-field="date_received"/></td>
                                   </tr>
                                   <tr>
-                                    <td width="25%"><strong>Date Checked:</strong></td><td width="25%"><!--<span t-field="date_checked"/>--></td>
-                                    <td width="25%"><strong>Checked By:</strong></td><td><!--<span t-field="checked_by"/>--></td>
+                                    <td width="25%"><strong>Date Checked:</strong></td><td width="25%"><span t-field="date_checked"/></td>
+                                    <td width="25%"><strong>Checked By:</strong></td><td><span t-field="checked_by"/></td>
                                   </tr>
                                   <tr>
                                     <td width="25%"><strong>Date Pulled/Stocked:</strong></td><td width="25%"></td>
