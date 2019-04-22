@@ -474,6 +474,7 @@
                                         <span t-if="pack_operation.result_package_id">:</span>
                                         <span t-field="pack_operation.result_package_id"/>
                                       </td>
+                                      <td style="border: 1px solid black"></td>
                                 </tr>
                               </tbody>
                             </table>
