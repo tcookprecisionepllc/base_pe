@@ -18,6 +18,7 @@ class StockMove(models.Model):
     zero_counted = fields.Boolean(string="Zero Counted")
     date_actual = fields.Datetime(string="Actual Date")
     date_received = fields.Datetime(string="Date Received")
+    pulled_by = fields.Many2one('res.partner','Pulled/Stocked By')
 
     #@api.model
     #def my_example(self):

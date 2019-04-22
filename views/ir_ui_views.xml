@@ -98,6 +98,7 @@
           <group>
             <field name="date_actual"/>
             <field name="date_received"/>
+            <field name="pulled_by"/>
             <field name="qty_counted" widget="char"/>
             <field name="zero_counted"/>
             <field name="counted_by" widget="many2many_tags"/>
