@@ -19,3 +19,5 @@ class StockMove(models.Model):
     carton_count_custom = fields.Integer(string="Number of Cartons")
     carton_description = fields.Text(string="Carton Description")
     tracking_number_text = fields.Text(string="Tracking Number(s)")
+    date_shipped = fields.Datetime(string="Date Shipped")
+    shipped_by = fields.Many2one('res.partner', "Shipped By")
