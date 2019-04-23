@@ -604,9 +604,14 @@
         <xpath expr="//field[@name='carrier_id']" position="replace">
           <field name="carrier_id"/>
         </xpath>
-        <xpath expr="//field[@name='carrier_tracking_ref']" position="after">
+        <xpath expr="//field[@name='carrier_id']" position="after">
           <field name="freight_cost"/><br/>
-          <field name="freight_po"/>
+          <field name="freight_po"/><br/>
+        </xpath>
+        <xpath expr="//field[@name='number_of_packages']" position="after">
+          <field name="weight_custom"/><br/>
+          <field name="carton_count_custom"/><br/>
+          <field name="carton_description"/><br/>
         </xpath>
       </field>
     </record>
