@@ -600,8 +600,13 @@
       <field name="arch" type="xml">
         <xpath expr="//field[@name='carrier_tracking_ref']" position="replace">
           <field name="carrier_tracking_ref" class="oe_inline"/>
-        </xpath><xpath expr="//field[@name='carrier_id']" position="replace">
+        </xpath>
+        <xpath expr="//field[@name='carrier_id']" position="replace">
           <field name="carrier_id"/>
+        </xpath>
+        <xpath expr="//field[@name='carrier_tracking_ref']" position="after">
+          <field name="freight_cost"/><br/>
+          <field name="freight_po"/>
         </xpath>
       </field>
     </record>

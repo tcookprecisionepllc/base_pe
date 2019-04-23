@@ -13,5 +13,5 @@ class StockMove(models.Model):
     date_checked = fields.Datetime(string="Date Checked")
     checked_by = fields.Many2one('res.partner','Checked By')
     stocked_by = fields.Many2one('res.partner','Pulled/Stocked By')
-    freight_charge = fields.Float(string="Freight Charge")
+    freight_cost = fields.Float(string="Freight Charge")
     freight_po = fields.Char(string="Freight PO")
