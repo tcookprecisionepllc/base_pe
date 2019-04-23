@@ -19,6 +19,7 @@ class StockMove(models.Model):
     date_actual = fields.Datetime(string="Actual Date")
     date_received = fields.Datetime(string="Date Received")
     pulled_by = fields.Many2one('res.partner','Pulled/Stocked By')
+    custom_origin = fields.Char(string="Custom Origin")
 
     #@api.model
     #def my_example(self):
