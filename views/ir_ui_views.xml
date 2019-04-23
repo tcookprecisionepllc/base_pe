@@ -600,7 +600,6 @@
       <field name="arch" type="xml">
         <xpath expr="//field[@name='carrier_tracking_ref']" position="replace">
           <field name="carrier_tracking_ref" class="oe_inline" readonly="1"/>
-          <field name="tracking_number_text"/>
         </xpath>
         <xpath expr="//field[@name='carrier_id']" position="replace">
           <field name="carrier_id"/>
@@ -613,6 +612,9 @@
           <field name="weight_custom"/>
           <field name="carton_count_custom"/>
           <field name="carton_description"/>
+        </xpath>
+        <xpath expr="//field[@name='delivery_type']" position="after">
+          <field name="tracking_number_text"/>
         </xpath>
       </field>
     </record>
