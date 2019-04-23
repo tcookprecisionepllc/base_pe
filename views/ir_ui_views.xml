@@ -53,6 +53,9 @@
         <xpath expr="//field[@name='routing_id']" position="after">
           <field name="x_legacy_number"/>
         </xpath>
+        <xpath expr="//field[@name='product_qty']" position="before">
+          <field name="description"/>
+        </xpath>
         <xpath expr="//notebook/page/field/tree/field" position="after">
           <field name="product_desc"/>
           <field name="bin_locations" widget="many2many_tags" invisible="0" readonly="1"/>
