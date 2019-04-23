@@ -18,3 +18,4 @@ class StockMove(models.Model):
     weight_custom = fields.Float(string="Weight (lbs)")
     carton_count_custom = fields.Integer(string="Number of Cartons")
     carton_description = fields.Text(string="Carton Description")
+    tracking_number_text = fields.Text(string="Tracking Number(s)")

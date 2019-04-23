@@ -599,7 +599,8 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='carrier_tracking_ref']" position="replace">
-          <field name="carrier_tracking_ref" class="oe_inline"/>
+          <field name="carrier_tracking_ref" class="oe_inline" readonly="1"/>
+          <field name="tracking_number_text"/>
         </xpath>
         <xpath expr="//field[@name='carrier_id']" position="replace">
           <field name="carrier_id"/>
