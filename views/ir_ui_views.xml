@@ -605,13 +605,13 @@
           <field name="carrier_id"/>
         </xpath>
         <xpath expr="//field[@name='carrier_id']" position="after">
-          <field name="freight_cost"/><br/>
-          <field name="freight_po"/><br/>
+          <field name="freight_cost"/>
+          <field name="freight_po"/>
         </xpath>
         <xpath expr="//field[@name='number_of_packages']" position="after">
-          <field name="weight_custom"/><br/>
-          <field name="carton_count_custom"/><br/>
-          <field name="carton_description"/><br/>
+          <field name="weight_custom"/>
+          <field name="carton_count_custom"/>
+          <field name="carton_description"/>
         </xpath>
       </field>
     </record>
