@@ -17,4 +17,4 @@ class StockMove(models.Model):
     freight_po = fields.Char(string="Freight PO")
     weight_custom = fields.Float(string="Weight (lbs)")
     carton_count_custom = fields.Integer(string="Number of Cartons")
-    carton_description = fields.Char(string="Carton Description")
+    carton_description = fields.Text(string="Carton Description")
