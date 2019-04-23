@@ -20,3 +20,4 @@ class MrpProduction(models.Model):
     audited_by = fields.Many2one('res.users', 'Audited By')
     date_pulled = fields.Datetime(string="Date Pulled")
     pulled_by = fields.Many2one('res.partner','Pulled By')
+    description = fields.Text('product.product.description_picking', 'Description')
