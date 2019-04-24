@@ -130,6 +130,7 @@
           <field name="moves_corrected_date"/>
           <field name="no_correction"/>
           <field name="date_reversed"/>
+          <field name="replacement_mo"/>
         </xpath>
       </field>
     </record>
