@@ -154,7 +154,7 @@
           <field name="user_id" invisible="1"/>
           <field name="salesperson"/>
         </xpath>
-        <xpath expr="//field[@name='supplier']" position="after">
+        <!--<xpath expr="//field[@name='supplier']" position="after">
           <field name="vendor_application_submitted_date"/>
           <field name="vendor_application_submitted_by"/>
           <field name="vendor_application_approved_date"/>
@@ -163,7 +163,7 @@
           <field name="customer_application_submitted_date"/>
           <field name="customer_application_approved_date"/>
           <field name="customer_application_approved_by"/>
-        </xpath>
+        </xpath>-->
       </field>
     </record>
     <record model="ir.ui.view" id="sale_view_order_form_mod">
