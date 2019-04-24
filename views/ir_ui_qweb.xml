@@ -350,9 +350,9 @@
                                     <td><h1 t-field="o.name" class="mt0"/></td>
                                     <td width="15%"></td>
                                     <td><h3><strong>ID: </strong><span t-field="o.id"/></h3></td>
-                                    <span t-if="o.x_corrected_by_move_no"><td><strong>Reversing Move: </strong><span t-field="o.x_corrected_by_move_no"/><br/></td></span>
-                                    <span t-if="o.replacement_move_no"><td><strong>Replacement Move: </strong><span t-field="o.replacement_move_no"/><br/></td></span>
-                                    <span t-if="o.corrective_move_no"><td><strong>Corrective Move: </strong><span t-field="o.corrective_move_no"/><br/></td></span>
+                                    <span t-if="o.x_corrected_by_move_no"><td><strong>Reversing Move: </strong><span t-field="o.x_corrected_by_move_no"/></td><br/></span>
+                                    <span t-if="o.replacement_move_no"><td><strong>Replacement Move: </strong><span t-field="o.replacement_move_no"/></td><br/></span>
+                                    <span t-if="o.corrective_move_no"><td><strong>Corrective Move: </strong><span t-field="o.corrective_move_no"/></td><br/></span>
                                   </tr>
                                 </table>
                                 <table class="table table-bordered">
