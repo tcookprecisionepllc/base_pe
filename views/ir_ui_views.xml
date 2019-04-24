@@ -154,12 +154,12 @@
           <field name="user_id" invisible="1"/>
           <field name="salesperson"/>
         </xpath>
-        <xpath expr="//notebook/page[3]/group/group/field[1]" position="after">
+        <xpath expr="//notebook/page[3]/group/group[2]/field[1]" position="after">
           <field name="vendor_application_submitted_date"/>
           <field name="vendor_application_submitted_by"/>
           <field name="vendor_application_approved_date"/>
         </xpath>
-        <xpath expr="//notebook/page[3]/group/group[2]/field[1]" position="after">
+        <xpath expr="//notebook/page[3]/group/group/field[1]" position="after">
           <field name="customer_application_submitted_date"/>
           <field name="customer_application_approved_date"/>
           <field name="customer_application_approved_by"/>
