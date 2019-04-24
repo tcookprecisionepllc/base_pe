@@ -16,19 +16,19 @@
       <xpath expr="//t/t/div/div[4]" position="after">
         <table class="table table-bordered">
           <tr>
-            <td width="25%"><strong>Date Pulled:</strong></td><td><span t-field="o.date_pulled"/></td>
+            <td width="25%"><strong>Date Pulled:</strong></td><td width="25%"><span t-field="o.date_pulled"/></td>
             <td width="25%"><strong>Pulled By:</strong></td><td><span t-field="o.pulled_by"/></td>
           </tr>
           <tr>
-            <td width="25%"><strong>Date Completed:</strong></td><td></td>
+            <td width="25%"><strong>Date Completed:</strong></td><td width="25%"></td>
             <td width="25%"><strong>Assembled By:</strong></td><td><span t-field="o.assembled_by"/></td>
           </tr>
           <tr>
-            <td width="25%"><strong>Date Processed:</strong></td><td></td>
+            <td width="25%"><strong>Date Processed:</strong></td><td width="25%"></td>
             <td width="25%"><strong>Processed By:</strong></td><td></td>
           </tr>
           <tr>
-            <td width="25%"><strong>Date Audited:</strong></td><td><span t-field="o.date_audited"/></td>
+            <td width="25%"><strong>Date Audited:</strong></td><td width="25%"><span t-field="o.date_audited"/></td>
             <td width="25%"><strong>Audited By:</strong></td><td><span t-field="o.audited_by"/></td>
           </tr>
         </table>
