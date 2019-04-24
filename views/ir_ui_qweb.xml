@@ -45,6 +45,7 @@
       </xpath>
       <xpath expr="//t/t/div/div[2]/div/h2" position="after">
         <span t-field="o.description"/>
+        <span t-if="o.replacement_mo">Replacement MO: <span t-field="o.replacement_mo"/></span>
         <span t-if="o.x_serial_number"><h1>Serial Number: <span t-field="o.x_serial_number"/></h1></span>
       </xpath>
       <xpath expr="//tbody/t/tr[2]" position="replace">

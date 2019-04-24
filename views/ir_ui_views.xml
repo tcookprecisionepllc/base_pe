@@ -85,6 +85,7 @@
         </xpath>
         <xpath expr="//field[@name='availability']" position="after">
           <field name="date_reversed"/>
+          <field name="replacement_mo"/>
           <field name="x_notes"/>
         </xpath>
       </field>

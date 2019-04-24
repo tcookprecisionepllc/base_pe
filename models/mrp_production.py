@@ -21,3 +21,4 @@ class MrpProduction(models.Model):
     date_pulled = fields.Datetime(string="Date Pulled")
     pulled_by = fields.Many2one('res.partner','Pulled By')
     description = fields.Text("Description", related="product_id.description_picking")
+    replacement_mo = fields.Char(string="Replacement MO")
