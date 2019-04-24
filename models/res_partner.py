@@ -8,7 +8,7 @@ class ResPartner(models.Model):
 
     email_temp = fields.Char('Email Address')
     salesperson = fields.Many2one('res.partner', string="Salesperson")
-    vendor_app_date = fields.Datetime(string="Credit App Submitted")
+    #vendor_app_date = fields.Datetime(string="Credit App Submitted")
     #vendor_application_submitted_by = fields.Many2one('res.partner', string="Submitted By")
     #vendor_application_approved_date = fields.Datetime(string="Credit App Approved")
     #customer_application_submitted_date = fields.Datetime(string="Credit App Submitted")
