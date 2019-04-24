@@ -52,7 +52,7 @@
            <td>
                <span t-field="line.product_id"/>
            </td>
-           <td width="15%">
+           <td width="25%">
              <span t-field="line.product_desc"/>
            </td>
            <td>
