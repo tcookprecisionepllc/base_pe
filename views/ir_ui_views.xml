@@ -211,11 +211,11 @@
           <field name="x_reference_number"/>
         </xpath>
         <xpath expr="//field[@name='payment_term_id']" position="after">
-          <field name="sale_deadline"/>
           <field name="date_rfq"/>
           <field name="date_quoted"/>
           <field name="quote_sent_by"/>
-          <field name="date_ordered"/>          
+          <field name="date_ordered"/>
+          <field name="sale_deadline"/>
         </xpath>
       </field>
     </record>
