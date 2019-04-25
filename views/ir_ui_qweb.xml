@@ -114,6 +114,21 @@
      </xpath>
     </field>
   </record>
+  <record model="ir.ui.view" id="sale_report_saleorder_document_internal_mod">
+    <field name="name">x_aec.sale.report_saleorder_document_internal.mod</field>
+    <field name="type">qweb</field>
+    <field name="model" eval="False"/>
+    <field name="inherit_id" ref="sale.report_saleorder_document_internal"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <xpath expr="//t/t/div/div[2]/div/div[2]/div" position="after">
+        <div t-field="doc.shipping_address_email"/>
+     </xpath>
+      <xpath expr="//t/t/div/div[2]/div/div" position="after">
+        <div t-field="doc.invoice_address_email"/>
+     </xpath>
+    </field>
+  </record>
   <record model="ir.ui.view" id="sale_report_invoice_document_inherit_sale_mod">
     <field name="name">x_aec.sale.report_invoice_document_inherit_sale.mod</field>
     <field name="type">qweb</field>
