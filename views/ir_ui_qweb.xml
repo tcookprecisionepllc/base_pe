@@ -114,7 +114,7 @@
      </xpath>
     </field>
   </record>
-  <record model="ir.ui.view" id="sale_report_saleorder_document_internal_mod">
+  <!--<record model="ir.ui.view" id="sale_report_saleorder_document_internal_mod">
     <field name="name">x_aec.sale.report_saleorder_document_internal.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
@@ -128,7 +128,7 @@
         <div t-field="doc.invoice_address_email"/>
      </xpath>
     </field>
-  </record>
+  </record>-->
   <record model="ir.ui.view" id="sale_report_invoice_document_inherit_sale_mod">
     <field name="name">x_aec.sale.report_invoice_document_inherit_sale.mod</field>
     <field name="type">qweb</field>
