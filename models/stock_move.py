@@ -20,6 +20,7 @@ class StockMove(models.Model):
     date_received = fields.Datetime(string="Date Received")
     pulled_by = fields.Many2one('res.partner','Pulled/Stocked By')
     custom_origin = fields.Char(string="Custom Origin")
+    serial_number = fields.Char(string="Serial Number")
 
     #@api.model
     #def my_example(self):
