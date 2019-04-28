@@ -101,6 +101,7 @@
         <xpath expr="//group[@name='moved_quants_grp']" position="after">
           <group>
             <field name="custom_origin"/>
+            <field name="serial_number"/>
             <field name="date_actual"/>
             <field name="date_received"/>
             <field name="pulled_by"/>
@@ -502,6 +503,7 @@
           <field name="id"/>
         </xpath>
         <xpath expr="//field[@name='date']" position="replace">
+          <field name="serial_number"/>
           <field name="date"/>
           <field name="date_actual"/>
         </xpath>
