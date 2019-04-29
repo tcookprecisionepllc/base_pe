@@ -16,3 +16,6 @@ class SaleOrder(models.Model):
     date_quoted = fields.Datetime(string="Quote Sent")
     quote_sent_by = fields.Many2one('res.partner', 'Quote Sent By')
     date_ordered = fields.Datetime(string="Date Ordered")
+    asset_number = fields.Char(string="Asset Number")
+    rig_number = fields.Char(string="Rig Number")
+    ordered_by = fields.Many2one('res.partner', 'Ordered By')

@@ -106,6 +106,26 @@
     <field name="inherit_id" ref="sale.report_saleorder_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
+      <xpath expr="//t/t/div/div[3]" position="after">
+        <div class="row mt32 mb32">
+          <div t-if="doc.ordered_by" class="col-xs-3">
+            <strong>Ordered By:</strong>
+            <p t-field="doc.ordered_by"/>
+          </div>
+          <div t-if="doc.rig_number" class="col-xs-3">
+            <strong>Rig Number:</strong>
+            <p t-field="doc.rig_number"/>
+          </div>
+          <div t-if="doc.asset_number" class="col-xs-3">
+            <strong>Asset Number:</strong>
+            <p t-field="doc.asset_number"/>
+          </div>
+          <div t-if="doc.job_ticket_number" class="col-xs-3">
+            <strong>Job Ticket Number:</strong>
+            <p t-field="doc.job_ticket_number"/>
+          </div>
+        </div>
+     </xpath>
       <xpath expr="//t/t/div/div[2]/div/div[2]/div" position="after">
         <div t-field="doc.shipping_address_email"/>
      </xpath>
