@@ -665,7 +665,7 @@
       </xpath>
     </field>
   </record>-->
-  <!--<record model="ir.ui.view" id="mrp_bom_structure_report_mod">
+  <record model="ir.ui.view" id="mrp_bom_structure_report_mod">
     <field name="name">x_aec.mrp.mrp_bom_structure_report.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
@@ -676,5 +676,5 @@
         <span t-field="o.description"/>
       </xpath>
     </field>
-  </record>-->
+  </record>
 </odoo>
