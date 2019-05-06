@@ -521,6 +521,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//notebook/page[1]/field[3]/tree/field[2]" position="after">
+          <field name="product_description" attrs="{'readonly': True}"/>
           <field name="bin_locations" widget="many2many_tags" attrs="{'readonly': True}"/>
         </xpath>
         <!--<xpath expr="//notebook/page[2]/field/field[@name='product_id']" position="after">
@@ -725,6 +726,20 @@
         </xpath>
         <xpath expr="//field[@name='display_name']" position="before">
           <field name="id"/>
+        </xpath>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="stock_view_move_picking_tree_mod">
+      <field name="name">x_aec.stock.view_move_picking_tree.mod</field>
+      <field name="model">stock.move</field>
+      <field name="type">form</field>
+      <field name="mode">extension</field>
+      <field name="inherit_id" ref="stock.view_move_picking_tree"/>
+      <field name="priority">99</field>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='product_id']" position="after">
+          <field name="product_desc" attrs="{'readonly': True}"/>
+          <field name="bin_locations" attrs="{'readonly': True}"/>
         </xpath>
       </field>
     </record>

@@ -21,3 +21,4 @@ class StockMove(models.Model):
     tracking_number_text = fields.Text(string="Tracking Number(s)")
     date_shipped = fields.Datetime(string="Date Shipped")
     shipped_by = fields.Many2one('res.partner', "Shipped By")
+    product_description = fields.Text(string="Description", related="product_id.description_picking")
