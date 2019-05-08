@@ -22,3 +22,4 @@ class StockMove(models.Model):
     date_shipped = fields.Datetime(string="Date Shipped")
     shipped_by = fields.Many2one('res.partner', "Shipped By")
     product_description = fields.Text(string="Description", related="product_id.description_picking")
+    delivered_to = fields.Many2one('res.partner', "Delivered To")

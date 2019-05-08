@@ -644,6 +644,7 @@
           <field name="freight_cost"/>
           <field name="date_shipped"/>
           <field name="shipped_by"/>
+          <field name="delivered_to"/>
           <field name="freight_po"/>
         </xpath>
         <xpath expr="//field[@name='number_of_packages']" position="after">
