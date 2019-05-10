@@ -55,6 +55,7 @@
            </td>
            <td width="25%">
              <span t-field="line.product_desc"/>
+             <span t-if="o.x_notes"><strong>NOTE: </strong><span t-field="o.x_notes"/></span>
            </td>
            <td>
               <span t-esc="', '.join(line.bin_locations.mapped('x_name'))"/>
