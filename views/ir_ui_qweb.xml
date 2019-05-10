@@ -45,6 +45,7 @@
       </xpath>
       <xpath expr="//t/t/div/div[2]/div/h2" position="after">
         <span t-field="o.description"/>
+        <span t-if="o.x_notes"><strong>NOTE: </strong><span t-field="o.x_notes"/></span>
         <span t-if="o.replacement_mo"><br/><strong>Replacement MO:</strong> <span t-field="o.replacement_mo"/></span>
         <span t-if="o.x_serial_number"><h1>Serial Number: <span t-field="o.x_serial_number"/></h1></span>
       </xpath>
@@ -55,7 +56,6 @@
            </td>
            <td width="25%">
              <span t-field="line.product_desc"/>
-             <span t-if="o.x_notes"><strong>NOTE: </strong><span t-field="o.x_notes"/></span>
            </td>
            <td>
               <span t-esc="', '.join(line.bin_locations.mapped('x_name'))"/>
