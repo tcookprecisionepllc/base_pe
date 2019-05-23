@@ -24,4 +24,4 @@ class StockMove(models.Model):
     product_description = fields.Text(string="Description", related="product_id.description_picking")
     delivered_to = fields.Many2one('res.partner', "Delivered To")
     asset_number = fields.Char(string='Asset Number', related="sale_id.asset_number")
-    rig_number = field.Char(string='Rig Number', related="sale_id.rig_number")
+    rig_number = fields.Char(string='Rig Number', related="sale_id.rig_number")
