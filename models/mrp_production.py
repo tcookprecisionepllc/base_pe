@@ -22,3 +22,5 @@ class MrpProduction(models.Model):
     pulled_by = fields.Many2one('res.partner','Pulled By')
     description = fields.Text("Description", related="product_id.description_picking")
     replacement_mo = fields.Char("Replacement MO")
+    date_wip_audited = fields.Datetime(string="Date WIP Audited")
+    wip_audited_by = fields.Many2one('res.users', 'WIP Audited By')

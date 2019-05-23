@@ -80,6 +80,8 @@
               <field name="moves_corrected_date"/>
               <field name="date_audited"/>
               <field name="audited_by"/>
+              <field name="date_wip_audited"/>
+              <field name="wip_audited_by"/>
             </group>
           </page>
         </xpath>
