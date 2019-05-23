@@ -441,7 +441,9 @@
                                   <thead>
                                     <tr>
                                       <th t-if="o.origin"><strong>Order (Origin)</strong></th>
-                                      <th><strong>Job Ticket</strong></th>
+                                      <th t-if="o.job_ticket_number"><strong>Job Ticket</strong></th>
+                                      <th t-if="o.rig_number"><strong>Rig Number</strong></th>
+                                      <th t-if="o.asset_number"><strong>Asset Number</strong></th>
                                       <th><strong>State</strong></th>
                                       <th><strong>Completed Date</strong></th>
                                       <th><strong>Date Created</strong></th>
@@ -453,8 +455,14 @@
                                       <td t-if="o.origin">
                                         <span t-field="o.origin"/>
                                       </td>
-                                      <td>
+                                      <td t-if="o.job_ticket_number">
                                         <span t-field="o.job_ticket_number"/>
+                                      </td>
+                                      <td t-if="o.rig_number">
+                                        <span t-field="o.rig_number"/>
+                                      </td>
+                                      <td t-if="o.asset_number">
+                                        <span t-field="o.asset_number"/>
                                       </td>
                                       <td>
                                         <span t-field="o.state"/>
