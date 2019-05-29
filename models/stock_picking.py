@@ -25,3 +25,4 @@ class StockMove(models.Model):
     delivered_to = fields.Many2one('res.partner', "Delivered To")
     asset_number = fields.Char(string='Asset Number', related="sale_id.asset_number")
     rig_number = fields.Char(string='Rig Number', related="sale_id.rig_number")
+    audit_transaction = fields.Boolean("Audit Transaction (no record)")

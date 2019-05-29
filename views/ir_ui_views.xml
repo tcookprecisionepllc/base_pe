@@ -546,6 +546,7 @@
           <field name="stocked_by"/>
           <field name="x_serial_number"/>
           <field name="x_date_audited"/>
+          <field name="audit_transaction"/>
         </xpath>
         <xpath expr="//field[@name='backorder_id']" position="after">
           <field name="x_packing_list_no"/>
@@ -628,6 +629,7 @@
             <field name="replacement_move_no"/>
             <field name="corrective_move_no"/>
             <field name="x_date_audited"/>
+            <field name="audit_transaction"/>
         </tree>
         </xpath>
       </field>
