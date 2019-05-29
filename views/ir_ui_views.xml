@@ -82,6 +82,7 @@
               <field name="audited_by"/>
               <field name="date_wip_audited"/>
               <field name="wip_audited_by"/>
+              <field name="audit_transaction"/>
             </group>
           </page>
         </xpath>
@@ -134,6 +135,7 @@
           <field name="no_correction"/>
           <field name="date_reversed"/>
           <field name="replacement_mo"/>
+          <field name="audit_transaction"/>
         </xpath>
       </field>
     </record>

@@ -24,3 +24,4 @@ class MrpProduction(models.Model):
     replacement_mo = fields.Char("Replacement MO")
     date_wip_audited = fields.Datetime(string="Date WIP Audited")
     wip_audited_by = fields.Many2one('res.users', 'WIP Audited By')
+    audit_transaction = fields.Boolean("Audit Transaction (no record)")
