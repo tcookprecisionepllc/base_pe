@@ -533,9 +533,11 @@
         </xpath>-->
         <xpath expr="//field[@name='picking_type_id']" position="after">
           <field name="x_legacy_stock_move_id"/>
+          <field name="x_date_audited"/>
           <field name="x_corrected_by_move_no"/>
           <field name="replacement_move_no"/>
           <field name="corrective_move_no"/>
+          <field name="audit_transaction"/>
           <field name="x_notes"/>
         </xpath>
         <xpath expr="//field[@name='min_date']" position="after">
@@ -545,8 +547,6 @@
           <field name="checked_by"/>
           <field name="stocked_by"/>
           <field name="x_serial_number"/>
-          <field name="x_date_audited"/>
-          <field name="audit_transaction"/>
         </xpath>
         <xpath expr="//field[@name='backorder_id']" position="after">
           <field name="x_packing_list_no"/>
