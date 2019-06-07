@@ -113,6 +113,7 @@
             <field name="counted_by" widget="many2many_tags"/>
             <field name="reversing_move"/>
             <field name="is_reversing_move"/>
+            <field name="is_equipment" invisible="1"/>
             <field name="x_notes"/>
         </group>
         </xpath>
@@ -136,7 +137,6 @@
           <field name="date_reversed"/>
           <field name="replacement_mo"/>
           <field name="audit_transaction"/>
-          <field name="is_equipment" invisible="1"/>
         </xpath>
       </field>
     </record>
