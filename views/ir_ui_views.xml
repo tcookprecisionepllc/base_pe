@@ -543,6 +543,7 @@
           <field name="replacement_move_no"/>
           <field name="corrective_move_no"/>
           <field name="audit_transaction"/>
+          <field name="is_invalid"/>
           <field name="x_notes"/>
         </xpath>
         <xpath expr="//field[@name='min_date']" position="after">
