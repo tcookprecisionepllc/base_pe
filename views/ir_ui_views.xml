@@ -511,7 +511,7 @@
           <field name="id"/>
         </xpath>
         <xpath expr="//field[@name='date']" position="replace">
-          <field name="partner_id.name"/>
+          <field name="partner_id"/>
           <field name="is_equipment"/>
           <field name="serial_number"/>
           <field name="date"/>
