@@ -22,7 +22,6 @@ class StockMove(models.Model):
     custom_origin = fields.Char(string="Custom Origin")
     serial_number = fields.Char(string="Serial Number")
     is_equipment = fields.Boolean(string="Is Equipment", related="product_id.x_is_equipment")
-    partner =
 
     #@api.model
     #def my_example(self):
