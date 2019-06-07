@@ -136,6 +136,7 @@
           <field name="date_reversed"/>
           <field name="replacement_mo"/>
           <field name="audit_transaction"/>
+          <field name="is_equipment" invisible="1"/>
         </xpath>
       </field>
     </record>
@@ -510,6 +511,7 @@
           <field name="id"/>
         </xpath>
         <xpath expr="//field[@name='date']" position="replace">
+          <field name="is_equipment"/>
           <field name="serial_number"/>
           <field name="date"/>
           <field name="date_actual"/>

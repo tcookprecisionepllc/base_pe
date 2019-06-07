@@ -21,6 +21,7 @@ class StockMove(models.Model):
     pulled_by = fields.Many2one('res.partner','Pulled/Stocked By')
     custom_origin = fields.Char(string="Custom Origin")
     serial_number = fields.Char(string="Serial Number")
+    is_equipment = fields.Boolean(string="Is Equipment", related="product_id.x_is_equipment")
 
     #@api.model
     #def my_example(self):
