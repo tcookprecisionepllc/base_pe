@@ -114,6 +114,8 @@
             <field name="reversing_move"/>
             <field name="is_reversing_move"/>
             <field name="is_equipment" invisible="1"/>
+            <field name="is_invalid_picking" readonly="1"/>
+            <field name="is_invalid"/>
             <field name="x_notes"/>
         </group>
         </xpath>

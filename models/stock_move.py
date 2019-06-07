@@ -22,6 +22,8 @@ class StockMove(models.Model):
     custom_origin = fields.Char(string="Custom Origin")
     serial_number = fields.Char(string="Serial Number")
     is_equipment = fields.Boolean(string="Is Equipment", related="product_id.x_is_equipment")
+    is_invalid_picking = fields.Boolean(string="Invalid Picking", related="picking_id.is_invalid")
+    is_invalid = fields.Boolean(string="Invalid Move")
 
     #@api.model
     #def my_example(self):
