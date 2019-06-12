@@ -239,6 +239,7 @@
       <field name="priority">16</field>
       <field name="arch" type="xml">
         <xpath expr="//notebook/page[2]/group/group[2]/field[3]" position="after">
+          <field name="return_picking"/>
           <field name="replaced_by"/>
           <field name="date_audited"/>
           <field name="notes"/>

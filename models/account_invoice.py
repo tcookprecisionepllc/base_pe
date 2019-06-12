@@ -14,3 +14,4 @@ class AccountInvoice(models.Model):
     replaced_by = fields.Char("Replaced By")
     date_audited = fields.Date('Date Audited')
     notes = fields.Text("Notes")
+    return_picking = fields.Many2one('stock.picking', 'Return Picking')
