@@ -162,6 +162,9 @@
           <field name="user_id" invisible="1"/>
           <field name="salesperson"/>
         </xpath>
+        <xpath expr="//field[@name='category_id']" position="after">
+          <field name="tax_id_number"/>
+        </xpath>
         <xpath expr="//notebook/page[3]/group/group[2]/field[1]" position="after">
           <field name="vendor_application_submitted_date"/>
           <field name="vendor_application_submitted_by"/>
