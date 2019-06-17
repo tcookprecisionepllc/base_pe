@@ -640,6 +640,7 @@
             <field name="corrective_move_no"/>
             <field name="x_date_audited"/>
             <field name="audit_transaction"/>
+            <field name="is_invalid"/>
         </tree>
         </xpath>
       </field>
