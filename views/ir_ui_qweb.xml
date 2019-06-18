@@ -459,6 +459,9 @@
                                       <td t-if="o.job_ticket_number">
                                         <span t-field="o.job_ticket_number"/>
                                       </td>
+                                      <td t-if="o.repair_description">
+                                        <span t-field="o.repair_description"/>
+                                      </td>
                                       <td t-if="o.rig_number">
                                         <span t-field="o.rig_number"/>
                                       </td>
