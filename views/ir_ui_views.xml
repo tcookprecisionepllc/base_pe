@@ -221,7 +221,7 @@
           <field name="rig_number"/>
           <field name="asset_number"/>
           <field name="job_ticket_number"/>
-          <field name="repair__description"/>
+          <field name="repair_description"/>
           <field name="x_reference_number"/>
         </xpath>
         <xpath expr="//field[@name='payment_term_id']" position="after">
