@@ -129,6 +129,10 @@
             <strong>Job Ticket Number:</strong>
             <p t-field="doc.job_ticket_number"/>
           </div>
+          <div t-if="doc.repair_description" class="col-xs-3">
+            <strong>Repair Description:</strong>
+            <p t-field="doc.repair_description"/>
+          </div>
         </div>
      </xpath>
       <xpath expr="//t/t/div/div[2]/div/div[2]/div" position="after">
@@ -442,6 +446,7 @@
                                     <tr>
                                       <th t-if="o.origin"><strong>Source Document</strong></th>
                                       <th t-if="o.job_ticket_number"><strong>Job Ticket</strong></th>
+                                      <th t-if="o.repair_description"><strong>Repair Description</strong></th>
                                       <th t-if="o.rig_number"><strong>Rig Number</strong></th>
                                       <th t-if="o.asset_number"><strong>Asset Number</strong></th>
                                     </tr>

@@ -27,3 +27,4 @@ class StockMove(models.Model):
     rig_number = fields.Char(string='Rig Number', related="sale_id.rig_number")
     audit_transaction = fields.Boolean("Audit Transaction (no record)")
     is_invalid = fields.Boolean(string="Invalid")
+    repair_description = fields.Char(string='Repair Description', related="sale_id.repair_description")

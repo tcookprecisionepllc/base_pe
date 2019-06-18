@@ -221,6 +221,7 @@
           <field name="rig_number"/>
           <field name="asset_number"/>
           <field name="job_ticket_number"/>
+          <field name="repair__description"/>
           <field name="x_reference_number"/>
         </xpath>
         <xpath expr="//field[@name='payment_term_id']" position="after">
@@ -561,6 +562,7 @@
         <xpath expr="//field[@name='backorder_id']" position="after">
           <field name="x_packing_list_no"/>
           <field name="job_ticket_number" attrs="{'readonly': True}"/>
+          <field name="repair_description" attrs="{'readonly': True}"/>
           <field name="rig_number" attrs="{'readonly': True}"/>
           <field name="asset_number" attrs="{'readonly': True}"/>
         </xpath>

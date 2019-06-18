@@ -19,3 +19,4 @@ class SaleOrder(models.Model):
     asset_number = fields.Char(string="Asset Number")
     rig_number = fields.Char(string="Rig Number")
     ordered_by = fields.Many2one('res.partner', 'Ordered By')
+    repair_description = fields.Char("Repair Description")
