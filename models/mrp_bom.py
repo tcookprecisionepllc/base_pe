@@ -7,3 +7,4 @@ class MrpBom(models.Model):
     _inherit = "mrp.bom"
 
     labor_hours = fields.Float("Labor Hours")
+    description = fields.Char(string="Description", related="product_tmpl_id.description_picking")
