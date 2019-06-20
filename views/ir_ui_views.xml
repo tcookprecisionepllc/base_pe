@@ -695,9 +695,9 @@
         <xpath expr="//field[@name='type']" position="after">
           <field name="labor_hours"/>
         </xpath>
-        <xpath expr="//field[@name='product_tmpl_id']" position="after">
+        <!--<xpath expr="//field[@name='product_tmpl_id']" position="after">
           <field name="description"/>
-        </xpath>
+        </xpath>-->
       </field>
     </record>
     <record model="ir.ui.view" id="account_invoice_tree_mod">
