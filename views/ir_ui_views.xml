@@ -381,6 +381,9 @@
       <field name="inherit_id" ref="product.product_template_tree_view"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
+        <xpath expr="//field[@name='default_code']" position="before">
+          <field name="id"/>
+        </xpath>
         <xpath expr="//field[@name='name']" position="after">
           <field name="description_sale"/>
         </xpath>
