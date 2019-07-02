@@ -158,6 +158,7 @@
      </xpath>
     </field>
   </record>-->
+  <!-- v12 debugging
   <record model="ir.ui.view" id="sale_report_invoice_document_inherit_sale_mod">
     <field name="name">x_aec.sale.report_invoice_document_inherit_sale.mod</field>
     <field name="type">qweb</field>
@@ -172,7 +173,7 @@
         <div t-field="o.invoice_address_email"/>
      </xpath>
     </field>
-  </record>
+  </record>-->
   <!-- v12 debugging
   <record model="ir.ui.view" id="account_report_invoice_document_mod">
     <field name="name">x_aec.account.report_invoice_document.mod</field>
