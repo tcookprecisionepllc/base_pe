@@ -1,11 +1,9 @@
 <!--<?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <!-- MODIFIED ACTIONS -->
     <record model="ir.actions.act_window" id="stock.stock_picking_type_action">
       <field name="context">{'group_by':['code']}</field>
     </record>
-    <!-- NEW ACTIONS -->
     <record model="ir.actions.act_window" id="action_incoming_outgoing_report">
       <field name="name">Incoming Outgoing Report</field>
       <field name="res_model">incoming.outgoing.report</field>
