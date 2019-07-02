@@ -1,5 +1,5 @@
-<!--<?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<?xml version="1.0" encoding="utf-8"?>
+<!--<odoo>
   <data>
     <record model="ir.model.access" id="access_model_incoming_outgoing_report">
       <field name="name">Global</field>

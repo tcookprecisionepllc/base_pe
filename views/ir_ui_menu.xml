@@ -1,5 +1,5 @@
-<!--<?xml version="1.0" encoding="utf-8"?>
-<odoo>
+<?xml version="1.0" encoding="utf-8"?>
+<!--<odoo>
   <record model="ir.ui.menu" id="menu_incoming_outgoing_report_pivot">
     <field name="action" ref="base_pe.action_incoming_outgoing_report"/>
     <field name="active" eval="True"/>
