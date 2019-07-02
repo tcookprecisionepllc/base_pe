@@ -237,6 +237,7 @@
         </xpath>
       </field>
     </record>
+    <!-- v12 debugging
     <record model="ir.ui.view" id="account_invoice_form_mod">
       <field name="name">x_aec.account.invoice_form.mod</field>
       <field name="model">account.invoice</field>
@@ -255,9 +256,9 @@
           <field name="billing_method"/>
           <field name="date_delivered"/>
         </xpath>
-        <!--<xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+        <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
           <field name="invoice_address_email" readonly="1"/>
-        </xpath>-->
+        </xpath>
       </field>
     </record>
     <record model="ir.ui.view" id="sale_account_invoice_form_mod">
@@ -274,7 +275,7 @@
           <field name="legacy_number"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="base_values_view_tree_action_mod">
       <field name="name">x_aec.base.values_view_tree_action.mod</field>
       <field name="model">ir.values</field>
