@@ -190,6 +190,7 @@
      </xpath>
     </field>
   </record>-->
+  <!-- v12 debugging
   <record model="ir.ui.view" id="purchase.report_purchaseorder_document_mod">
     <field name="name">x_aec.purchase.report_purchaseorder_document.mod</field>
     <field name="type">qweb</field>
@@ -267,7 +268,7 @@
         </table>
       </xpath>
     </field>
-  </record>
+  </record>-->
   <record model="ir.ui.view" id="purchase_report_purchasequotation_document_mod">
     <field name="name">x_aec.purchase.report_purchasequotation_document.mod</field>
     <field name="type">qweb</field>
