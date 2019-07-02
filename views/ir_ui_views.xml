@@ -602,6 +602,7 @@
         </xpath>
       </field>
     </record>
+    <!-- v12 debugging
     <record model="ir.ui.view" id="stock_view_pack_operation_details_form_mod">
       <field name="name">x_aec.stock.view_pack_operation_details_form.mod</field>
       <field name="model">stock.pack.operation</field>
@@ -610,14 +611,14 @@
       <field name="inherit_id" ref="stock.view_pack_operation_details_form"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <!--<xpath expr="//field[@name='product_id']" position="after">
+        <xpath expr="//field[@name='product_id']" position="after">
           <field name="bin_locations" attrs="{'readonly': True}"/>
-        </xpath>-->
+        </xpath>
         <xpath expr="//group/group/div" position="after">
           <field name="x_serial_number"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="stock_vpicktree_mod">
       <field name="name">x_aec.stock.vpicktree.mod</field>
       <field name="model">stock.picking</field>
