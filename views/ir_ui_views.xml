@@ -202,9 +202,9 @@
         <xpath expr="//notebook/page[2]/group/group[3]" position="after">
           <field name="x_notes"/>
         </xpath>
-        <xpath expr="//field[@name='user_id']" position="after">
+        <!--<xpath expr="//field[@name='user_id']" position="after">
           <field name="salesperson_from_partner"/>
-        </xpath>
+        </xpath>-->
         <xpath expr="//tree/field[@name='sequence']" position="after">
           <field name="x_line_number"/>
         </xpath>
@@ -485,9 +485,9 @@
       <field name="inherit_id" ref="sale.view_quotation_tree"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='user_id']" position="after">
+        <!--<xpath expr="//field[@name='user_id']" position="after">
           <field name="salesperson_from_partner"/>
-        </xpath>
+        </xpath>-->
         <xpath expr="//field[@name='state']" position="after">
           <field name="invoice_status"/>
           <field name="x_legacy_number"/>
