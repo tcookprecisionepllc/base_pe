@@ -276,6 +276,7 @@
         </xpath>
       </field>
     </record>-->
+    <!-- v12 debugging
     <record model="ir.ui.view" id="base_values_view_tree_action_mod">
       <field name="name">x_aec.base.values_view_tree_action.mod</field>
       <field name="model">ir.values</field>
@@ -291,7 +292,7 @@
         <field name="key"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="mrp_plm_mrp_eco_stage_view_tree">
       <field name="name">x_aec.mrp_plm.mrp_eco_stage_view_tree.mod</field>
       <field name="model">mrp.eco.stage</field>
