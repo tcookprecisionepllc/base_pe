@@ -375,6 +375,7 @@
         </xpath>
       </field>
     </record>
+    <!-- v12 debugging
     <record model="ir.ui.view" id="product.product_template_tree_view_mod">
       <field name="name">x_aec.product.product_template_tree_view.mod</field>
       <field name="model">product.template</field>
@@ -394,7 +395,7 @@
           <field name="x_last_counted_bakersfield"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="purchase_purchase_order_form_mod">
       <field name="name">x_aec.purchase.purchase_order_form.mod</field>
       <field name="model">purchase.order</field>
