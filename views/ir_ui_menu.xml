@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--<?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <record model="ir.ui.menu" id="menu_incoming_outgoing_report_pivot">
     <field name="action" ref="base_pe.action_incoming_outgoing_report"/>
@@ -9,4 +9,4 @@
     <field name="sequence">99</field>
     <field name="web_icon" eval="False"/>
   </record>
-</odoo>
+</odoo>-->
