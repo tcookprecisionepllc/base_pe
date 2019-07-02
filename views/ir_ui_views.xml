@@ -495,6 +495,7 @@
         </xpath>
       </field>
     </record>
+    <!-- v12 debugging
     <record model="ir.ui.view" id="stock.view_inventory_tree_mod">
       <field name="name">x_aec.stock.view_inventory_tree.mod</field>
       <field name="model">stock.inventory</field>
@@ -507,7 +508,7 @@
           <field name="location_id"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="stock_view_move_tree_mod">
       <field name="name">x_aec.stock.view_move_tree.mod</field>
       <field name="model">stock.move</field>
