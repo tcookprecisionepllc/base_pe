@@ -268,9 +268,9 @@
       <field name="inherit_id" ref="sale.account_invoice_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <xpath expr="//field[@name='partner_shipping_id']" position="after">
-        <!--<field name="shipping_address_email" readonly="1"/>-->
-        </xpath>
+        <!--<xpath expr="//field[@name='partner_shipping_id']" position="after">
+          <field name="shipping_address_email" readonly="1"/>
+        </xpath>-->
         <xpath expr="//field[@name='payment_term_id']" position="after">
           <field name="x_number_cancel"/>
           <field name="x_customer_po"/>
