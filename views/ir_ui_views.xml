@@ -215,7 +215,7 @@
           <attribute name="readonly">0</attribute>
         </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_invoice_id']" position="after">
-          <field name="invoice_address_email" readonly="1"/>
+          <!--<field name="invoice_address_email" readonly="1"/>-->
         </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
           <field name="shipping_address_email" readonly="1"/>
@@ -256,7 +256,7 @@
           <field name="date_delivered"/>
         </xpath>
         <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
-          <field name="invoice_address_email" readonly="1"/>
+          <!--<field name="invoice_address_email" readonly="1"/>-->
         </xpath>
       </field>
     </record>
