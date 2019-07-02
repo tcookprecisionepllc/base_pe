@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<odoo>
+<odoo>
   <data>
-    <record model="ir.actions.act_window" id="stock.stock_picking_type_action">
+    <!--<record model="ir.actions.act_window" id="stock.stock_picking_type_action">
       <field name="context">{'group_by':['code']}</field>
     </record>
     <record model="ir.actions.act_window" id="action_incoming_outgoing_report">
@@ -16,6 +16,6 @@
       <field name="view_id" ref="base_pe.view_incoming_outgoing_report_pivot"/>
       <field name="view_ids" eval="[(6, 0, [])]"/>
       <field name="view_mode">pivot</field>
-    </record>
+    </record>-->
   </data>
-</odoo>-->
+</odoo>
