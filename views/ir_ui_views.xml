@@ -358,7 +358,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='company_id']" position="before">
-          <field name="cost_custom"/>
+          <!--<field name="cost_custom"/>-->
           <field name="cost_entered_by"/>
           <field name="cost_entered_date"/><br/><br/>
         </xpath>
