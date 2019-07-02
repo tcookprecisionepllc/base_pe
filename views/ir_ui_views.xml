@@ -255,9 +255,9 @@
           <field name="billing_method"/>
           <field name="date_delivered"/>
         </xpath>
-        <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
-          <!--<field name="invoice_address_email" readonly="1"/>-->
-        </xpath>
+        <!--<xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+          <field name="invoice_address_email" readonly="1"/>
+        </xpath>-->
       </field>
     </record>
     <record model="ir.ui.view" id="sale_account_invoice_form_mod">
