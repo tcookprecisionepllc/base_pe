@@ -1,12 +1,12 @@
  #-*- coding: utf-8 -*-
 
-from odoo import api, fields, models, _
-from odoo.exceptions import UserError
+#from odoo import api, fields, models, _
+#from odoo.exceptions import UserError
 
-class ResPartner(models.Model):
-    _inherit = "res.partner"
+#class ResPartner(models.Model):
+#    _inherit = "res.partner"
 
-    email_temp = fields.Char('Email Address')
+#    email_temp = fields.Char('Email Address')
 #    salesperson = fields.Many2one('res.partner', string="Salesperson")
 #    vendor_application_submitted_date = fields.Datetime(string="Credit App Submitted")
 #    vendor_application_submitted_by = fields.Many2one('res.partner', string="Submitted By")
