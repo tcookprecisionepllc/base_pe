@@ -14,3 +14,4 @@ from . import product_template
 from . import purchase_order
 from . import mrp_bom_line
 from . import stock_pack_operation
+from . import stock_move_line
