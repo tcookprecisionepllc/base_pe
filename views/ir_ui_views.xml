@@ -58,7 +58,7 @@
           <field name="description" readonly="1"/>
         </xpath>
         <xpath expr="//notebook/page/field/tree/field" position="after">
-          <!--<field name="product_desc"/>-->
+          <field name="product_desc"/>
           <field name="bin_locations" widget="many2many_tags" invisible="0" readonly="1"/>
         </xpath>
         <xpath expr="//notebook/page[2]/field/tree/field" position="after">
