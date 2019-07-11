@@ -235,7 +235,6 @@
         </xpath>
       </field>
     </record>
-    <!-- v12 debugging
     <record model="ir.ui.view" id="account_invoice_form_mod">
       <field name="name">x_aec.account.invoice_form.mod</field>
       <field name="model">account.invoice</field>
@@ -273,7 +272,7 @@
           <field name="legacy_number"/>
         </xpath>
       </field>
-    </record>-->
+    </record>
     <!-- v12 debugging
     <record model="ir.ui.view" id="base_values_view_tree_action_mod">
       <field name="name">x_aec.base.values_view_tree_action.mod</field>
