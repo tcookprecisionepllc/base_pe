@@ -94,7 +94,6 @@
         </xpath>
       </field>
     </record>
-    <!-- v12 debugging
     <record model="ir.ui.view" id="stock_view_move_form_mod">
       <field name="name">x_aec.stock.view_move_form.mod</field>
       <field name="model">stock.move</field>
@@ -103,7 +102,7 @@
       <field name="inherit_id" ref="stock.view_move_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <xpath expr="//group[@name='moved_quants_grp']" position="after">
+        <xpath expr="//group[@name='linked_group']" position="after">
           <group>
             <field name="custom_origin"/>
             <field name="serial_number"/>
@@ -122,7 +121,7 @@
         </group>
         </xpath>
       </field>
-    </record>-->
+    </record>
     <record model="ir.ui.view" id="mrp_production_tree_view_mod">
       <field name="name">x_aec.mrp.mrp_production_tree_view.mod</field>
       <field name="model">mrp.production</field>
