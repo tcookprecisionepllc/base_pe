@@ -143,7 +143,6 @@
         </xpath>
       </field>
     </record>
-    <!-- v12 debugging
     <record model="ir.ui.view" id="base_view_partner_form_mod">
       <field name="name">x_aec.base.view_partner_form.mod</field>
       <field name="model">res.partner</field>
@@ -178,7 +177,7 @@
           <field name="customer_application_approved_by"/>
         </xpath>
       </field>
-    </record>-->
+    </record>
     <record model="ir.ui.view" id="sale_view_order_form_mod">
       <field name="name">x_aec.sale.view_order_form.mod</field>
       <field name="model">sale.order</field>
