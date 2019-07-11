@@ -303,7 +303,7 @@
         </xpath>
       </field>
     </record>
-    <!--<record model="ir.ui.view" id="account_invoice_tree_mod">
+    <record model="ir.ui.view" id="account_invoice_tree_mod">
       <field name="name">x_aec.account.invoice_tree.mod</field>
       <field name="model">account.invoice</field>
       <field name="type">form</field>
@@ -317,7 +317,7 @@
           <field name="replaced_by"/>
         </xpath>
       </field>
-    </record>-->
+    </record>
     <record model="ir.ui.view" id="product_product_supplierinfo_form_view_mod">
       <field name="name">x_aec.product.product_supplierinfo_form_view.mod</field>
       <field name="model">product.supplierinfo</field>
