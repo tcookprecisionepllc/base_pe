@@ -630,7 +630,7 @@
             <field name="location_dest_id"/>
             <field name="partner_id"/>
             <field name="x_packing_list_no"/>
-            <!--<field name="min_date" invisible="1"/>-->
+            <field name="scheduled_date" invisible="1"/>
             <field name="date_done"/>
             <field name="create_date"/>
             <field name="date" invisible="1"/>
