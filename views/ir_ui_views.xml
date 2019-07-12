@@ -553,7 +553,7 @@
           <field name="is_invalid"/>
           <field name="x_notes"/>
         </xpath>
-        <xpath expr="//field[@name='min_date']" position="after">
+        <xpath expr="//field[@name='date_done']" position="after">
           <field name="x_actual_date"/>
           <field name="date_received"/>
           <field name="date_checked"/>
