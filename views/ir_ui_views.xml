@@ -491,7 +491,7 @@
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="stock.view_inventory_tree_mod">
+    <!--<record model="ir.ui.view" id="stock.view_inventory_tree_mod">
       <field name="name">x_aec.stock.view_inventory_tree.mod</field>
       <field name="model">stock.inventory</field>
       <field name="type">form</field>
@@ -503,7 +503,7 @@
           <field name="location_id"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="stock_view_move_tree_mod">
       <field name="name">x_aec.stock.view_move_tree.mod</field>
       <field name="model">stock.move</field>
@@ -516,9 +516,9 @@
           <field name="qty_counted" attrs="{'invisible':[('qty_counted','=',0.0)]}"/>
           <field name="zero_counted"/>
         </xpath>
-        <!--<xpath expr="//field[@name='name']" position="before">
+        <xpath expr="//field[@name='name']" position="before">
           <field name="id"/>
-        </xpath>-->
+        </xpath>
         <xpath expr="//field[@name='date']" position="replace">
           <field name="partner_id"/>
           <field name="is_equipment"/>
