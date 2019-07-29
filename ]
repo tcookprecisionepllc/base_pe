@@ -491,7 +491,7 @@
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="view_inventory_tree_mod">
+    <!--<record model="ir.ui.view" id="stock.view_inventory_tree_mod">
       <field name="name">x_aec.stock.view_inventory_tree.mod</field>
       <field name="model">stock.inventory</field>
       <field name="type">form</field>
@@ -503,7 +503,7 @@
           <field name="location_id"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="stock_view_move_tree_mod">
       <field name="name">x_aec.stock.view_move_tree.mod</field>
       <field name="model">stock.move</field>
@@ -536,10 +536,13 @@
       <field name="inherit_id" ref="stock.view_picking_form"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-      <xpath expr="//notebook//field[@name='move_ids_without_package']//tree//field[@name='product_id']" position="after">
-          <field name="product_desc" attrs="{'readonly': True}"/>
+        <!--<xpath expr="//notebook/page[1]/field[3]/tree/field[2]" position="after">
+          <field name="product_description" attrs="{'readonly': True}"/>
           <field name="bin_locations" widget="many2many_tags" attrs="{'readonly': True}"/>
-        </xpath>
+        </xpath>-->
+        <!--<xpath expr="//notebook/page[2]/field/field[@name='product_id']" position="after">
+          <field name="bin_locations" attrs="{'readonly': True}"/>
+        </xpath>-->
         <xpath expr="//field[@name='picking_type_id']" position="after">
           <field name="x_legacy_stock_move_id"/>
           <field name="x_date_audited"/>
@@ -594,22 +597,23 @@
         </xpath>
       </field>
     </record>
+    <!-- v12 debugging
     <record model="ir.ui.view" id="stock_view_pack_operation_details_form_mod">
       <field name="name">x_aec.stock.view_pack_operation_details_form.mod</field>
-      <field name="model">stock.move</field>
+      <field name="model">stock.pack.operation</field>
       <field name="type">form</field>
       <field name="mode">extension</field>
-      <field name="inherit_id" ref="stock.view_move_form"/>
+      <field name="inherit_id" ref="stock.view_pack_operation_details_form"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//field[@name='product_id']" position="after">
           <field name="bin_locations" attrs="{'readonly': True}"/>
         </xpath>
-	<xpath expr="//field[@name='location_dest_id']" position="after">
-          <field name="serial_number"/>
+        <xpath expr="//group/group/div" position="after">
+          <field name="x_serial_number"/>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="stock_vpicktree_mod">
       <field name="name">x_aec.stock.vpicktree.mod</field>
       <field name="model">stock.picking</field>
