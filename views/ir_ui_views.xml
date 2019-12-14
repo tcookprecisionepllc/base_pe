@@ -537,7 +537,7 @@
       <field name="inherit_id" ref="stock.view_picking_form"/>
       <field name="priority">99</field>
       <field name="arch" type="xml">
-        <xpath expr="//notebook/page[1]/field[3]/tree/field[2]" position="after">
+        <xpath expr="//notebook/page[1]/field[1]/tree[1]/field[1]" position="after">
           <field name="product_description" attrs="{'readonly': True}"/>
           <field name="bin_locations" widget="many2many_tags" attrs="{'readonly': True}"/>
         </xpath>
