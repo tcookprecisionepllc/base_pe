@@ -534,9 +534,6 @@
           <field name="product_desc" attrs="{'readonly': True}"/>
           <field name="bin_locations" widget="many2many_tags" attrs="{'readonly': True}"/>
         </xpath>
-        <xpath expr="//notebook/page[2]/field[3]/tree[1]/field[@name='product_id']" position="after">
-          <field name="bin_locations" attrs="{'readonly': True}"/>
-        </xpath>
         <xpath expr="//field[@name='picking_type_id']" position="after">
           <field name="x_legacy_stock_move_id"/>
           <field name="x_date_audited"/>
