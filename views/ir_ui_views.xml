@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <record model="ir.ui.view" id="view_incoming_outgoing_report_tree">
+    <!--<record model="ir.ui.view" id="view_incoming_outgoing_report_tree">
       <field name="name">x_gfp.incoming.outgoing.report.tree</field>
       <field name="model">incoming.outgoing.report</field>
       <field name="mode">primary</field>
@@ -41,7 +41,7 @@
                <field name="net_available" type="measure"/>
            </pivot>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="mrp_production_form_view_mod">
       <field name="name">x_gfp.mrp.production.form.mod</field>
       <field name="model">mrp.production</field>
