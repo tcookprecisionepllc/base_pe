@@ -173,7 +173,7 @@
      </xpath>
     </field>
   </record>
-  <record model="ir.ui.view" id="account_report_invoice_document_mod">
+  <!--<record model="ir.ui.view" id="account_report_invoice_document_mod">
     <field name="name">x_aec.account.report_invoice_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
@@ -187,7 +187,7 @@
         </div>
      </xpath>
     </field>
-  </record>
+  </record>-->
   <record model="ir.ui.view" id="purchase.report_purchaseorder_document_mod">
     <field name="name">x_aec.purchase.report_purchaseorder_document.mod</field>
     <field name="type">qweb</field>
