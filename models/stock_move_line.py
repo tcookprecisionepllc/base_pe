@@ -7,4 +7,4 @@ class StockMoveLine(models.Model):
     _inherit = "stock.move.line"
 
     product_desc = fields.Text(string="Description",related="product_id.description_picking")
-    
+    bin_locations = fields.Many2many(string="Bin Locations",related="product_id.x_shelf_location_tags")
