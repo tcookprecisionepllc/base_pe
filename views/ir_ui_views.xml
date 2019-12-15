@@ -531,7 +531,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//notebook/page[1]/field[1]/tree[1]/field[1]" position="after">
-          <field name="product_description" attrs="{'readonly': True}"/>
+          <field name="product_desc" attrs="{'readonly': True}"/>
           <field name="bin_locations" widget="many2many_tags" attrs="{'readonly': True}"/>
         </xpath>
         <xpath expr="//notebook/page[2]/field[3]/tree[1]/field[@name='product_id']" position="after">
