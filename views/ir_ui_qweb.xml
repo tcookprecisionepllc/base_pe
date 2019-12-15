@@ -306,7 +306,7 @@
       </xpath>
     </field>
   </record>-->
-  <record model="ir.ui.view" id="sale.report_saleorder_document_mod">
+  <!--<record model="ir.ui.view" id="sale.report_saleorder_document_mod">
     <field name="name">x_aec.sale.report_saleorder_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
@@ -350,7 +350,7 @@
         </div>
       </xpath>
     </field>
-  </record>
+  </record>-->
   <record model="ir.ui.view" id="stock_report_picking_mod">
     <field name="name">x_aec.stock.report_picking.mod</field>
     <field name="type">qweb</field>
