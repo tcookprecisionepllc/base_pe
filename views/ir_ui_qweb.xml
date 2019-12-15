@@ -135,9 +135,9 @@
           </div>
         </div>
      </xpath>
-      <xpath expr="//t/t/div/div[2]/div/div[2]/div" position="after">
+     <!--<xpath expr="//t/t/div/div[2]/div/div[2]/div" position="after">
         <div t-field="doc.shipping_address_email"/>
-     </xpath>
+     </xpath>-->
       <xpath expr="//t/t/div/div[2]/div/div" position="after">
         <div t-field="doc.invoice_address_email"/>
      </xpath>
