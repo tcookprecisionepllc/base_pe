@@ -188,7 +188,7 @@
      </xpath>
     </field>
   </record>-->
-  <record model="ir.ui.view" id="purchase.report_purchaseorder_document_mod">
+  <!--<record model="ir.ui.view" id="purchase.report_purchaseorder_document_mod">
     <field name="name">x_aec.purchase.report_purchaseorder_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
@@ -265,7 +265,7 @@
         </table>
       </xpath>
     </field>
-  </record>
+  </record>-->
   <record model="ir.ui.view" id="purchase_report_purchasequotation_document_mod">
     <field name="name">x_aec.purchase.report_purchasequotation_document.mod</field>
     <field name="type">qweb</field>
