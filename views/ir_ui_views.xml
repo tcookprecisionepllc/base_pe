@@ -93,7 +93,7 @@
         </xpath>
       </field>
     </record>
-    <record model="ir.ui.view" id="stock_view_move_form_mod">
+    <!--<record model="ir.ui.view" id="stock_view_move_form_mod">
       <field name="name">x_aec.stock.view_move_form.mod</field>
       <field name="model">stock.move</field>
       <field name="type">form</field>
@@ -120,7 +120,7 @@
         </group>
         </xpath>
       </field>
-    </record>
+    </record>-->
     <record model="ir.ui.view" id="mrp_production_tree_view_mod">
       <field name="name">x_aec.mrp.mrp_production_tree_view.mod</field>
       <field name="model">mrp.production</field>
