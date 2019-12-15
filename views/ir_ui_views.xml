@@ -671,11 +671,11 @@
           <field name="delivered_to"/>
           <field name="freight_po"/>
         </xpath>
-        <xpath expr="//field[@name='number_of_packages']" position="after">
+        <!--<xpath expr="//field[@name='number_of_packages']" position="after">
           <field name="weight_custom"/>
           <field name="carton_count_custom"/>
           <field name="carton_description"/>
-        </xpath>
+        </xpath>-->
         <xpath expr="//field[@name='delivery_type']" position="after">
           <field name="tracking_number_text"/>
         </xpath>
