@@ -185,11 +185,6 @@
       <field name="inherit_id" ref="sale.view_order_form"/>
       <field name="priority">16</field>
       <field name="arch" type="xml">
-        <!--
-        <xpath expr="//button[@name='action_done']" position="after">
-          <button name="refresh_pricing" states="draft" type="object" string="Refresh Pricing"/>
-        </xpath>
-      -->
         <xpath expr="//notebook/page/field/tree/field[@name='tax_id']" position="after">
           <field name="product_internal_category"/>
         </xpath>
@@ -304,7 +299,7 @@
         </xpath>
       </field>
     </record>
-    <!--<record model="ir.ui.view" id="account_invoice_tree_mod">
+    <record model="ir.ui.view" id="account_invoice_tree_mod">
       <field name="name">x_aec.account.invoice_tree.mod</field>
       <field name="model">account.invoice</field>
       <field name="type">form</field>
@@ -318,7 +313,7 @@
           <field name="replaced_by"/>
         </xpath>
       </field>
-    </record>-->
+    </record>
     <record model="ir.ui.view" id="product_product_supplierinfo_form_view_mod">
       <field name="name">x_aec.product.product_supplierinfo_form_view.mod</field>
       <field name="model">product.supplierinfo</field>
