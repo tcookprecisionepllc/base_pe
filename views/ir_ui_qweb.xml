@@ -138,9 +138,9 @@
      <!--<xpath expr="//t/t/div/div[2]/div/div[2]/div" position="after">
         <div t-field="doc.shipping_address_email"/>
      </xpath>-->
-      <xpath expr="//t/t/div/div[2]/div/div" position="after">
+      <!--<xpath expr="//t/t/div/div[2]/div/div" position="after">
         <div t-field="doc.invoice_address_email"/>
-     </xpath>
+     </xpath>-->
     </field>
   </record>
   <!--<record model="ir.ui.view" id="sale_report_saleorder_document_internal_mod">
