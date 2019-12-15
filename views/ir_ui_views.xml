@@ -554,14 +554,14 @@
           <field name="is_invalid"/>
           <field name="x_notes"/>
         </xpath>
-        <xpath expr="//field[@name='min_date']" position="after">
+        <!--<xpath expr="//field[@name='min_date']" position="after">
           <field name="x_actual_date"/>
           <field name="date_received"/>
           <field name="date_checked"/>
           <field name="checked_by"/>
           <field name="stocked_by"/>
           <field name="x_serial_number"/>
-        </xpath>
+        </xpath>-->
         <xpath expr="//field[@name='backorder_id']" position="after">
           <field name="x_packing_list_no"/>
           <field name="job_ticket_number" attrs="{'readonly': True}"/>
