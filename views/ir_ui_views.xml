@@ -512,10 +512,8 @@
           <field name="qty_counted" attrs="{'invisible':[('qty_counted','=',0.0)]}"/>
           <field name="zero_counted"/>
         </xpath>
-        <!--<xpath expr="//field[@name='name']" position="before">
-          <field name="id"/>
-        </xpath>-->
         <xpath expr="//field[@name='date']" position="replace">
+          <field name="id"/>
           <field name="partner_id"/>
           <field name="is_equipment"/>
           <field name="serial_number"/>
