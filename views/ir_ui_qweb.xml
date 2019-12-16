@@ -7,12 +7,6 @@
     <field name="inherit_id" ref="mrp.report_mrporder"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <!--<xpath expr="//t/t/div/div[4]/div[3]" position="after">
-        <div class="col-xs-3" t-if="'sale_name' in o">
-          <strong>SO Number:</strong><br/>
-          <span t-esc="'sale_name' in o and o.sale_name"/>
-        </div>
-      </xpath>-->
       <xpath expr="//t/t/div/div[4]" position="after">
         <table class="table table-bordered">
           <tr>
@@ -71,27 +65,6 @@
           <td style="border: 1px solid black" width="10%"></td>
         </tr>
      </xpath>
-      <!--<xpath expr="//tbody/t/tr[2]" position="replace">
-        <tr t-foreach="o.move_raw_ids.sorted(lambda x: x.product_id.name)" t-as="line">
-           <td>
-               <span t-field="line.product_id"/>
-           </td>
-           <td width="25%">
-             <span t-field="line.product_desc"/>
-           </td>
-           <td>
-              <span t-esc="', '.join(line.bin_locations.mapped('x_name'))"/>
-           </td>
-           <td class="text-right">
-               <span t-field="line.product_uom_qty"/>
-               <span t-field="line.product_uom.name" groups="product.group_uom"/>
-           </td>
-           <td>
-             <span t-field="line.quantity_done"/>
-           </td>
-           <td style="border: 1px solid black" width="10%"></td>
-       </tr>
-     </xpath>-->
      <xpath expr="//t/t/t/div/div/table" position="replace">
       <table class="table table-bordered">
        <tr>
@@ -129,7 +102,7 @@
     <field name="inherit_id" ref="sale.report_saleorder_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/t/div/div[3]" position="after">
+      <xpath expr="//t/div/div[2]/div[6]" position="after">
         <div class="row mt32 mb32">
           <div t-if="doc.ordered_by" class="col-xs-3">
             <strong>Ordered By:</strong>
