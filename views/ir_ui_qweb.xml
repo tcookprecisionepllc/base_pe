@@ -129,7 +129,7 @@
      <xpath expr="//t/t[3]/t/t/div" position="after">
         <div t-field="doc.shipping_address_email"/>
      </xpath>
-      <xpath expr="//t/t[3]/t/div]" position="after">
+     <xpath expr="//t/t[3]/t/div" position="after">
         <div t-field="doc.invoice_address_email"/>
      </xpath>
     </field>
