@@ -102,7 +102,7 @@
     <field name="inherit_id" ref="sale.report_saleorder_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/div/div[2]/div[6]" position="after">
+      <xpath expr="//t/div/div[2]" position="after">
         <div class="row mt32 mb32">
           <div t-if="doc.ordered_by" class="col-xs-3">
             <strong>Ordered By:</strong>
