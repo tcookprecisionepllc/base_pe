@@ -37,7 +37,7 @@
           </tr>
         </table>
       </xpath>
-      <xpath expr="//thead/tr" position="replace">
+      <!--<xpath expr="//thead/tr" position="replace">
         <tr>
           <th><strong>Product</strong></th>
           <th>Description</th>
@@ -46,7 +46,7 @@
           <th>Previously Pulled</th>
           <th>Qty Pulled</th>
         </tr>
-      </xpath>
+      </xpath>-->
       <xpath expr="//t/t/div/div[2]/div/h2" position="after">
         <span t-field="o.description"/>
         <span t-if="o.x_notes"><br/><strong>NOTE: </strong><span t-field="o.x_notes"/></span>
