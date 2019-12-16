@@ -604,7 +604,7 @@
         </xpath>
       </field>
     </record>-->
-    <!--<record model="ir.ui.view" id="stock_vpicktree_mod">
+    <record model="ir.ui.view" id="stock_vpicktree_mod">
       <field name="name">x_aec.stock.vpicktree.mod</field>
       <field name="model">stock.picking</field>
       <field name="type">form</field>
@@ -613,7 +613,7 @@
       <field name="priority">99</field>
       <field name="arch" type="xml">
         <xpath expr="//tree" position="replace">
-          <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" decoration-danger="state not in ('cancel', 'done') and min_date &lt; current_date" string="Picking list">
+          <tree decoration-info="state == 'draft'" decoration-muted="state == 'cancel'" decoration-danger="state not in ('cancel', 'done') and scheduled_date &lt; current_date" string="Picking list">
             <field name="id"/>
             <field name="name"/>
             <field name="location_id"/>
@@ -639,7 +639,7 @@
         </tree>
         </xpath>
       </field>
-    </record>-->
+    </record>
     <record model="ir.ui.view" id="delivery_view_picking_withcarrier_out_form_mod">
       <field name="name">x_aec.delivery.view_picking_withcarrier_out_form.mod</field>
       <field name="model">stock.picking</field>
