@@ -164,22 +164,22 @@
      </xpath>
     </field>
   </record>
-  <!--<record model="ir.ui.view" id="account_report_invoice_document_mod">
+  <record model="ir.ui.view" id="account_report_invoice_document_mod">
     <field name="name">x_aec.account.report_invoice_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
     <field name="inherit_id" ref="account.report_invoice_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/t/div/div[2]/div[5]" position="after">
+      <xpath expr="//t/t[2]/div" position="after">
         <div class="col-xs-2" t-if="o.x_customer_po">
           <strong>Customer PO:</strong>
           <p t-field="o.x_customer_po"/>
         </div>
      </xpath>
     </field>
-  </record>-->
-  <!--<record model="ir.ui.view" id="purchase.report_purchaseorder_document_mod">
+  </record>
+  <!--<record model="ir.ui.view" id="purchase_report_purchaseorder_document_mod">
     <field name="name">x_aec.purchase.report_purchaseorder_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
@@ -297,7 +297,7 @@
       </xpath>
     </field>
   </record>-->
-  <!--<record model="ir.ui.view" id="sale.report_saleorder_document_mod">
+  <!--<record model="ir.ui.view" id="sale_report_saleorder_document_mod">
     <field name="name">x_aec.sale.report_saleorder_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
