@@ -226,7 +226,7 @@
           <th><strong>Qty Received</strong></th>
         </tr>
       </xpath>
-      <xpath expr="//t/div/div[3]/div[1]" position="replace">
+      <xpath expr="//t/div/div[2]/div[3]" position="replace">
         <div class="col-xs-3">
           <strong>Shipping Method:</strong>
           <p t-field="o.x_shipping_method"/>
