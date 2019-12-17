@@ -297,14 +297,14 @@
       </xpath>
     </field>
   </record>-->
-  <!--<record model="ir.ui.view" id="sale_report_saleorder_document_mod">
+  <record model="ir.ui.view" id="sale_report_saleorder_document_mod">
     <field name="name">x_aec.sale.report_saleorder_document.mod</field>
     <field name="type">qweb</field>
     <field name="model" eval="False"/>
     <field name="inherit_id" ref="sale.report_saleorder_document"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//t/div/div[3]/div[2]" position="replace">
+      <!--<xpath expr="//t/div/div[3]/div[2]" position="replace">
         <div t-if="doc.state not in ['draft','sent']" class="col-xs-3">
           <strong>Date Ordered:</strong>
           <p t-field="doc.confirmation_date"/>
@@ -319,8 +319,8 @@
       </xpath>
       <xpath expr="//table/thead/tr/th" position="before">
         <th>Line</th>
-      </xpath>
-      <xpath expr="//t/div/div[3]/div[4]" position="after">
+      </xpath>-->
+      <xpath expr="//t/div/div[2]/div[6]" position="after">
         <div t-if="doc.x_customer_po" class="col-xs-3">
           <strong>Customer PO:</strong>
           <p t-field="doc.x_customer_po"/>
@@ -330,7 +330,7 @@
           <p t-field="doc.x_reference_number"/>
         </div>
       </xpath>
-      <xpath expr="//t/div/div[3]/div[4]" position="replace">
+      <xpath expr="//t/div/div[2]/div[4]" position="replace">
         <div t-if="doc.salesperson_from_partner" class="col-xs-3">
           <strong>Salesperson:</strong>
           <p t-field="doc.salesperson_from_partner"/>
@@ -341,7 +341,7 @@
         </div>
       </xpath>
     </field>
-  </record>-->
+  </record>
   <record model="ir.ui.view" id="stock_report_picking_mod">
     <field name="name">x_aec.stock.report_picking.mod</field>
     <field name="type">qweb</field>
