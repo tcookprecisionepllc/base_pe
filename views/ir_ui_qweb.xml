@@ -603,10 +603,10 @@
                           <p t-field="o.note"/>
                           <p t-field="o.x_notes"/>
                         </div>
-                  </xpath>
+                  </xpath>-->
       <xpath expr="//t/t/t/div/p[2]" position="after">
         <p t-field="o.x_notes"/>
-      </xpath>-->
+      </xpath>
       <!--<xpath expr="//div/table[2]/tbody/tr/t[2]" position="replace">
         <td>
           <span t-field="pack_operation.location_dest_id"/>
