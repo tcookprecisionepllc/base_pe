@@ -349,7 +349,7 @@
     <field name="inherit_id" ref="stock.report_picking"/>
     <field name="priority">99</field>
     <field name="arch" type="xml">
-      <xpath expr="//div[1]" position="replace">
+      <!--<xpath expr="//div[1]" position="replace">
         <div class="page">
               <br/>
               <div class="row">
@@ -576,8 +576,8 @@
                                 </tr>
                               </thead>
                               <tbody>
-                              <!--<t t-set="picking_operation_ids" t-value="o.picking_operation_ids"/>
-                              <t groups="base.group_portal" t-set="picking_operation_ids" t-value="o.picking_operation_ids.sudo()"/>-->
+                              <t t-set="picking_operation_ids" t-value="o.picking_operation_ids"/>
+                              <t groups="base.group_portal" t-set="picking_operation_ids" t-value="o.picking_operation_ids.sudo()"/>
                               <tr t-foreach="o.move_lines" t-as="move">
                                   <td><span t-field="move.product_id"/><br/>
                                       <span t-field="move.product_id.description_picking"/>
@@ -596,17 +596,17 @@
                               </tr>
                           </tbody>
                         </table>
-                          <!--<p t-if="o.state in ['draft', 'waiting', 'confirmed']">
+                          <p t-if="o.state in ['draft', 'waiting', 'confirmed']">
                             You do not have any products reserved for this picking.  Please click the 'Reserve' button
                             to check if products are available.
-                          </p>-->
+                          </p>
                           <p t-field="o.note"/>
                           <p t-field="o.x_notes"/>
                         </div>
                   </xpath>
       <xpath expr="//t/t/t/div/p[2]" position="after">
         <p t-field="o.x_notes"/>
-      </xpath>
+      </xpath>-->
       <!--<xpath expr="//div/table[2]/tbody/tr/t[2]" position="replace">
         <td>
           <span t-field="pack_operation.location_dest_id"/>
